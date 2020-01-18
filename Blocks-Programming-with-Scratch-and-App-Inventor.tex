@@ -13,6 +13,15 @@
 % Използване на хедър и футър.
 \usepackage{fancyhdr}
 
+% Използване на кавички при цитиране.
+\usepackage{dirtytalk}
+
+% Използва се за създаване на азбучен указател.
+\usepackage{imakeidx}
+
+% Използва се за сензитивни хипер-връзки в самия документ.
+\usepackage[pdftex, bookmarks, linktocpage]{hyperref}
+
 % Заглавие.
 \title{Блоково програмиране със Scratch и App Inventor}
 
@@ -24,9 +33,6 @@
 
 % Избор на активен език.
 \selectlanguage{bulgarian}
-
-% За кавички при цитиране.
-\usepackage{dirtytalk}
 
 % Текстове за декорация на страницата в горната и долната част.
 \pagestyle{fancy}
@@ -40,13 +46,47 @@
 \renewcommand{\headrulewidth}{2pt}
 \renewcommand{\footrulewidth}{1pt}
 
+% Генериране на азбучен указател.
+\onecolumn
+\makeindex[columns=2, title=Азбучен указател, intoc]
+
+% Начало на документа.
 \begin{document}
 
 % Предна корица.
-\includepdf[pages={1}]{cover/front}
+\includepdf[pages={1}]{covers/front}
 \thispagestyle{empty}
 
+% Страница с авторски права.
+\include{chapters/copyrights}
+
+% Таблица на съдържанието.
+\thispagestyle{empty}
+\pagestyle{empty}
+\tableofcontents
+\thispagestyle{empty}
+\pagestyle{empty}
+
+% Отделните глави са в отделни файлове.
+\newpage
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\include{chapters/introduction}
+\newpage
+\include{chapters/conclusion}
+
+% Списък с използвана литература и източници на информация.
+\newpage
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Библиография}
+\end{thebibliography}
+
+% Азбучен указател на използваните термини.
+\newpage
+\printindex
+
 % Задна корица.
-\includepdf[pages=-]{cover/back}
+\includepdf[pages=-]{covers/back}
 
 \end{document}
