@@ -1,11 +1,18 @@
-\documentclass[14pt,a4paper]{book}
+\documentclass[14pt,a4paper,openany]{book}
 
 % Използване на български език.
-\usepackage[english,bulgarian]{babel}
+\usepackage[T2A,T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage[english,bulgarian]{babel}
+
+% Използва се за групиране на изображения.
+\usepackage{subcaption}
 
 % Използване на графика.
 \usepackage[pdftex]{graphicx}
+
+% Използване на по прецизни позиции за изображенията.
+\usepackage{float}
 
 % Използване на PDF-и за кориците.
 \usepackage{pdfpages}
@@ -19,11 +26,23 @@
 % Използва се за създаване на азбучен указател.
 \usepackage{imakeidx}
 
-% Използва се за сензитивни хипер-връзки в самия документ.
+% Добавя възможност за сензитивни хипер-връзки в самия документ.
 \usepackage[pdftex, bookmarks, linktocpage]{hyperref}
+
+% Команда с множество опции за настройка на поведението на пакета hyperref, с най-полезната опция - кирилизация на заглавията от Bookmarks в Acrobat.
+\hypersetup{unicode=true, colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black}
 
 % Използва се за листинги с програмен код.
 \usepackage{listings}
+
+% Използва се за многоредови коментари.
+\usepackage{verbatim}
+
+% Използвасе за междуредово разстояние.
+\usepackage{lipsum}
+
+% Използва се за таблици, които да са на повече от една страница.
+\usepackage{longtable}
 
 % Заглавие.
 \title{Блоково програмиране със Scratch и App Inventor}
@@ -43,7 +62,7 @@
 \fancyhead[LE,RO]{\thepage}
 \fancyhead[RE]{Блоково програмиране със Scratch и App Inventor}
 \fancyhead[LO]{Тодор Балабанов, Галя Петрова}
-\fancyfoot[LE,RO]{Издателство \say{Образование и Познание}, 2020}
+\fancyfoot[LE,RO]{Издателство \say{Образование и Познание}, 2022}
 
 % Дебелина на разделителните линии.
 \renewcommand{\headrulewidth}{2pt}
@@ -61,6 +80,9 @@
 
 % Определя характеристиките на листигните за програмния код.
 \lstset{backgroundcolor=\color{gray!30}, breaklines=true, language=r, frame=single}
+
+% Разстояние от ред и половина.
+\linespread{1.5}
 
 % Начало на документа.
 \begin{document}
@@ -98,7 +120,7 @@
 
 % Отделните глави са в отделни файлове.
 \include{chapters/introduction}\newpage
-%\include{chapters/chapter01}\newpage
+\include{chapters/chapter01}\newpage
 \include{chapters/conclusion}\newpage
 
 % Списък с използвана литература и източници на информация.
