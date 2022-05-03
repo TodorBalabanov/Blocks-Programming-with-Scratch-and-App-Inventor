@@ -1,1 +1,212 @@
-\chapter{}
+\chapter{Игра кликни и победи}
+
+В този проект двата героя се придвижват напред, когато играчът клика върху синия или червения бутон. Колкото по- бързо играчът клика върху бутона, толкова по- бързо неговият герой се придвижва напред. Печели този играч, който първи достигне до зелената финална линия.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0200.png}
+  \caption{Кликни и победи}
+\label{fig0200}
+\end{figure}
+
+\section{Добавяне на фон и герои}
+Конструирането на играта започва с избора на фон. От секция Backdrops->Choose a Backdrop може да се избере подходящ от наличните, които Scratch предоставя.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0201.png}
+  \caption{Избор на подходящ фон за играта}
+\label{fig0201}
+\end{figure}
+
+В тази гира, за да се направи състезателното трасе заедно със зелената финална линия, трябва фонът да бъде подобрен. За тази цел първо се избира опция Bacdrops.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0202.png}
+  \caption{Рисуване на допълнителни елементи върху фона}
+\label{fig0202}
+\end{figure}
+
+С помощта на инструмента линия се добавя състезателното трасе. Ако се смени дебелината и цвета на линията може да бъде добавена и финалната линия.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0203.png}
+  \caption{Финален фон на играта}
+\label{fig0203}
+\end{figure}
+
+Ако играта няма нужда от основния герой в Scratch котката, той може да бъде изтрит.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0204.png}
+  \caption{Изтриване на основния герой}
+\label{fig0204}
+\end{figure}
+
+Следва да бъдат добавени и героите към играта. В Scratch има налични много спрайтове. За целите на тази игра са необходими два - един, който е позициониран в ляво и друг - в дясно (Фиг. \ref{fig0205}). Чрез свойствата Size и Direction се променя размерът и посоката на героя.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0205.png}
+  \caption{Герои в играта}
+\label{fig0205}
+\end{figure}
+
+Освен тези два спрайта са необходими и още два, които са бутоните, върху които играчите трябва да кликат. Те се намират отново в секция Sprite. В тази игра бутоните трябва да бъдат различен цвят, за да се различават. За да се промени цвета на бутон, то трябва да се промени неговия костюм .
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0206.png}
+  \caption{Син бутон}
+\label{fig0206}
+\end{figure}
+
+С помощта на инструмента Fill се сменя цвета на бутона (Фиг. \ref{fig0207}). Същото може да се направи и за червения бутон. Отново чрез свойството Size може да промени размерът на този спрайт.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0207.png}
+  \caption{Червен бутон}
+\label{fig0207}
+\end{figure}
+
+\section{Програмиране на синия бутон}
+Когато играчът кликне върху синия бутон, той трябва да изпрати съобщение "blue". Първото начално блокче, което трябва да се постави е когато този спрайт бъде кликнат.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0208.png}
+  \caption{Когато героят е кликнат}
+\label{fig0208}
+\end{figure}
+
+Следва героят да изпрати съобщение "blue". От тъмно оранжевата група инструкцията за разпространение на съобщение. Съобщението, което трябва да разпространи е "blue".
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0209.png}
+  \caption{Изпращане на съобщение}
+\label{fig0209}
+\end{figure}
+
+Кодът на този герой изглежда по следния начин:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0210.png}
+  \caption{Целият код на синия бутон}
+\label{fig0210}
+\end{figure}
+
+\section{Програмиране на червения бутон}
+Когато играчът кликне върху червения бутон, аналогично на синия, той трябва да изпрати съобщение "red". Кодът на червения бутон е следния:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0211.png}
+  \caption{Целият код на червения бутон}
+\label{fig0211}
+\end{figure}
+
+До този момент програмата се състои в това, когато играчът натисне синия или червения бутон, те да изпращат съответните съобщения.
+
+\section{Програмиране героите да се движат}
+Инструкциите на синия бутон са, че той изпраща съобщение. Левият герой трябва да се абонира да получи съобщението.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0212.png}
+  \caption{Абониране за съобщението от синия бутон}
+\label{fig0212}
+\end{figure}
+
+Героят трябва да се премести надясно към зелената финална линия, което означава, че трябва да се промени x координатата, като се увеличи с 3 стъпки.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0213.png}
+  \caption{Движение на героя надясно}
+\label{fig0213}
+\end{figure}
+
+Инструкциите за другият герой е аналогичен. Основните разлики са две:
+- съобщението, за което този герой се абонира е изпратено от червения бутон
+- героят трябва да се движи наляво към зелената финална линия, което означава, че трябва да се промени x координатата, като се намали с 3 стъпки
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0214.png}
+  \caption{Движение на героя наляво}
+\label{fig0214}
+\end{figure}
+
+\section{Програмиране победителя}
+За да се завърши играта остава да се направи проверка кой от героите е достигнал зелената финална линия.
+
+В десния герой първата инструкция, която трябва да се добави е началната за начало на играта. Във всеки един момент на играта трябва да се проверява дали героят е достигнал до финалната линия. Поради тази причина трябва да се добави инструкция за цикъл завинаги.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0215.png}
+  \caption{Цикъл завинаги}
+\label{fig0215}
+\end{figure}
+
+Вътре в тялото на цикъла следва да се направи проверката, за това дали героят е докоснал финалната линия.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0216.png}
+  \caption{Проверка дали героят е достигнал финал}
+\label{fig0216}
+\end{figure}
+
+За да се избере същия зелен цвят, какъвто е на финалната линия, трябва да се използва инструментът пипетка.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0217.png}
+  \caption{Избор на цвят}
+\label{fig0217}
+\end{figure}
+
+Инструкциите, които се намират вътре в условието ще се изпълнят, когато героят победи. Тогава той трябва да уголеми размера си и да изпише съобщение "Победих!".
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0218.png}
+  \caption{Инструкциите за победа}
+\label{fig0218}
+\end{figure}
+
+Последното подобрение, което трябва да се направи, за да се завърши този герой е да бъде поставен в начална позиция всеки път, когато играта започне. В синята секция се намира инструкцията, която казва къде да бъде позициониран героят.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0219.png}
+  \caption{Инструкцията за позициониране на героя}
+\label{fig0219}
+\end{figure}
+
+Финалния код на този герой е:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0220.png}
+  \caption{Финален код на левия герой}
+\label{fig0220}
+\end{figure}
+
+След като този герой е готов, остава да се добавят и инструкциите за победа и на другия герой. Кодът е аналогичен. Единствената разлика е в началните координати.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig0221.png}
+  \caption{Финален код на десния герой}
+\label{fig0221}
+\end{figure}
+
+Време е за забавление заедно с приятели и съпоставяне на силите, за това кой герой по- бързо ще достигне до финала.
