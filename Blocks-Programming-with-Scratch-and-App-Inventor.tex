@@ -63,7 +63,7 @@
 \fancyhead[LE,RO]{\thepage}
 \fancyhead[RE]{Блоково програмиране със Scratch и App Inventor}
 \fancyhead[LO]{Тодор Балабанов, Галя Петрова, Антония Гузгунова}
-\fancyfoot[LE,RO]{Издателство ''Образование и познание'', 2023}
+%\fancyfoot[LE,RO]{Издателство ''Образование и познание'', 2023}
 
 % Дебелина на разделителните линии.
 \renewcommand{\headrulewidth}{2pt}
@@ -73,11 +73,11 @@
 \onecolumn
 \makeindex[columns=2, title=Азбучен указател, intoc]
 
-% Подменя думата използван а за ноемрация на фрагментите програмен код.
+% Подменя думата използван а за номерация на фрагментите програмен код.
 \renewcommand{\lstlistingname}{Листинг}
 
 % Смяна на названието за списъка от листингите.
-\renewcommand{\lstlistlistingname}{Списък на листингите}
+%\renewcommand{\lstlistlistingname}{Списък на листингите}
 
 % Определя характеристиките на листигните за програмния код.
 \lstset{backgroundcolor=\color{gray!30}, breaklines=true, language=r, frame=single}
@@ -89,7 +89,7 @@
 \begin{document}
 
 % Предна корица.
-\includepdf[pages={1}]{covers/front}
+%\includepdf[pages={1}]{covers/front}
 \thispagestyle{empty}
 
 % Страница с авторски права.
@@ -108,12 +108,12 @@
 \listoffigures\newpage
 
 % Списък с таблиците.
-\addcontentsline{toc}{chapter}{Списък на таблиците}
-\listoftables\newpage
+%\addcontentsline{toc}{chapter}{Списък на таблиците}
+%\listoftables\newpage
 
 % Списък с листингите.
-\addcontentsline{toc}{chapter}{Списък на листингите}
-\lstlistoflistings\newpage
+%\addcontentsline{toc}{chapter}{Списък на листингите}
+%\lstlistoflistings\newpage
 
 % Номериране на страниците с основното изложение.
 \pagenumbering{arabic}
@@ -136,17 +136,16 @@
 \include{chapters/chapter13}\newpage
 \include{chapters/chapter14}\newpage
 \include{chapters/chapter15}\newpage
-\include{chapters/chapter16}\newpage
 \include{chapters/conclusion}\newpage
 
 % Списък с използвана литература и източници на информация.
-\addcontentsline{toc}{chapter}{Библиография}
-\input{chapters/references}\newpage
+%\addcontentsline{toc}{chapter}{Библиография}
+%\input{chapters/references}\newpage
 
 % Азбучен указател на използваните термини.
 \printindex
 
 % Задна корица.
-\includepdf[pages=-]{covers/back}
+%\includepdf[pages=-]{covers/back}
 
 \end{document}
