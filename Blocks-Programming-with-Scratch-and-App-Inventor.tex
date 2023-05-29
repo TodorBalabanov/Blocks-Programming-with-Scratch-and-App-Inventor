@@ -60,10 +60,10 @@
 % Текстове за декорация на страницата в горната и долната част.
 \pagestyle{fancy}
 \fancyhf{}
-%\fancyhead[LE,RO]{\thepage}
+\fancyhead[LE,RO]{\thepage}
 \fancyhead[RE]{Блоково програмиране със Scratch и App Inventor}
 \fancyhead[LO]{Тодор Балабанов, Галя Петрова, Антония Гузгунова}
-%\fancyfoot[LE,RO]{Издателство ''Образование и познание'', 2023}
+\fancyfoot[LE,RO]{Издателство ''Образование и познание'', 2023, София}
 
 % Дебелина на разделителните линии.
 \renewcommand{\headrulewidth}{2pt}
@@ -89,7 +89,7 @@
 \begin{document}
 
 % Предна корица.
-%\includepdf[pages={1}]{covers/front}
+\includepdf[pages={1}]{covers/front}
 \thispagestyle{empty}
 
 % Страница с авторски права.
@@ -146,6 +146,6 @@
 \printindex
 
 % Задна корица.
-%\includepdf[pages=-]{covers/back}
+\includepdf[pages=-]{covers/back}
 
 \end{document}
