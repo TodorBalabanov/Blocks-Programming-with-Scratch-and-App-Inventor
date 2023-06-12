@@ -1,0 +1,151 @@
+\documentclass[14pt, a4paper, openany]{book}
+
+% Използване на български език.
+\usepackage[T2A, T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+% Използва се за групиране на изображения.
+\usepackage{subcaption}
+
+% Използване на графика.
+\usepackage[pdftex]{graphicx}
+
+% Използване на по прецизни позиции за изображенията.
+\usepackage{float}
+
+% Използване на PDF-и за кориците.
+\usepackage{pdfpages}
+
+% Използване на хедър и футър.
+\usepackage{fancyhdr}
+
+% Използване на кавички при цитиране.
+%\usepackage{dirtytalk}
+\usepackage{csquotes}
+
+% Използва се за създаване на азбучен указател.
+\usepackage{imakeidx}
+
+% Добавя възможност за сензитивни хипер-връзки в самия документ.
+\usepackage[pdftex, bookmarks, linktocpage]{hyperref}
+
+% Команда с множество опции за настройка на поведението на пакета hyperref, с най-полезната опция - кирилизация на заглавията от Bookmarks в Acrobat.
+\hypersetup{unicode=true, colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black}
+
+% Използва се за листинги с програмен код.
+\usepackage{listings}
+
+% Използва се за многоредови коментари.
+\usepackage{verbatim}
+
+% Използвасе за междуредово разстояние.
+\usepackage{lipsum}
+
+% Използва се за таблици, които да са на повече от една страница.
+\usepackage{longtable}
+
+% Заглавие.
+\title{Block Programming with Scratch and App Inventor}
+
+% Автори.
+\author{Todor Balabanov, Galya Petrova, Antonia Guzgunova}
+
+% Директория с изображения.
+\graphicspath{{images/}}
+
+% Избор на активен език.
+\selectlanguage{english}
+
+% Текстове за декорация на страницата в горната и долната част.
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{Block Programming with Scratch and App Inventor}
+\fancyhead[LO]{Todor Balabanov, Galya Petrova, Antonia Guzgunova}
+\fancyfoot[LE,RO]{Publishing House ''Education and Knowledge'', 2023, Sofia}
+
+% Дебелина на разделителните линии.
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+% Генериране на азбучен указател.
+\onecolumn
+\makeindex[columns=2, title=Index, intoc]
+
+% Подменя думата използван а за номерация на фрагментите програмен код.
+\renewcommand{\lstlistingname}{Listing}
+
+% Смяна на названието за списъка от листингите.
+%\renewcommand{\lstlistlistingname}{Списък на листингите}
+
+% Определя характеристиките на листигните за програмния код.
+\lstset{backgroundcolor=\color{gray!30}, breaklines=true, language=r, frame=single}
+
+% Разстояние от ред и половина.
+\linespread{1.5}
+
+% Начало на документа.
+\begin{document}
+
+% Предна корица.
+\includepdf[pages={1}]{covers-en/front}
+\thispagestyle{empty}
+
+% Страница с авторски права.
+\include{chapters-en/copyrights}
+
+% Номериране на страниците със служебна информация.
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+% Таблица на съдържанието.
+\addcontentsline{toc}{chapter}{Table of Contents}
+\tableofcontents\newpage
+
+% Списък с фигурите.
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures\newpage
+
+% Списък с таблиците.
+%\addcontentsline{toc}{chapter}{List of Tables}
+%\listoftables\newpage
+
+% Списък с листингите.
+%\addcontentsline{toc}{chapter}{List of Source Codes}
+%\lstlistoflistings\newpage
+
+% Номериране на страниците с основното изложение.
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% Отделните глави са в отделни файлове.
+%\include{chapters-en/introduction}\newpage
+%\include{chapters-en/chapter01}\newpage
+%\include{chapters-en/chapter02}\newpage
+%\include{chapters-en/chapter03}\newpage
+%\include{chapters-en/chapter04}\newpage
+%\include{chapters-en/chapter05}\newpage
+%\include{chapters-en/chapter06}\newpage
+%\include{chapters-en/chapter07}\newpage
+%\include{chapters-en/chapter08}\newpage
+%\include{chapters-en/chapter09}\newpage
+%\include{chapters-en/chapter10}\newpage
+%\include{chapters-en/chapter11}\newpage
+%\include{chapters-en/chapter12}\newpage
+%\include{chapters-en/chapter13}\newpage
+%\include{chapters-en/chapter14}\newpage
+%\include{chapters-en/chapter15}\newpage
+%\include{chapters-en/conclusion}\newpage
+
+% Списък с използвана литература и източници на информация.
+%\addcontentsline{toc}{chapter}{References}
+%\input{chapters/references}\newpage
+
+% Азбучен указател на използваните термини.
+\printindex
+
+% Задна корица.
+\includepdf[pages=-]{covers-en/back}
+
+\end{document}

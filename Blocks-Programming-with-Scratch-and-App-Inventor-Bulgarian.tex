@@ -89,11 +89,11 @@
 \begin{document}
 
 % Предна корица.
-\includepdf[pages={1}]{covers/front}
+\includepdf[pages={1}]{covers-bg/front}
 \thispagestyle{empty}
 
 % Страница с авторски права.
-\include{chapters/copyrights}
+\include{chapters-bg/copyrights}
 
 % Номериране на страниците със служебна информация.
 \pagenumbering{roman}
@@ -120,23 +120,23 @@
 \setcounter{page}{1}
 
 % Отделните глави са в отделни файлове.
-\include{chapters/introduction}\newpage
-\include{chapters/chapter01}\newpage
-\include{chapters/chapter02}\newpage
-\include{chapters/chapter03}\newpage
-\include{chapters/chapter04}\newpage
-\include{chapters/chapter05}\newpage
-\include{chapters/chapter06}\newpage
-\include{chapters/chapter07}\newpage
-\include{chapters/chapter08}\newpage
-\include{chapters/chapter09}\newpage
-\include{chapters/chapter10}\newpage
-\include{chapters/chapter11}\newpage
-\include{chapters/chapter12}\newpage
-\include{chapters/chapter13}\newpage
-\include{chapters/chapter14}\newpage
-\include{chapters/chapter15}\newpage
-\include{chapters/conclusion}\newpage
+\include{chapters-bg/introduction}\newpage
+\include{chapters-bg/chapter01}\newpage
+\include{chapters-bg/chapter02}\newpage
+\include{chapters-bg/chapter03}\newpage
+\include{chapters-bg/chapter04}\newpage
+\include{chapters-bg/chapter05}\newpage
+\include{chapters-bg/chapter06}\newpage
+\include{chapters-bg/chapter07}\newpage
+\include{chapters-bg/chapter08}\newpage
+\include{chapters-bg/chapter09}\newpage
+\include{chapters-bg/chapter10}\newpage
+\include{chapters-bg/chapter11}\newpage
+\include{chapters-bg/chapter12}\newpage
+\include{chapters-bg/chapter13}\newpage
+\include{chapters-bg/chapter14}\newpage
+\include{chapters-bg/chapter15}\newpage
+\include{chapters-bg/conclusion}\newpage
 
 % Списък с използвана литература и източници на информация.
 %\addcontentsline{toc}{chapter}{Библиография}
@@ -146,6 +146,6 @@
 \printindex
 
 % Задна корица.
-\includepdf[pages=-]{covers/back}
+\includepdf[pages=-]{covers-bg/back}
 
 \end{document}
