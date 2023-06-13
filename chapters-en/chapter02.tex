@@ -1,1383 +1,1382 @@
-\chapter{Програмни конструкции}
+\chapter{Program Constructs}
 
-Компютърните програми са съставени от стриктна последователност инструкции. Такива последователности се наричат алгоритъм. Ние хората всеки ден изпълняваме различни алгоритми, като част от нашето ежедневие. Да се приготвим и да отидем на училище е един алгоритъм. Събуждаме се, ставаме, обличаме се, правим си сутрешния тоалет, закусваме, излизаме от вкъщи, придвижваме се до училище. Много ярък пример за алгоритъм са рецептите за готвене. В една рецепта има начални продукти, след това точни инструкции как продуктите са се обработят и смесят, като има ясна представа какъв трябва да бъде крайният резултат. При компютърните програми има основен набор от инструкции, които съставляват изразните средства на съответния програмен език. Чарът на блоковите езици е, че този основен набор от инструкции е представен визуално, под формата на цветни блокчета. Подредбата на цветните блокчета в строго определена последователност води до създаването на малки компютърни програми. 
+Computer programs are made up of a strict sequence of instructions. Such sequences are called an algorithm. We humans run various algorithms every day as part of our daily lives. Getting ready and going to school is an algorithm. We wake up, get up, get dressed, do our morning outfit, have breakfast, leave the house, move to school. A very vivid example of an algorithm is cooking recipes. In a recipe, there are starting products, then precise instructions on how to process and mix the products, with a clear idea of what the end result should be. In computer programs, there is a basic set of instructions that make up the means of expression of the corresponding programming language. The charm of block languages is that this basic set of instructions is represented visually, in the form of colored blocks. The arrangement of the colored blocks in a strictly defined sequence leads to the creation of small computer programs.
 
-В случая на Scratch, програмата има ясно определена стартова точка и ясно определена финална точка. При App Inventor подходът е малко по-различен. Там последователността от инструкции, съставляващи писаната програма, се въвежда в малки фрагменти, наречени събития. Събитията възникват при различни действия от страна на потребителя или операционната система. При Scratch говорим за последователно програмиране, а при App Inventor говорим за събитийно програмиране. Основните програмни конструкции в двете програмни среди до голяма степен са идентични, но има и някои съществени разлики. За да можем да пишем ефективни и надеждни програми е важно добре да познаваме изразните средства на програмните среди с които работим. 
+In the case of Scratch, the program has a well-defined start point and a well-defined end point. With App Inventor, the approach is slightly different. There, the sequence of instructions that make up the written program is entered in small fragments called events. Events are triggered by various user or operating system actions. In Scratch we talk about sequential programming and in App Inventor we talk about event programming. The basic programming constructs in the two programming environments are largely identical, but there are also some significant differences. In order to be able to write efficient and reliable programs, it is important to know well the means of expression of the programming environments we work with.
 
-\section{Изразни средства в Scratch}
+\section{Expressive Means in Scratch}
 
-Базовите градивни блокчета в Scratch са организирани в цветни групи (Фиг. \ref{fig020001}). Тази организация помага за по-бързо ориентиране и по-ефективна употреба на различните блокчета. 
+The basic building blocks in Scratch are organized into colored groups (Fig. \ref{fig020001}). This organization helps to navigate faster and use the different blocks more efficiently.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020001.png}
-  \caption{Групиране на инструкциите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020001.png}
+   \caption{Grouping instructions}
 \label{fig020001}
 \end{figure}
 
-Най-важното блокче в програмата е блокчето, което дава старт за изпълнение на инструкциите, които са подредени под него. Това блокче има зелен флаг (Фиг. \ref{fig020002}) и определя какво ще последва след стартирането на програмата.
+The most important block in the program is the block that initiates the execution of the instructions that are arranged below it. This block has a green flag (Fig. \ref{fig020002}) and defines what will happen after the program is started.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020002.png}
-  \caption{Начална точка на програмата}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020002.png}
+   \caption{Starting point of the program}
 \label{fig020002}
 \end{figure}
 
-Блокчето за старт на програмата се намира в светло оранжевата група, която е предназначена да реагира на събития от страна на потребителя. Точният момент в който потребителят иска програмата да започне своето изпълнение е неопределен във времето и поради тази причина Scratch трябва да улови събитие, предизвикано от самия потребител. 
+The program launch block is located in the light orange group, which is designed to react to user events. The exact moment at which the user wants the program to start its execution is undefined in time, and for this reason Scratch must catch an event triggered by the user himself.
 
-Второто по важност блокче служи за край на програмата (Фиг. \ref{fig020003}). То се намира в тъмно оранжевата група и има за задача да спре всички процеси, извършващи се по време на изпълнението на самата програма.
+The second most important block serves to end the program (Fig. \ref{fig020003}). It is located in the dark orange group and has the task of stopping all processes taking place during the execution of the program itself.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020003.png}
-  \caption{Крайна точка на програмата}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020003.png}
+   \caption{Program endpoint}
 \label{fig020003}
 \end{figure}
 
-Тъмно оранжевата група съдържа блокчета за контрол на изпълнението. Тези блокчета позволяват програмата да поема по различни пътища, както и група от действия да се повтарят многократно. 
+The dark orange group contains performance control blocks. These blocks allow the program to take different paths, as well as a group of actions to be repeated many times.
 
-В Scratch блокчетата инструкции основно контролират картинки, наречени спрайтове (sprites). За разлика от обикновеното компютърно изображение, спрайтът е графичен обект, който съдържа множество кадри, показващи изображението на героя в различни конфигурации. Всяка нова програма в Scratch започва с един спрайт, на оранжевата котка, разположена на координати (x=0,y=0). Работното пространство е двуизмерна координатна система с център (0,0). 
+In Scratch, instruction blocks basically control pictures called sprites. Unlike an ordinary computer image, a sprite is a graphic object that contains multiple frames showing the image of the character in different configurations. Every new Scratch program starts with a single sprite, of the orange cat, located at coordinates (x=0,y=0). The workspace is a two-dimensional coordinate system centered at (0,0).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020004.png}
-  \caption{Завършване веднага след започване}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020004.png}
+   \caption{Finish immediately after starting}
 \label{fig020004}
 \end{figure}
 
-Ако бъдат съединени, блокчетата за начало и за край (Фиг. \ref{fig020004}), то програмата не изпълнява нищо. Практически, тази програма приключва веднага след като е започнала. Програма, която не прави нищо е напълно безсмислена. За да започне нещо да се случва се използват блокчетата в синята група. Първото блокче инструктира котето да се премести 10 стъпки, като броя стъпки може да бъде променени, чрез изписване на друго число във вътрешността на блокчето (Фиг. \ref{fig020005}).
+If the start and end blocks are joined (Fig. \ref{fig020004}), the program does nothing. Practically, this program ends as soon as it starts. A program that does nothing is completely pointless. To start something happening, use the blocks in the blue group. The first block instructs the kitten to move 10 steps, and the number of steps can be changed by writing another number inside the block (Fig. \ref{fig020005}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020005.png}
-  \caption{Преместване на героя}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020005.png}
+   \caption{Moving Character}
 \label{fig020005}
 \end{figure}
 
-Следващият блок в групата инструктира героя да се завърти на определено число градуси, по часовниковата стрелка, спрямо собствения си център (Фиг. \ref{fig020006}).
+The next block in the group instructs the character to rotate a specified number of degrees, clockwise, relative to its own center (Fig. \ref{fig020006}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020006.png}
-  \caption{Завъртане по часовниковата стрелка}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020006.png}
+   \caption{Clockwise Rotation}
 \label{fig020006}
 \end{figure}
 
-Аналогично, със следващото блокче в групата, завъртането може да се изпълни и в посока обратна на часовниковата стрелка (Фиг. \ref{fig020007}).
+Similarly, with the next block in the group, the rotation can also be performed in a counterclockwise direction (Fig. \ref{fig020007}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020007.png}
-  \caption{Завъртане обратно на часовниковата стрелка}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020007.png}
+   \caption{Counterclockwise rotation}
 \label{fig020007}
 \end{figure}
 
-Следващия блок в групата дава възможност героят да се премести на случайни координати или на координати посочени с мишката (Фиг. \ref{fig020008}).
+The next block in the group allows the character to move to random coordinates or to coordinates specified with the mouse (Fig. \ref{fig020008}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020008.png}
-  \caption{Преместване на случайна позиция}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020008.png}
+   \caption{Move to random position}
 \label{fig020008}
 \end{figure}
 
-Движението на героя може да бъде зададено и чрез абсолютни координати с блокче, позволяващо да се впишат числа за абцисната и ординатната ос (Фиг. \ref{fig020009}).
+The movement of the character can also be set by absolute coordinates with a block allowing entering numbers for the abscissa and ordinate axis (Fig. \ref{fig020009}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020009.png}
-  \caption{Преместване по абсолютни координати}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020009.png}
+   \caption{Move by absolute coordinates}
 \label{fig020009}
 \end{figure}
 
-Плавно придвижване, по предварително зададен интервал от време, е възможно на случайни координати или координати посочени с мишката, благодарение на следващото блокче в групата (Фиг. \ref{fig020010}).
+Smooth movement, at a predetermined time interval, is possible at random coordinates or coordinates specified with the mouse, thanks to the next block in the group (Fig. \ref{fig020010}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020010.png}
-  \caption{Плъзгане до случайна позиция}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020010.png}
+   \caption{Slide to random position}
 \label{fig020010}
 \end{figure}
 
-Плавното плъзгане до предварително зададени координати, за предварително определен интервал от време, е възможно с блокчето предназначено за тази цел (Фиг. \ref{fig020011}).
+Smooth sliding to predetermined coordinates, for a predetermined time interval, is possible with the block designed for this purpose (Fig. \ref{fig020011}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020011.png}
-  \caption{Плъзгане до зададени координати}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020011.png}
+   \caption{Slide to set coordinates}
 \label{fig020011}
 \end{figure}
 
-Анимираният герой има характеристика за ориентация, под формата на ъгъл. При 90 градуса, оранжевата котка гледа на дясно. За да се промени ориентацията на героя се използва блокче с възможност за въвеждане на конкретен ъгъл (Фиг. \ref{fig020012}).
+The animated character has an orientation property, in the form of an angle. At 90 degrees, the orange cat is looking to the right. To change the character's orientation, a block with the possibility of entering a specific angle is used (Fig. \ref{fig020012}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020012.png}
-  \caption{Ъглова ориентация}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020012.png}
+   \caption{Corner Orientation}
 \label{fig020012}
 \end{figure}
 
-При по-сложни сценарии за управление на героя, понякога е нужно героят да следи показалеца на мишката. За тази цел има определено блокче, което изпълнява тази инструкция (Фиг. \ref{fig020013}).
+In more complex character control scenarios, sometimes the character needs to follow the mouse pointer. For this purpose, there is a specific block that executes this instruction (Fig. \ref{fig020013}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020013.png}
-  \caption{Ориентация по показалеца на мишката}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020013.png}
+   \caption{Mouse Pointer Orientation}
 \label{fig020013}
 \end{figure}
 
-Блокчетата могат да се поставят едно след друго, като за последователна промяна на относителните x и y координатите (относителни, спрямо текущата позиция) на героя има специално определени блокчета (Фиг. \ref{fig020014}).
+Blocks can be placed one after the other, and for sequential change of the relative x and y coordinates (relative to the current position) of the character there are specially defined blocks (Fig. \ref{fig020014}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020014.png}
-  \caption{Последователна промяна на относителни координати}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020014.png}
+   \caption{Sequential change of relative coordinates}
 \label{fig020014}
 \end{figure}
 
-Освен относителна промяна на координатите е възможна и абсолютна промяна на координатите, като абсолютната промяна е спрямо центъра на координатната система (Фиг. \ref{fig020015}).
+In addition to a relative change of the coordinates, an absolute change of the coordinates is also possible, with the absolute change relative to the center of the coordinate system (Fig. \ref{fig020015}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020015.png}
-  \caption{Последователна промяна на абсолютни координати}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020015.png}
+   \caption{Sequential change of absolute coordinates}
 \label{fig020015}
 \end{figure}
 
-При своето движение, когато анимираният герой достигне границите на работното пространство, единият вариант е движението да продължи извън видимата зона. Другият вариант е да се вземат мерки и героят да отскача от ръбовете на работното пространство. За това отскачане има конкретно блокче (Фиг. \ref{fig020016}). За да се илюстрира работата му е нужна малко по-сложна последователност от инструкции. При всяко стартиране на програмата, първо се променят относителните координати, а след това се извършва отскачане от ръба, ако е необходимо. За да бъде малко по-интересен сценарият за проверка, вместо фиксирани стойности за относително отместване се използва вграждане на едно от зелените блокчета, което позволява генериране на случайно число в предварително определен диапазон. Съществено е да се забележи, че зеленото блокче има овална форма, което подсказва, че то е предназначено за вграждане в някой от другите блокове, които имат овален слот. 
+In its movement, when the animated character reaches the boundaries of the workspace, one option is to continue the movement outside the visible area. The other option is to take action and have the character bounce off the edges of the workspace. There is a specific block for this bounce (Fig. \ref{fig020016}). A slightly more complex sequence of instructions is needed to illustrate its operation. Each time the program is run, first the relative coordinates are changed, and then an edge bounce is performed if necessary. To make the verification scenario a bit more interesting, instead of fixed relative offset values, an embedding of one of the green blocks is used, allowing for the generation of a random number within a predetermined range. It is important to note that the green block has an oval shape, which suggests that it is intended to fit into one of the other blocks that have an oval slot.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020016.png}
-  \caption{Отскачане от ръбовете}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020016.png}
+   \caption{Bouncing off the edges}
 \label{fig020016}
 \end{figure}
 
-Следващо, много полезно блокче, от групата на тъмно оранжевите е блокчето за изчакване на период от време (Фиг. \ref{fig020017}). Когато това блокче бъде поставено между блокчетата за начало и край, програмата изчаква зададения брой секунди, преди да преустанови изпълнението си. По време на изпълнение, ясно може да се забележи, че около последователността от инструкции се появява жълта рамка, която символизира режима на изпълняващи се инструкции. 
+Next, very useful block, from the group of dark orange is the block for waiting a period of time (Fig. \ref{fig020017}). When this block is placed between the start and end blocks, the program waits the specified number of seconds before stopping execution. During execution, it can clearly be seen that a yellow frame appears around the sequence of instructions, coflock symbolizes the mode of executing instructions.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020017.png}
-  \caption{Инструкция за изчакване}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020017.png}
+   \caption{Wait instruction}
 \label{fig020017}
 \end{figure}
 
-Групата на лилавите блокчета съдържат инструкции за външното оформление на анимирания герой. Първите две блокчета са предназначени за реплики (Фиг. \ref{fig020018}), които героят казва (изписват се както в комикс). Първото блокче задава текст, който стои на екрана до следващата инструкция. Точно за това е нужно да има няколко секунди изчакване, така че текстът да остане видим за потребителя. Второто блокче има и параметър с който да се определи колко секунди текстът да бъде видим за потребителя. 
+The group of purple blocks contain instructions for the outer layout of the animated character. The first two blocks are intended for lines (Fig. \ref{fig020018}) that the character says (spelled as in a comic book). The first block sets text that stays on the screen until the next instruction. This is exactly why there needs to be a few seconds of waiting so that the text remains visible to the user. The second block also has a parameter to determine how many seconds the text should be visible to the user.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020018.png}
-  \caption{Изписване на реплики за изговаряне}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020018.png}
+   \caption{Writing cues to speak}
 \label{fig020018}
 \end{figure}
 
-Вторите две блокчета са предвидени за реплики, които анимираният герой си мисли, но не изрича. Разликата се състои в начина по който се визуализира текстът (Фиг. \ref{fig020019}).
+The second two blocks are intended for lines that the animated character thinks but does not say. The difference is in the way the text is visualized (Fig. \ref{fig020019}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020019.png}
-  \caption{Изписване на реплики, като мисъл}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020019.png}
+   \caption{Writing lines, as a thought}
 \label{fig020019}
 \end{figure}
 
-Анимираните герои в Scratch са под формата на спрайтове. Спрайтът е набор от различни изображения за героя в различни пози. За смяната на тези различни пози се използват две блокчета (Фиг. \ref{fig020020}), като първото задава конкретен кадър в спрайта, а второто задава следващия кадър в последователността.
+Animated characters in Scratch are in the form of sprites. A sprite is a set of different images for the character in different poses. To change these different poses two blocks are used (Fig. \ref{fig020020}), the first setting a specific frame in the sprite and the second setting the next frame in the sequence.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020020.png}
-  \caption{Смяна на пози}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020020.png}
+   \caption{Changing Poses}
 \label{fig020020}
 \end{figure}
 
-На работната сцена освен анимираните герои (под формата на спрайтове) има и фоново изображение. Това фоново изображение също подлежи на промяна, за което са предвидени две отделни блочета (Фиг. \ref{fig020021}). С първото може да се избират фонови изображения напред, назад, по случаен принцип или с конкретно название, а с второто блокче следващото изображение в последователността. 
+In addition to the animated characters (in the form of sprites), there is also a background image on the work scene. This background image is also subject to change, for which two separate blocks are provided (Fig. \ref{fig020021}). With the first one, background images can be selected forward, backward, randomly or with a specific name, and with the second block the next image in the sequence.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020021.png}
-  \caption{Смяна на фона}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020021.png}
+   \caption{Change background}
 \label{fig020021}
 \end{figure}
 
-За промяната на размера на анимирания герой има две конкретни блокчета, като първото променя размера в абсолютни стойности, а второто променя размера в проценти, спрямо оригиналния размер (Фиг. \ref{fig020022}).
+There are two specific blocks for resizing the animated character, the first resizing in absolute values, and the second resizing in percentages relative to the original size (Fig. \ref{fig020022}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020022.png}
-  \caption{Промяна на размерите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020022.png}
+   \caption{Resize}
 \label{fig020022}
 \end{figure}
 
-За промяна на визуалното оформление на анимирания герой са предвидени три блокчета (Фиг. \ref{fig020023}). Първите две задават промяна, като промяната може да бъде в цвета, различни изкривявания, пикселизация, мозайка, прозрачност или яркост, а третото блокче отменя всички направени декорации. Първото блокче предизвиква относителна промяна, спрямо текущото състояние на героя, а второто блокче задава абсолютна промяна. Отново е важно да се дадат няколко секунди, така че промените да бъдат ясно различими. 
+Three blocks are provided for changing the visual layout of the animated character (Fig. \ref{fig020023}). The first two set a change, and the change can be in color, various distortions, pixelation, mosaic, transparency or brightness, and the third block cancels any decorations made. The first block causes a relative change to the character's current state, and the second block sets an absolute change. Again, it is important to give a few seconds so that the changes are clearly discernible.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020023.png}
-  \caption{Промяна на външния вид}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020023.png}
+   \caption{Change appearance}
 \label{fig020023}
 \end{figure}
 
-Работата със спрайтове е предимно за постигане на анимирани ефекти. Различните анимирани герой в сцената имат определени взаимодействия по между си. Сценарият на изработвания проект определя в кой момент всеки от героите се появява на сцената и в кой момент изчезва. За да се осъществи появата и изчезването са предвидени две блокчета, извършващи тези действия (Фиг. \ref{fig020024}).
+Working with sprites is primarily for achieving animated effects. The different animated characters in the scene have certain interactions with each other. The script of the developed project determines at what moment each of the characters appears on the scene and at what moment they disappear. In order to carry out the appearance and disappearance, two blocks performing these actions are provided (Fig. \ref{fig020024}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020024.png}
-  \caption{Скриване и повява}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020024.png}
+   \caption{Hide and show}
 \label{fig020024}
 \end{figure}
 
-Множество програмни продукти, работещи с растерни графични изображения, организират различните изображения в слоеве. Пример за такива са Adobe Photoshop, GIMP, Microsoft Word, LibreOffice Draw и много други. Организацията в слоеве е логична, тъй като различните спрайтове в определени моменти от времето могат да се припокриват. В някои от софтуерните пакети за графична обработка, наличието на слоеве се възприема като Z буфер. В Scratch също е налична възможността за работа със слоеве, като две конкретни блокчета позволяват спрайтът да се придвижва напред и назад по слоевете (Фиг. \ref{fig020025}).
+Many bitmap software products organize different images into layers. Examples of such are Adobe Photoshop, GIMP, Microsoft Word, LibreOffice Draw and many others. The layered organization is logical, as different sprites can overlap at certain points in time. In some of the graphics software packages, the presence of layers is perceived as a Z buffer. In Scratch, the ability to work with layers is also available, with two specific blocks allowing the sprite to move forward and backward through the layers (Fig. \ref{fig020025}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020025.png}
-  \caption{Придвижване по слоевете}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020025.png}
+   \caption{Navigation through layers}
 \label{fig020025}
 \end{figure}
 
-Групата блокчета в пурпурен цвят са предназначени за звуково оформление. Изпълнението на звуци се постига с първите две блокчета в групата (Фиг. \ref{fig020026}). Първото блокче изпълнява звука докато той бъде приключен, а второто блокче го стартира и предава изпълнението към следващото блокче. С третото блокче всички изпълняващи се звуци биват спрени. Програмната среда позволява звуци да бъдат записани и от компютъра на потребителя. 
+The group of blocks in magenta are for sound layout. The performance of sounds is achieved with the first two blocks in the group (Fig. \ref{fig020026}). The first block plays the sound until it is finished, and the second block starts it and passes the execution to the next one that pad. With the third block, all playing sounds are stopped. The software environment allows sounds to be recorded from the user's computer as well.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020026.png}
-  \caption{Изпълнение на звуци}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020026.png}
+   \caption{Playing Sounds}
 \label{fig020026}
 \end{figure}
 
-Две от характеристиките на звуците могат да се променят с блокчетата за височина (честотна) и стерео озвучаване (ляво/дясно). И двете блокчета имат числени стойности за посочените характеристики (Фиг. \ref{fig020027}).
+Two of the sounds' characteristics can be changed with the pitch (frequency) and stereo (left/right) blocks. Both blocks have numerical values for the specified characteristics (Fig. \ref{fig020027}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020027.png}
-  \caption{Характеристики на звука}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020027.png}
+   \caption{Sound Characteristics}
 \label{fig020027}
 \end{figure}
 
-За постигането на една по-богата звукова картина, силата на различните звуци може да се управлява с две блокчета (Фиг. \ref{fig020028}). Първото контролира силата на звука по абсолютна стойност, а второто като проценти. 
+To achieve a richer sound picture, the strength of the different sounds can be controlled with two blocks (Fig. \ref{fig020028}). The former controls volume in absolute value, the latter as percentages.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020028.png}
-  \caption{Сила на звука}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020028.png}
+   \caption{Volume}
 \label{fig020028}
 \end{figure}
 
-Оранжевата група блокчета са предназначени за възникване на събития. Събитията са инструмент за изпълнение на инструкции, когато няма ясна престава за момента в който програмните инструкции трябва да се изпълнят. Такова събитие е натискане на бутон по клавиатурата от страна на потребителя (Фиг. \ref{fig020029}).
+The orange group of blocks are for events to occur. Events are a tool for executing instructions when there is no clear cutoff for when program instructions must be executed. Such an event is pressing a button on the keyboard by the user (Fig. \ref{fig020029}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020029.png}
-  \caption{Събитие за натискане на клавиш}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020029.png}
+   \caption{Key Press Event}
 \label{fig020029}
 \end{figure}
 
-Кликването с мишката върху определен спрайт също може да бъде обработено с помощта на подходящо блокче (Фиг. \ref{fig020030}).
+Mouse clicking on a specific sprite can also be handled using a suitable block (Fig. \ref{fig020030}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020030.png}
-  \caption{Събитие за кликане с мишката}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020030.png}
+   \caption{Mouse Click Event}
 \label{fig020030}
 \end{figure}
 
-Смяната на фона също може да предизвика обработване на събитие. За тази цел има предвидено блокче (Фиг. \ref{fig020031}).
+Changing the background can also trigger an event to be handled. A block is provided for this purpose (Fig. \ref{fig020031}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020031.png}
-  \caption{Събитие за смяна на фона}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020031.png}
+   \caption{BackgroundChange Event}
 \label{fig020031}
 \end{figure}
 
-Събитие може да бъде прихванато след изтичане на определено време към таймер или достигане на определено ниво на звук (Фиг. \ref{fig020032}).
+An event can be caught after a certain time has elapsed to a timer or a certain sound level has been reached (Fig. \ref{fig020032}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020032.png}
-  \caption{Събитие от таймер или звук}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020032.png}
+   \caption{Timer or sound event}
 \label{fig020032}
 \end{figure}
 
-Работата със събития е свързана и с механизъм за предаване/получаване на съобщения. Един блок инструкции може да разпространи предварително дефинирано съобщение, а друг блок инструкции може да се абонира за получаването на точно този вид съобщение (Фиг. \ref{fig020033}).
+Event handling is also associated with a mechanism for sending/receiving messages. One block of instructions can broadcast a predefined message, and another block of instructions can subscribe to receive exactly that kind of message (Fig. \ref{fig020033}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020033.png}
-  \caption{Разпространяване и получаване на съобщения}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020033.png}
+   \caption{Broadcasting and receiving messages}
 \label{fig020033}
 \end{figure}
 
-Тъй като работата с механизма за съобщения може да изисква синхронизация, то има отделно блокче, което разпространява съобщението и изчаква извършването на действията от прихващането му (Фиг. \ref{fig020034}). Програмистът може да създава различни съобщения, които да бъдат изпращани в различни ситуации. 
+Since working with the messaging engine may require synchronization, it has a separate block that propagates the message and waits for actions to be taken on its interception (Fig. \ref{fig020034}). The programmer can create different messages to be sent in different situations.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020034.png}
-  \caption{Разпространяване на съобщение с изчакване}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020034.png}
+   \caption{Propagating a pending message}
 \label{fig020034}
 \end{figure}
 
-Най-важните, а и най-полезните блокчета са организирани в групата на тъмно оранжевите. Това са блокчета, които определят по коя пътека на изпълнение ще се поеме, спрямо възможните избори за изпълнение на инструкции. Когато желанието е определено действие да се изпълни многократно, при зададен брой повторения, за тази цел има конкретно блокче (Фиг. \ref{fig020035}). В програмирането, многократните повторения се осъществяват с помощта на конструкции за цикъл, какъвто е случаят и с това блокче за повторения.
+The most important and also the most useful blocks are organized in the dark orange group. These are blocks that define which execution path to take, given the possible choices for executing instructions. When the desire is to perform a specific action repeatedly, with a set number of repetitions, there is a specific block for this purpose (Fig. \ref{fig020035}). In programming, multiple iterations are accomplished using loop constructs, as is the case with this iteration block.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020035.png}
-  \caption{Фиксиран брой повторения}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020035.png}
+   \caption{Fixed number of iterations}
 \label{fig020035}
 \end{figure}
 
-Думичката repeat от английски означава повтори. Числото в блокчето определя колко на брой повторения да бъдат изпълнени, а в слота на блочето се поставят инструкциите, които да бъдат повтаряни. В този пример, котето се премества на случайно избрани координати, след което следва изчакване от предварително определен брой секунди. В много редки ситуации има нужда от безкрайно повтарящ се цикъл, за което е предвидено отделно блокче (Фиг. \ref{fig020036}).
+The word repeat from English means repeat. The number in the pad determines how many repetitions to execute, and the slot in the pad is where the instructions to be repeated are placed. In this example, the kitten is moved to randomly selected coordinates, followed by a wait of a predetermined number of seconds. In very rare situations, there is a need for an infinitely repeating loop, for which a separate block is provided (Fig. \ref{fig020036}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020036.png}
-  \caption{Безкрайни повторения}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020036.png}
+   \caption{Infinite Replays}
 \label{fig020036}
 \end{figure}
 
-Следващото блокче е едно от най-важните блокчета в програмирането. То се нарича блокче за изпълнение при условие (Фиг. \ref{fig020037}) или условен преход. Съдържанието на блокчето се изпълнява само, ако условието в заглавната му част се изпълнява.
+The next block is one of the most important blocks in programming. It is called a conditional execution block (Fig. \ref{fig020037}) or a conditional transition. The contents of the block are executes only if the condition in its header is satisfied.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020037.png}
-  \caption{Изпълнение при условие}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020037.png}
+   \caption{Execution on condition}
 \label{fig020037}
 \end{figure}
 
-Това тъмно оранжево блокче не може да се използва само. То винаги е в съчетание с поне едно зелено блокче, а понякога и с две, както е в настоящия пример. Част от зелените блокчета са неправилни шестоъгълници и са направени така, че да пасват в заглавната част на някои от тъмно оранжевите блокчета. Самото шестоъгълно блокче има овален слот в който се поместват някои от зелените овални блокчета. В примера е избрано зелено блокче, което изисква равенство към конкретно число, а за овалното блокче се ползва генератор на случайни числа, според предварително зададен интервал. Ако условието в заглавната част на блокчето за условен преход не бъде изпълнено, то тялото се пропуска и се преминава към следващите инструкции, след блочкето. Блокчето за условен преход има и вариант в който се предвиждат слотове за изпълнение и на двете възможности – вярно условие или невярно условие (Фиг. \ref{fig020038}). Ако условието е изпълнено, се изпълнява първият блок с инструкции. Ако условието не е изпълнено, се изпълнява вторият блок с инструкции.
+This dark orange block cannot be used alone. It is always paired with at least one green block, and sometimes with two, as in the current example. Some of the green blocks are irregular hexagons and are made to fit into the header of some of the dark orange blocks. The hexagonal block itself has an oval slot into which some of the green oval blocks fit. In the example, a green block is selected, which requires equality to a specific number, and a random number generator is used for the oval block, according to a predetermined interval. If the condition in the header of the conditional transition block is not met, then the body is skipped and the next instructions after the block are passed. The block for conditional transition also has a variant in which slots are provided for the execution of both possibilities – a true condition or a false condition (Fig. \ref{fig020038}). If the condition is met, the first instruction block is executed. If the condition is not met, the second block of instructions is executed.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020038.png}
-  \caption{Изпълнение при условие с алтернатива}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020038.png}
+   \caption{Execution on condition with alternative}
 \label{fig020038}
 \end{figure}
 
-Следващото интересно блокче прави изчакване докато се случи определено събитие. В случая, събитието е спрайтът да бъде докоснат с мишката (Фиг. \ref{fig020039}). Случи ли се това докосване, изпълнението на програмата продължава към следващото блокче. Какво събитие се очаква е определено с допълнително блокче (светло синьо), което има формата на неправилен шестоъгълник.
+The next interesting block is waiting until a certain event happens. In this case, the event is the sprite being touched with the mouse (Fig. \ref{fig020039}). If this touch happens, the execution of the program continues to the next block. What event is expected is defined by an additional block (light blue) that has the shape of an irregular hexagon.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020039.png}
-  \caption{Изчакване на условие}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020039.png}
+   \caption{Waiting condition}
 \label{fig020039}
 \end{figure}
 
-Последните три блокчета в групата на тъмно оранжевите трябва да се демонстрират заедно (Фиг. \ref{fig020040}). Първото блокче задава нова верига от инструкции, когато определен спрай бъде клониран (копие на оригиналния спрайт). Второто блокче служи за клониране на текущия спрайт. А третото блокче служи за изтриване на текущия спрайт. 
+The last three blocks in the dark orange group must be demonstrated together (Fig. \ref{fig020040}). The first block sets a new chain of instructions when a particular sprite is cloned (a copy of the original sprite). The second block serves to clone the current sprite. And the third block serves to delete the current sprite.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020040.png}
-  \caption{Клониране на спрайтове}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020040.png}
+   \caption{Clone Sprites}
 \label{fig020040}
 \end{figure}
 
-Групата на светлосините блокчета е посветена на взаимодействия, отнасящите се до спрайта. Второто блокче в групата е предвидено за изпълняване на условие, когато спрайтът докосне конкретен цвят. Блокчето е с шестоъгълна форма, което подсказва, че е предназначено за вграждане. За да се демонстрира работата на това блокче, ще се завърти един цикъл, който ще премества котето на случайни координати и ще изчаква малък интервал от време, преди следващото преместване (Фиг. \ref{fig020041}). 
+The group of light blue blocks is dedicated to interactions related to the sprite. The second block in the group is intended to fulfill a condition when the sprite touches a particular color. The block has a hexagonal shape, which suggests that it is intended for embedding. To demonstrate the operation of this block, a loop will be run that will move the kitten to random coordinates and wait a small time interval before the next move (Fig. \ref{fig020041}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020041.png}
-  \caption{Циклично прескачане на случайни координати}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020041.png}
+   \caption{Cyclical jump of random coordinates}
 \label{fig020041}
 \end{figure}
 
-Така направен цикълът ще се върти безкрайно, тъй като не е зададено условие за край. Точно в условието за край мое да се помести блокчето, определящо докосването на цвят. Към сцената ще добавим нов спрайт (Фиг. \ref{fig020042}), на една червена ябълка (Фиг. \ref{fig020043}), която котето трябва да хване. Щом я хване, ще спре да подсказа и ще измяука (Фиг. \ref{fig020044}). 
+A loop made like this will loop endlessly since no end condition is set. It is in the end condition that I want to place the block defining the touch of color. We will add a new sprite to the scene (Fig. \ref{fig020042}), of a red apple (Fig. \ref{fig020043}), which the kitten must catch. Once he catches her, he will stop prompting and meow (Fig. \ref{fig020044}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020042.png}
-  \caption{Добавяне на спрайт}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020042.png}
+   \caption{Add sprite}
 \label{fig020042}
 \end{figure}
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020043.png}
-  \caption{Избор на спрайт от галерията}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020043.png}
+   \caption{Choose sprite from gallery}
 \label{fig020043}
 \end{figure}
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020044.png}
-  \caption{Позициониране на ябълката}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020044.png}
+   \caption{Positioning the apple}
 \label{fig020044}
 \end{figure}
 
-При работата със спрайтове, една от най-често решаваните задачи е дали два спрайта се докосват или припокриват. Има различни техники за установяване на колизии между спрайтове, но една от най-ефективните е докосването на определен цвят. При съвременните компютри се работи с малко над 16 милиона различни цвята. Едно разумно подбиране на цветовете, които имат героите, може да даде безгранични възможности за откриване на колизии. Тъй като ябълката е червена, изборът за край на цикъла е когато котето докосне червения цвят (Фиг. \ref{fig020045}).
+When working with sprites, one of the most common problems is whether two sprites touch or overlap. There are various techniques for detecting collisions between sprites, but one of the most effective is touching a certain color. Modern computers work with just over 16 million different colors. A judicious selection of the colors that the characters have can give limitless possibilities for detecting collisions. Since the apple is red, the choice to end the cycle is when the kitten touches the red color (Fig. \ref{fig020045}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020045.png}
-  \caption{Докосване по цвят}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020045.png}
+   \caption{Touch by color}
 \label{fig020045}
 \end{figure}
 
-С предходното блокче, независимо коя част на котето докосне ябълката, цикълът спира да се върти и се чува мяукането. Много по-фино определяне на колизията между спрайтовете може да се получи, ако само черният контур на котето се проверява за докосване до червения цвят на ябълката, за което служи следващото блокче (Фиг. \ref{fig020046}).
+With the previous block, no matter which part of the kitten touches the apple, the loop stops spinning and the meow is heard. A much finer definition of the collision between spites writing can be obtained if only the black outline of the kitten is checked for touching the red color of the apple, which is what the next block is for (Fig. \ref{fig020046}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020046.png}
-  \caption{Колизия при два предварително зададени цвята}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020046.png}
+   \caption{Collision on two preset colors}
 \label{fig020046}
 \end{figure}
 
-Следващото блокче е с овална форма и доставя на програмата разстоянието между спрайта и показалеца на мишката. Овалната форма подсказва, че това блокче трябва да бъде вградено в някое от блокчетата за аритметични изрази (Фиг. \ref{fig020047}).
+The next block is oval shaped and supplies the program with the distance between the sprite and the mouse pointer. The oval shape suggests that this block should be embedded in one of the arithmetic expression blocks (Fig. \ref{fig020047}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020047.png}
-  \caption{Разстояние до показалеца на мишката}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020047.png}
+   \caption{Mouse Pointer Distance}
 \label{fig020047}
 \end{figure}
 
-Понякога се налага потребителят да напише нещо. За да се даде тази възможност е следващото блокче в групата на светло сините (Фиг. \ref{fig020048}). Анимираният герой подканя потребителя, като в конкретен текст подсказва какво се очаква да бъде написано. 
+Sometimes the user needs to type something. To give this possibility is the next block in the light blue group (Fig. \ref{fig020048}). The animated character prompts the user by suggesting in specific text what is expected to be written.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020048.png}
-  \caption{Въвеждане на текст}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020048.png}
+   \caption{Enter text}
 \label{fig020048}
 \end{figure}
 
-Следващото блокче е от шестоъгълните и е предназначено за вграждане. Това блокче връща резултат „истина“, когато бъде натиснат определен клавиш (Фиг. \ref{fig020049}).
+The next block is one of the hexagonal blocks and is intended for embedding. This block returns a result of "true" when a certain key is pressed (Fig. \ref{fig020049}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020049.png}
-  \caption{Определяне на натиснат клавиш}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020049.png}
+   \caption{Defining key pressed}
 \label{fig020049}
 \end{figure}
 
-Сходно поведение може да се постигне и със следващото блокче, но вместо натискане на клавиш от клавиатурата се очаква натискане на клавиша на мишката (Фиг. \ref{fig020050}).
+A similar behavior can be achieved with the next block, but instead of pressing a key on the keyboard, a mouse key is expected (Fig. \ref{fig020050}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020050.png}
-  \caption{Определяне на натиснат бутон от мишката}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020050.png}
+   \caption{Detect mouse button pressed}
 \label{fig020050}
 \end{figure}
 
-Следващите две блокчета са овални и също са за вграждане. Първото дава координатите на анимирания герой по абцисната ос, а второто дава координатите на анимирания герой по ординатната ос (Фиг. \ref{fig020051}).
+The next two blocks are oval and are also for embedding. The first gives the coordinates of the animated character along the abscissa axis, and the second gives the coordinates of the animated character along the ordinate axis (Fig. \ref{fig020051}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020051.png}
-  \caption{Координати на анимирания герой}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020051.png}
+   \caption{Coordinates of the animated character}
 \label{fig020051}
 \end{figure}
 
-По време на работа на програмата има функциониращ таймер, който отмерва времето от началото на изпълнението. Със следващото блокче този таймер може да се нулира (Фиг. \ref{fig020052}).
+During program operation, there is a functioning timer that measures the time from the start of execution. With the next block, this timer can be reset (Fig. \ref{fig020052}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020052.png}
-  \caption{Нулиране на таймера}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020052.png}
+   \caption{Reset Timer}
 \label{fig020052}
 \end{figure}
 
-Следващото блокче е от овалните и служи за доставяне на информация за фона, променливи или нивото на звука (Фиг. \ref{fig020053}).
+The next block is one of the ovals and serves to provide background information, variables or sound level (Fig. \ref{fig020053}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020053.png}
-  \caption{Информация за компоненти от сцената}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020053.png}
+   \caption{Scene Component Information}
 \label{fig020053}
 \end{figure}
 
-Последното блокче в групата е предвидено също за вграждане и връща броя дни от година 2000 (Фиг. \ref{fig020054}).
+The last block in the group is also intended for embedding and returns the number of days from the year 2000 (Fig. \ref{fig020054}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020054.png}
-  \caption{Брой дни от началото на века}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020054.png}
+   \caption{Number of days since the beginning of the century}
 \label{fig020054}
 \end{figure}
 
-Групата на зелените блокчета е предназначена за вграждане. Първите четири блокчета са с овална форма и са предвидени за аритметичните операции – събиране, изваждане, умножение и делене (Фиг. \ref{fig020055}).
+The group of green blocks is intended for embedding. The first four blocks are oval in shape and are intended for arithmetic operations – addition, subtraction, multiplication and division (Fig. \ref{fig020055}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020055.png}
-  \caption{Аритметични операции}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020055.png}
+   \caption{Arithmetic operations}
 \label{fig020055}
 \end{figure}
 
-Блокчето за избор на случайно число вече е демонстрирано, но то идеално пасва в трите блокчета, които следват след него. Това са блокчета за сравнение и са предвидени за вграждане в блокчетата за управление на изпълнението (Фиг. \ref{fig020056}).
+The random number block has already been demonstrated, but it fits perfectly into the three blocks that follow it. These are comparison blocks and are intended to be embedded in the execution control blocks (Fig. \ref{fig020056}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020056.png}
-  \caption{Операции за сравнение}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020056.png}
+   \caption{Comparison Operations}
 \label{fig020056}
 \end{figure}
 
-Следват три блокчета с шестоъгълна форма (Фиг. \ref{fig020057}), които служат за вграждане в блокчета за контрол на управлението. Трите блокчета изпълняват трите основни логически операции („и“, „или“, „не“). При първото блокче и двете условия трябва да са изпълнени за да се влезе в конструкцията за условен преход. Точно поради тази причина, логическата операция се нарича „и“. При второто блокче или едното условие, или другото условие трябва да бъде изпълнено, за да се влезе в конструкцията за условен преход. Точно поради тази причина, логическата операция се нарича „или“. При третото блокче, резултата се обръща, така че в конструкцията за условен преход се влиза при невярно условие. Поради тази причина, тази операция се нарича „отрицание“.
+Next are three hexagonal shaped blocks (Fig. \ref{fig020057}) which serve to embed in control control blocks. The three blocks perform the three basic logical operations ("and", "or", "not"). In the first block, both conditions must be met to enter the conditional transition construct. Precisely for this reason, the logical operation is called "and". In the second block, either one or the other condition must be met to enter the conditional transition construct. It is for this reason that the logical operation is called "or". In the third block, the result is reversed, so the conditional transition construct is entered under a false condition. For this reason, this operation is called "negation".
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020057.png}
-  \caption{Логически операции}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020057.png}
+   \caption{Logical operations walkie talkies}
 \label{fig020057}
 \end{figure}
 
-Следващите четири блокчета са за работа със символни низове (Фиг. \ref{fig020058}). Първите три са с овална форма, а последното е с шестоъгълна форма. Първото блокче слепва два символни низа. Второто блокче определя буква на определена позиция в символния низ. Третото блокче определя дължината на символния низ. Четвъртото блокче търси определена буква в символния низ. 
+The next four blocks are for working with character strings (Fig. \ref{fig020058}). The first three are oval in shape and the last is hexagonal in shape. The first block concatenates two character strings. The second block specifies a letter at a certain position in the character string. The third block specifies the length of the character string. The fourth block searches for a specific letter in the character string.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020058.png}
-  \caption{Работа със символни низове}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020058.png}
+   \caption{Working with character strings}
 \label{fig020058}
 \end{figure}
 
-Последните три блокчета в групата на зелените са предназначени за работа с функции (Фиг. \ref{fig020059}). Първото блокче изчислява остатъкът от целочислено делене. Второто блокче закръглява дробно число до цялата му част. Третото блокче предлага пресмятането на цял списък от математически функции. 
+The last three blocks in the green group are intended for working with functions (Fig. \ref{fig020059}). The first block calculates the remainder of integer division. The second block rounds a fractional number to its whole part. The third block offers the calculation of a whole list of mathematical functions.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020059.png}
-  \caption{Математически функции}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020059.png}
+   \caption{Mathematical Functions}
 \label{fig020059}
 \end{figure}
 
-Последната група блокчета е групата на тъмно оранжевите (Фиг. \ref{fig020060}). Те са предназначени за работа с променливи. Често при писането на програми е необходимо междинните пресметнати резултати да бъдат запазени временно и в последствие да бъдат използвани за следващи пресмятания. Това се постига чрез променливите. Променливите са временни контейнери, които съхраняват зададените им стойности. Първото блокче в групата служи за установяване на стойност на променливата. Второто блокче в групата служи за промяна на стойността на променливата. Третото блокче в групата служи за програмна визуализация на променливата. Последното блокче в групата служи за скриване на визуализацията. 
+The last group of blocks is the dark orange group (Fig. \ref{fig020060}). They are designed to work with variables. Often, when writing programs, it is necessary to save intermediate calculated results temporarily and subsequently use them for subsequent calculations. This is achieved through the variables. Variables are temporary containers that store their assigned values. The first block in the group serves to establish the value of the variable. The second block in the group serves to change the value of the variable. The third block in the group serves for program visualization of the variable. The last box in the group serves to hide the preview.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020060.png}
-  \caption{Работа с променливи}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020060.png}
+   \caption{Working with variables}
 \label{fig020060}
 \end{figure}
 
-След като вече са представени всички най-важни конструкции в програмната среда на Scratch, може да се премине към следващите стъпки за писането на по-сложни програми, съчетавайки базовите блокчета по подходящ начин.
+Now that all the most important constructs in the Scratch programming environment have been introduced, one can move on to the next steps of writing more complex programs, combining the basic building blocks in an appropriate way.
 
-\section{Изразни средства в App Inventor}
+\section{Expressions in App Inventor}
 
-Основна разлика между App Inventor и Scratch е, че в App Inventor не се използват спрайтове, а се изгражда графичен потребителски интерфейс. Причината за това е, че App Inventor стъпва на класическия подход за писане на Android приложения. Тази разлика налага да се разгледат два вида изразни средства в App Inventor, а именно компонентите на графичния интерфейс и програмните блокчета за изграждане на серия от инструкции.
+A major difference between App Inventor and Scratch is that App Inventor does not use sprites, but builds a graphical user interface. The reason for this is that App Inventor takes a classic approach to writing Android apps. This difference makes it necessary to consider two types of expressions in App Inventor, namely the GUI components and the programming blocks for building a series of instructions.
 
-Изграждането на приложение в App Inventor започва в нов, празен екран (Фиг. \ref{fig020061}). Екраните се наричат сцени и работата на програмата преминава от сцена в сцена. Когато програмата е нещо съвсем простичка, може да се реализира и само е една сцена. 
+Building an application in App Inventor starts in a new, blank screen (Fig. \ref{fig020061}). Screens are called scenes, and the program's work moves from scene to scene. When the program is something very simple, it can be realized and it is only one scene.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020061.png}
-  \caption{Начална сцена}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020061.png}
+   \caption{Opening scene}
 \label{fig020061}
 \end{figure}
 
-\subsection{Графичен интерфейс}
+\subsection{Graphical Interface}
 
-Компонентите на графичния интерфейс са организирани в групи, както са организирани блокчетата за изпълнение на инструкции. Повечето визуални компоненти имат графично оформление, директно на екрана, но има и компоненти, които не се визуализират. Пример за не визуализиращи се компоненти са мениджърите за управление на оформлението. Тези мениджъри са представени във втората група и функцията им е да служат като групиращи компоненти, които подреждат визуално представените компоненти. 
+GUI components are organized into groups, just as instruction blocks are organized. Most visual components have a graphical layout directly on the screen, but there are also components that are not visualized. An example of non-renderable components are layout management managers. These managers are represented in the second group and their function is to serve as grouping components that arrange the visually represented components.
 
-От дясно на работната сцена е представена йерархична структура на позиционираните графични компоненти. В този панел може да се изтриват компоненти или да бъдат преименувани. Най- в дясно е разположен панел с характеристиките на текущо избрания графичен компоненти. Компонентите имат различни характеристики и те могат да се установяват докато се проектира самия интерфейс. 
+A hierarchical structure of the positioned graphic components is presented on the right of the working scene. Components can be deleted or renamed in this panel. On the far right is a panel with the characteristics of the currently selected graphic component. Components have different characteristics and these can be established while designing the interface itself.
 
-В първата група са включени основните компоненти за изграждане на графичен потребителски интерфейс. Първият компонент в тази група е бутонът (Фиг. \ref{fig020062}). Поставянето му в работната площ на сцената става чрез избиране с мишката и влачене до работното пространство. Бутонът има характеристики свързани с текста върху самия компонент, възможността за поставяне на изображение, размери, форма, големина на шрифта, цветове на фона и на предния план, както и някои други.
+The first group includes the main components for building a graphical user interface. The first component in this group is the button (Fig. \ref{fig020062}). Placing it in the workspace of the scene is done by selecting with the mouse and dragging it to the workspace. The button has characteristics related to the text on the component itself, the ability to place an image, dimensions, shape, font size, background and foreground colors, and some others.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020062.png}
-  \caption{Графичен компонент за бутон}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020062.png}
+   \caption{Button Graphical Component}
 \label{fig020062}
 \end{figure}
 
-След бутона следва компонент за маркиране (Фиг. \ref{fig020063}), който има сходна функционалност на бутона, но се маркира състояние на включен или изключен. Често намира приложение за обозначаване на свойства. Най-важната характеристика на този компонент е дали е в установено състояние или в изключено. 
+The button is followed by a marking component (Fig. \ref{fig020063}), which has similar functionality to the button, but the on or off state is marked. It is often used to denote properties. The most important characteristic of this component is whether it is in the established state or in the disabled state.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020063.png}
-  \caption{Графичен компонент за отмятане}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020063.png}
+   \caption{Graphical ticker component}
 \label{fig020063}
 \end{figure}
 
-Въвеждането на дати от потребителя е процес, който може да доведе до много грешки. Причината за това е, че различните месеци имат различна продължителност, а месец февруари се определя от високосните години и дали съответната високосна година е кратна на четиристотин. За да се избегнат грешките при въвеждането на дати Android предлага визуален компонент, който да се ползва за контролирано въвеждане на дати (Фиг. \ref{fig020064}).
+Entering dates by the user is a process that can lead to many errors. The reason for this is that different months have different lengths, and the month of February is determined by leap years and whether the corresponding leap year is a multiple of four hundred. To avoid date entry errors Android offers a visual component to be used for controlled date entry (Fig. \ref{fig020064}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020064.png}
-  \caption{Графичен компонент за въвеждане на дати}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020064.png}
+   \caption{Graphic component for entering dates}
 \label{fig020064}
 \end{figure}
 
-При различните версии или частни модификации на операционната система Android, компонентът за въвеждане на дати може да има различно представяне. Една от възможностите е под формата на брояч с три сегмента за ден, месец и година (Фиг. \ref{fig020065}).
+In different versions or proprietary modifications of the Android operating system, the date input component may have a different presentation. One possibility is in the form of a counter with three segments for day, month and year (Fig. \ref{fig020065}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020065.png}
-  \caption{Въвеждане на дата}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020065.png}
+   \caption{Enter date}
 \label{fig020065}
 \end{figure}
 
-Следващият визуален компонент има единствената задача да показва изображение (Фиг. \ref{fig020066}). Това е и най-важната му характеристика в панела с характеристики за компонента.
+The next visual component has the sole task of displaying an image (Fig. \ref{fig020066}). This is also its most important characteristic in the characteristics panel for the component.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020066.png}
-  \caption{Графичен компонент за изображения}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020066.png}
+   \caption{Graphic component for images}
 \label{fig020066}
 \end{figure}
 
-Следва етикетът, който представлява поле с текст, без възможност потребителят да променя съдържанието на текста (Фиг. \ref{fig020067}).
+Next is the label, which is a text field with no possibility for the user to change the text content (Fig. \ref{fig020067}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020067.png}
-  \caption{Графичен компонент за етикет}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020067.png}
+   \caption{Label Graphical Component}
 \label{fig020067}
 \end{figure}
 
-При следващия компонент се дава възможност за избор от списък със символни низове. Като разделител между низовете се използва запетайка (Фиг. \ref{fig020068}).
+In the next component, it is possible to select from a list of character strings. A comma is used as a separator between strings (Fig. \ref{fig020068}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020068.png}
-  \caption{Графичен компонент за избор}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020068.png}
+   \caption{Selectable Graphical Component}
 \label{fig020068}
 \end{figure}
 
-Всяка от опциите се визуализира на отделен ред (Фиг. \ref{fig020069}).
+Each of the options is visualized on a separate line (Fig. \ref{fig020069}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020069.png}
-  \caption{Изброяване на опциите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020069.png}
+   \caption{List options}
 \label{fig020069}
 \end{figure}
 
-При компонента за списъчен изглед, за всяка опция е предвидена отделна клетка (Фиг. \ref{fig020070}).
+In the list view component, a separate cell is provided for each option (Fig. \ref{fig020070}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020070.png}
-  \caption{Графичен компонент за списък}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020070.png}
+   \caption{List widget}
 \label{fig020070}
 \end{figure}
 
-Следващият компонент е един от компонентите, които не се визуализират по време на проектирането. Служи за показване на нотификации (Фиг. \ref{fig020071}).
+The next component is one of the components that is not visualized at design time. Used to display notifications (Fig. \ref{fig020071}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020071.png}
-  \caption{Графичен компонент за нотификации}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020071.png}
+   \caption{Notification widget}
 \label{fig020071}
 \end{figure}
 
-За да бъде визуализиран е нужно да се добавят няколко инструкции, към прихванато събитие, така че по време на изпълнение, написаните текстове да бъдат показани (Фиг. \ref{fig020072}). Прихващането е за събитие на натиснат бутон за връщане, когато приложението показва първата сцена. 
+In order to be visualized, it is necessary to add several instructions to the intercepted event, so that during execution, the written texts are displayed (Fig. \ref{fig020072}). The interception is for the back button pressed event when the app displays the first scene.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020072.png}
-  \caption{Серия от инструкции за показване на нотификация}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020072.png}
+   \caption{A series of instructions to display a notification}
 \label{fig020072}
 \end{figure}
 
-По време на визуализацията, изплувалия диалогов прозорец може да бъде отказан (Фиг. \ref{fig020073}), тъй като е позволена опцията cancel.
+During preview, the popup dialog can be dismissed (Fig. \ref{fig020073}) because the cancel option is enabled.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020073.png}
-  \caption{Прозорец с нотификация}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020073.png}
+   \caption{Notification window}
 \label{fig020073}
 \end{figure}
 
-Полетата за въвеждане на пароли на външен вид са като обикновените полета за въвеждане на текст, но разликата е, че при писане не се виждат символите, а се заменят със звездички (Фиг. \ref{fig020074}).
+Password input fields look like regular text input fields, but the difference is that when typing, the characters are not visible, but are replaced by asterisks (Fig. \ref{fig020074}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020074.png}
-  \caption{Графичен компонент за въвеждане на пароли}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020074.png}
+   \caption{Graphic component for entering passwords}
 \label{fig020074}
 \end{figure}
 
-При слайдър компонента двете най-важни характеристики са минималната и максимална стойности, които компонентът може да заема. Слайдърът служи за визуализация на позиция по линейна скала (Фиг. \ref{fig020075}).
+With a slider component, the two most important characteristics are the minimum and maximum values that the component can take. The slider serves to visualize a position on a linear scale (Fig. \ref{fig020075}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020075.png}
-  \caption{Графичен компонент за позиция}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020075.png}
+   \caption{Position Graphical Component}
 \label{fig020075}
 \end{figure}
 
-При следващия компонент се дават възможности за избор, отново като изброен списък от символни низове (Фиг. \ref{fig020076}).
+At the next component, choices are given, again as an enumerated list of character strings (Fig. \ref{fig020076}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020076.png}
-  \caption{Графичен компонент за избор}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020076.png}
+   \caption{Selectable Graphical Component}
 \label{fig020076}
 \end{figure}
 
-Визуалното представяне на опциите се различава от представените възможности в предходните компоненти (Фиг. \ref{fig020077}).
+The visual representation of the options differs from the options presented in the previous ones those components (Fig. \ref{fig020077}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020077.png}
-  \caption{Избор чрез радио бутони}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020077.png}
+   \caption{Selection via radio buttons}
 \label{fig020077}
 \end{figure}
 
-Алтернатива на чек бокс компонента е компонента от тип ключ (Фиг. \ref{fig020078}). Най-важната характеристика на този компонент е състоянието в което се намира – включено или изключено. 
+An alternative to the check box component is the key type component (Fig. \ref{fig020078}). The most important characteristic of this component is the state it is in - on or off.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020078.png}
-  \caption{Графичен компонент за превключвател}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020078.png}
+   \caption{Switch widget}
 \label{fig020078}
 \end{figure}
 
-Текстовото поле е компонент, който служи за въвеждане на текст от потребителя (Фиг. \ref{fig020079}).
+The text field is a component that serves to enter text from the user (Fig. \ref{fig020079}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020079.png}
-  \caption{Графичен компонент за въвеждане на текст}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020079.png}
+   \caption{Text input widget}
 \label{fig020079}
 \end{figure}
 
-По аналогия с компонента за въвеждане на дати е наличен и компонент за въвеждане на часове (Фиг. \ref{fig020080}). 
+By analogy with the date input component, a time input component is also available (Fig. \ref{fig020080}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020080.png}
-  \caption{Графичен компонент за въвеждане на час}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020080.png}
+   \caption{Time input widget}
 \label{fig020080}
 \end{figure}
 
-В една от възможните му реализации е под формата на три полета, две за превъртане нагоре/надолу и едно за определяне на сутрин или след обяд (Фиг. \ref{fig020081}).
+In one of its possible implementations it takes the form of three fields, two for scrolling up/down and one for specifying morning or afternoon (Fig. \ref{fig020081}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020081.png}
-  \caption{Избиране на час}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020081.png}
+   \caption{Choose a time}
 \label{fig020081}
 \end{figure}
 
-Компонентът с най-богати възможности е последен в групата и представлява цял уеб браузър (Фиг. \ref{fig020082}).
+The most feature-rich component is the last in the group and is an entire web browser (Fig. \ref{fig020082}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020082.png}
-  \caption{Графичен компонент за уеб браузър}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020082.png}
+   \caption{Web Browser Graphical Component}
 \label{fig020082}
 \end{figure}
 
-В този компонент могат да се зареждат цели уеб страници (Фиг. \ref{fig020083}), включително и такива, които изискват интерактивност с JavaScript.
+Entire web pages (Fig. \ref{fig020083}) can be loaded into this component, including those that require JavaScript interactivity.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020083.png}
-  \caption{Зареждане на уеб страница}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020083.png}
+   \caption{Loading Web Page}
 \label{fig020083}
 \end{figure}
 
-Втората група визуални компоненти служат за подреждане на графичния потребителски интерфейс и се явяват контейнери за компонентите, които имат визуално представяне. Този механизъм за организация на графичния потребителски интерфейс е предложена с първите библиотеки за графичен интерфейс, предложени с програмния език Java. Целта на подобен вид организация е графичният потребителски интерфейс да бъде подходящ за устройства с различни размери на екраните. Визуалните компоненти се подреждат, според наличната площ и според правилата на съдържащите ги контейнери. 
+The second group of visual components serve to organize the graphical user interface and are containers for the components that have a visual representation. This mechanism for organizing the graphical user interface was proposed with the first graphical user interface libraries offered with the Java programming language. The purpose of this kind of organization is to make the graphical user interface suitable for devices with different screen sizes. Visual components are arranged according to the available area and according to the rules of the containers containing them.
 
-При първия компонент в групата, визуалните компоненти се подреждат хоризонтално, от където идва и названието му (Фиг. \ref{fig020084}).
+With the first component in the group, the visual components are arranged horizontally, hence its name (Fig. \ref{fig020084}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020084.png}
-  \caption{Контейнер за хоризонтално подреждане}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020084.png}
+   \caption{Horizontal stacking container}
 \label{fig020084}
 \end{figure}
 
-При първия контейнер, ако визуалните компоненти излизат извън видимото поле за работа на потребителя, то те не могат да бъдат достигнати. Поради тази причина, вторият контейнер предоставя възможности за превъртане (хоризонтално), така че излизащите извън работната област визуални компоненти да бъдат достигнати (Фиг. \ref{fig020085}).
+In the first container, if the visual components go outside the user's visible field of operation, then they cannot be reached. For this reason, the second container provides scrolling capabilities (horizontally) so that visual components that go outside the work area can be reached (Fig. \ref{fig020085}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020085.png}
-  \caption{Контейнер за хоризонтално подреждане с плъзгач}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020085.png}
+   \caption{Horizontal stacking container with slider}
 \label{fig020085}
 \end{figure}
 
-Третият контейнер в групата позволява визуалните компоненти да бъдат подреждани под формата на таблица с редове и колони (Фиг. \ref{fig020086}).
+The third container in the group allows the visual components to be arranged in the form of a table with rows and columns (Fig. \ref{fig020086}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020086.png}
-  \caption{Контейнер за таблично подреждане}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020086.png}
+   \caption{Table arrangement container}
 \label{fig020086}
 \end{figure}
 
-По аналогия с контейнера за хоризонтално подреждане е предоставен и контейнер за вертикално подреждане (Фиг. \ref{fig020087}). При него визуалните компоненти се подреждат един върху друг.
+By analogy with the container for horizontal stacking, a container for vertical stacking is also provided (Fig. \ref{fig020087}). In it, visual components are stacked on top of each other.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020087.png}
-  \caption{Контейнер за вертикално подреждане}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020087.png}
+   \caption{Vertical stack container}
 \label{fig020087}
 \end{figure}
 
-При недостатъчно работно пространство по вертикалната ос също е дадена възможност да се използва контейнер с възможност за преплъзване (Фиг. \ref{fig020088}).
+In case of insufficient working space along the vertical axis, it is also possible to use a container with the possibility of sliding (Fig. \ref{fig020088}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020088.png}
-  \caption{Контейнер за вертикално подреждане с плъзгач}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020088.png}
+   \caption{Vertical stacking container with slider}
 \label{fig020088}
 \end{figure}
 
-Плъзгачът се появява по границите на контейнера, но изчезва, когато няма преплъзване, така че да не заема излишно от визуалното пространство (Фиг. \ref{fig020089}).
+The slider appears on the container's borders, but disappears when there is no sliding, so that it does not take up too much visual space (Fig. \ref{fig020089}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020089.png}
-  \caption{Преплъзване на съдържанието в контейнера}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020089.png}
+   \caption{Slide content into container}
 \label{fig020089}
 \end{figure}
 
-Основно предимство на контейнерите е, че те самите могат да бъдат влагани в други контейнери (Фиг. \ref{fig020090}). С подходящо подреждане на различните влагания може да се постигне оформление на графичния потребителски интерфейс, такова че да бъде добре изглеждащ на устройства с различни размери на екрана.
+Mainly an advantage of containers is that they themselves can be nested within other containers (Fig. \ref{fig020090}). By properly arranging the different embeddings, a graphical user interface layout can be achieved that looks good on devices with different screen sizes.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020090.png}
-  \caption{Влагане на контейнери}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020090.png}
+   \caption{Inserting containers}
 \label{fig020090}
 \end{figure}
 
-След групата за компоненти, служещи за подреждане на видимите компоненти, следва група за мултимедия. В тази група компонентите нямат графично представяне по време на дизайна, но нямат графично представяне и по време на изпълнението. Изключение правят два компонента. Първият е компонент за избор на изображения, а вторият е компонент за показване на видео (Фиг. \ref{fig020091}).
+After the component group used to arrange the visible components, there is a multimedia group. In this group, components have no graphical representation at design time, but they also have no graphical representation at runtime. Two components are an exception. The first is an image selection component and the second is a video display component (Fig. \ref{fig020091}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020091.png}
-  \caption{Група за мултимедия}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020091.png}
+   \caption{Multimedia Group}
 \label{fig020091}
 \end{figure}
 
-Групата от компоненти за мултимедия дават програмни възможности за изпълнението на определени задачи, които са: запис на видео, запис на снимки, възпроизвеждане на звукови файлове, управление на звука, запис на звукови файлове, разпознаване на реч, синтезиране на реч и машинен превод между говорими езици. Сложността на компонентите в тази група не позволява тяхната лесна демонстрация, но някои от тях ще бъдат използвани в последващите примери. 
+The group of multimedia components provide programming capabilities to perform certain tasks, which are: video recording, photo recording, sound file playback, sound management, sound file recording, speech recognition, speech synthesis, and machine translation between spoken languages. The complexity of the components in this group prevents their easy demonstration, but some of them will be used in the following examples.
 
-След групата за мултимедия следва групата за анимация (Фиг. \ref{fig020092}). Най-често, при писането на игри се използва концепцията за платното (Canvas) и движещите се анимирани герои (Sprites). Познатите от Scratch спрайтове се появяват и тук, но в един много частен случай. 
+After the multimedia group comes the animation group (Fig. \ref{fig020092}). Most often, when writing games, the concept of the canvas (Canvas) and moving animated characters (Sprites) is used. The familiar Scratch sprites appear here too, but in a very special case.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020092.png}
-  \caption{Група за анимация}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020092.png}
+   \caption{Animation Group}
 \label{fig020092}
 \end{figure}
 
-Най-общо казано, платното представлява двумерна матрица от цветни точки (пиксели) върху която матрица се изрисуват различни двумерни примитиви или растерни изображения с канал за прозрачност. Важно е да се отбележи, че спрайтовете не могат да се поставят самостоятелно, а трябва да са в под йерархията на платното. 
+Generally speaking, canvas is a two-dimensional matrix of colored dots (pixels) on which various two-dimensional primitives or bitmaps with a transparency channel are drawn. It is important to note that sprites cannot be placed on their own, but must be below the canvas hierarchy.
 
-Тъй като Android операционната система се изпълнява предимно на мобилни устройства, а те много често имат GPS сензори, то следващата група компоненти дават възможности за работа с географски карти и геолокация (Фиг. \ref{fig020093}). 
+Since the Android operating system is primarily implemented on mobile devices, and they very often have GPS sensors, the next group of components provides opportunities for working with geographic maps and geolocation (Fig. \ref{fig020093}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020093.png}
-  \caption{Група за геолокация}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020093.png}
+   \caption{Geolocation Group}
 \label{fig020093}
 \end{figure}
 
-По аналогия с платното за рисуване и в тази група има основен компонент за визуализация на карта, като той може да съдържа в себе си графични примитиви, както следва: окръжност, избор на характеристики, линии, маркери, полигони и правоъгълници. Има и един компонент, който няма визуализация, но служи за активиране на функционалността за навигация по карта. Изобразяването на картите се извършва на слоеве, което позволява да се добавят графични примитиви над слоя за изобразяване на самата карта. 
+Analogous to the drawing canvas, this group also has a basic map visualization component, which can contain graphic primitives such as circle, feature selection, lines, markers, polygons, and rectangles. There is also a component that does not have a preview, but serves to enable map navigation functionality. Map rendering is done in layers, which allows graphics primitives to be added above the map rendering layer itself.
 
-Различните мобилни устройства разполагат с различен набор от хардуерни сензори (Фиг. \ref{fig020094}). Сензорите са части от устройството, които събират информация от външната среда. В следващата група от компоненти се дава възможност за програмна работа с различни видове сензори, като: акселерометър, четец на бар кодове, сензор за налягане, часовник, сензор за пространствена ориентация, сензор за влажност, сензор за осветеност, сензор за местоположение, сензор за интензивност на магнитното поле, сензор за близка комуникация, сензор за ориентация в пространството, крачкомер, сензор за близост до обекти и термометър.
+Different mobile devices have a different set of hardware sensors (Fig. \ref{fig020094}). Sensors are parts of the device that collect information from the external environment. In the next group of components, it is possible to program work with different types of sensors, such as: accelerometer, barcode reader, pressure sensor, clock, spatial orientation sensor, humidity sensor, illumination sensor, location sensor, magnetic field strength, proximity sensor, spatial orientation sensor, pedometer, object proximity sensor and thermometer.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020094.png}
-  \caption{Група за работа със сензори}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020094.png}
+   \caption{Sensor Working Group}
 \label{fig020094}
 \end{figure}
 
-Всички компоненти в групата са без визуално представяне и се ползват, чрез програмни конструкции. Работата с хардуера и сензорите към него изисква значителни умения и е извън обхвата на настоящото изложение. 
+All components in the group have no visual representation and are used through program constructs. Working with the hardware and its sensors requires considerable skill and is beyond the scope of this presentation.
 
-В следващата група са представени компоненти, които са свързани със социалните контакти. Първият компонент позволява изборът на лице от списъка с контакти (Фиг. \ref{fig020095}). Списъкът с контакти служи за запазване на информация за различни хора с които потребителят си комуникира.
+The next group presents components that are related to social contacts. The first component allows the selection of a person from the contact list (Fig. \ref{fig020095}). The contact list serves to save information about various people with whom the user communicates.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020095.png}
-  \caption{Графичен компонент за избор на контакт}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020095.png}
+   \caption{Contact Selector Graphical Component}
 \label{fig020095}
 \end{figure}
 
-Следва компонент за въвеждане на адрес за електронна поща (Фиг. \ref{fig020096}). Адресите за електронна поща имат строго фиксиран формат и е от съществено значение форматът да се спазва при въвеждане от потребителя. 
+Next is a component for entering an e-mail address (Fig. \ref{fig020096}). E-mail addresses have a strictly fixed format and it is essential that the format is followed when entered by the user.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020096.png}
-  \caption{Графичен компонент за въвеждане на имейл}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020096.png}
+   \caption{Graphic component hand email input}
 \label{fig020096}
 \end{figure}
 
-Компонентът за стартиране на телефонно обаждане е за програмна употреба и няма визуално представяне (Фиг. \ref{fig020097}).
+The phone call initiation component is for programmatic use and has no visual representation (Fig. \ref{fig020097}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020097.png}
-  \caption{Компонент за телефонно обаждане}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020097.png}
+   \caption{Phone Call Component}
 \label{fig020097}
 \end{figure}
 
-Следва компонент за избор на телефонен номер от списъка с контактите (Фиг. \ref{fig020098}).
+Next is a component for selecting a phone number from the contact list (Fig. \ref{fig020098}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020098.png}
-  \caption{Графичен компонент за избор на телефонен номер}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020098.png}
+   \caption{Graphic component for selecting a phone number}
 \label{fig020098}
 \end{figure}
 
-Последните три компонента нямат визуално представяне и служат за споделяне на информация, изпращане на текстови съобщения и публикуване в Twitter (Фиг. \ref{fig020099}). Тези компоненти са предназначени само за програмна употреба и активират приложения в рамките на операционната система.
+The last three components have no visual representation and serve to share information, send text messages, and post to Twitter (Fig. \ref{fig020099}). These components are intended for programmatic use only and enable applications within the operating system.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020099.png}
-  \caption{Компонент за споделяне на информация}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020099.png}
+   \caption{Information Sharing Component}
 \label{fig020099}
 \end{figure}
 
-Следва група компоненти, без визуално представяне. Тази група има за задача да съхранява информацията между отделни стартирания на програмата (Фиг. \ref{fig020100}). Първият компонент съхранява информацията на отдалечена облачна услуга. За тази цел се предоставя адрес към отдалечения сървър. Вторият компонент служи за работа с файлове на локалното устройство. Третият компонент служи за съхраняване на структурирана информация, между отделни стартирания на програмата. Съхраняването е на локалното устройство, като може да се оприличи на променливи, запазени след спирането на програмата. Последният компонент съхранява информация на отдалечен сървър, като използва механизма за уеб сървиси. 
+Next is a group of components, without visual representation. This group has the task of storing the information between separate program starts (Fig. \ref{fig020100}). The first component stores the information on a remote cloud service. An address to the remote server is provided for this purpose. The second component serves to work with files on the local drive. The third component serves to store structured information between separate program launches. The storage is on the local drive and can be likened to variables saved after the program is stopped. The latter component stores information on a remote server using the web services mechanism.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020100.png}
-  \caption{Компонент за съхранение на информация}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020100.png}
+   \caption{Information storage component}
 \label{fig020100}
 \end{figure}
 
-Следващата група компоненти отговарят за комуникационна свързаност (Фиг. \ref{fig020101}). Всичките компоненти нямат визуално представяне и са предназначени за програмна употреба. Първият компонент се ползва за отваряне на следващ екран, по начинът по който това се случва в Android програмите. Вторият компонент добавя Bluetooth функционалност от клиентската страна. Третият компонент добавя Bluetooth функционалност за сървърна страна. Четвъртият компонент дава възможност за серийна комуникация с устройства, като Arduino. Последният компонент в групата дава възможност за уеб базирана комуникация, без да се прави визуализация, както е при уеб браузър компонента. 
+The next group of components is responsible for communication connectivity (Fig. \ref{fig020101}). All components have no visual representation and are intended for programmatic use. The first component is used to open the next screen, the way it happens in Android programs. The second component adds client-side Bluetooth functionality. The third component adds server-side Bluetooth functionality. The fourth component enables serial communication with devices such as Arduino. The last component in the group enables web-based communication without rendering, as is the case with the web browser component.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020101.png}
-  \caption{Компонент за комуникационна свързаност}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020101.png}
+   \caption{Communication Connectivity Component}
 \label{fig020101}
 \end{figure}
 
-Една от най-големите групи с компоненти е за работа с Lego Mindstorms (Фиг. \ref{fig020102}). Тази серия на компанията Lego е предназначена за деца с интерес към роботиката. Тъй като темата за роботиката попада извън обхвата на настоящото изложение, тези компоненти няма да бъдат разглеждани. 
+One of the largest groups of components is for working with Lego Mindstorms (Fig. \ref{fig020102}). This series from the Lego company is designed for children with an interest in robotics. Since the topic of robotics falls outside the scope of this presentation, these components will not be discussed.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020102.png}
-  \caption{Компонент за Lego Mindstorms}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020102.png}
+   \caption{Lego Mindstorms Component}
 \label{fig020102}
 \end{figure}
 
-В групата на експерименталните компоненти попада само компонент за работа с Firebase база данни (Фиг. \ref{fig020103}).
+The group of experimental components includes only a component for working with a Firebase database (Fig. \ref{fig020103}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020103.png}
-  \caption{Експериментални компоненти}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020103.png}
+   \caption{Experimental Components}
 \label{fig020103}
 \end{figure}
 
-Графичният потребителски интерфейс в операционната система Android е така проектира, че външни производители на графични компоненти да могат да ги добавят под формата на библиотеки. Тази възможност е налична и в App Inventor, като последна група в панела с групи от компоненти. 
+The graphical user interface in the Android operating system is designed so that third-party manufacturers of graphical components can add them in the form of libraries. This option is also available in App Inventor, as the last group in the component groups panel.
 
-\subsection{Програмни конструкции}
+\subsection{Program Constructs}
 
-При App Inventor, за разлика от Scratch, съществуват много повече блокчета, тъй като всеки компонент от графичния потребителски интерфейс има множество възможности за обработване на събития и съответно предлага слотове за влагане на блокови конструкции. Поради тази причина, ще бъдат разгледани само основните блокчета, а останалите частично ще бъдат демонстрирани с последващото изложение. 
+In App Inventor, unlike Scratch, there are many more blocks, as each GUI component has multiple event-handling capabilities and accordingly offers slots for nesting block constructs. For this reason, only the main blocks will be considered, and the rest will be partially demonstrated with the subsequent presentation.
 
-Основните блокчета в App Inventor имат идентична функционалност на блокчетата в Scratch. Визуално са оформени малко по-различно, но идеята е същата – блокчетата следват едно след друго или се вграждат една в друго. За демонстрацията на повечето блокчета ще се ползва един бутон и една инстанция на компонента за нотификации (Фиг. \ref{fig020104}). Събитието „натискане на бутон“ е идеалният слот в който да се поместват демонстрираните конструкции. 
+Basic blocks in App Inventor have identical functionality to blocks in Scratch. Visually, they are shaped a little differently, but the idea is the same – the blocks follow one another or are embedded in each other. For the demonstration of most blocks, one button and one instance of the notification component will be used (Fig. \ref{fig020104}). The button press event is the ideal slot to place the demonstrated constructs.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020104.png}
-  \caption{Минимален интерфейс за демонстрация на блокови конструкции}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020104.png}
+   \caption{A minimal interface for demonstrating block constructions}
 \label{fig020104}
 \end{figure}
 
-Блоковите конструкции и тук се подреждат в специално отделено за тази цел работно пространство (Фиг. \ref{fig020105}).
+The block constructions are also arranged in a work space specially set aside for this purpose (Fig. \ref{fig020105}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020105.png}
-  \caption{Работно пространство за блокови конструкции}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020105.png}
+   \caption{Workspace for block structures}
 \label{fig020105}
 \end{figure}
 
-Блокчетата отново са организирани в цветни групи, а подреждането им ще бъде правено в слота за събитието на натиснатия бутон (Фиг. \ref{fig020106}).
+The blocks are again organized into colored groups, and their arrangement will be done in the button pressed event slot (Fig. \ref{fig020106}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020106.png}
-  \caption{Групи от цветни блокчета}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020106.png}
+   \caption{Groups of colored blocks}
 \label{fig020106}
 \end{figure}
 
-Първа е цветната група на кафявите блокчета, която служи за контрол на изпълнението. Тя започва с вече познатото блокче за условен преход (Фиг. \ref{fig020107}).
+First is the colored group of the brown blocks, which serves to control the performance. It starts with the already familiar conditional transition block (Fig. \ref{fig020107}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020107.png}
-  \caption{Блокче за условен преход}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020107.png}
+   \caption{Conditional transition block}
 \label{fig020107}
 \end{figure}
 
-Ако условието в конструкцията за преход бъде пресметнато до стойност „истина“, то в тялото на блокчето се извиква показване на нотификация, чрез вграждането на лилаво блокче (Фиг. \ref{fig020108}), от списъка на блокчета в компонента за нотификации.
+If the condition in the transition construct evaluates to true, then a notification display is called in the body of the block, by embedding a purple block (Fig. \ref{fig020108}), from the list of blocks in the notifications component.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020108.png}
-  \caption{Визуализиране на нотификация}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020108.png}
+   \caption{View Notification}
 \label{fig020108}
 \end{figure}
 
-Смият текст на нотификацията се изписва в блокче с пурпурен цвят и се вгражда към блокчето за визуализация на нотификацията (Фиг. \ref{fig020109}).
+The bolded text of the notification is written in a magenta block and embedded to the notification preview block (Fig. \ref{fig020109}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020109.png}
-  \caption{Текст на нотификацията}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020109.png}
+   \caption{Notification text}
 \label{fig020109}
 \end{figure}
 
-Следва оформянето на заглавната част от конструкцията за условен преход. Към слота за заглавието се поставя синьо блокче, в което ще бъде вписано условието за прехода (Фиг. \ref{fig020110}).
+Next is the formation of the header part of the conditional transition construction. A blue block is placed next to the title slot, in which the transition condition will be entered (Fig. \ref{fig020110}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020110.png}
-  \caption{Заглавна част на блокчето за преход}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020110.png}
+   \caption{Transition block header}
 \label{fig020110}
 \end{figure}
 
-От лявата страна на израза за условие застава синьо блокче, което генерира случайно число в зададен интервал (Фиг. \ref{fig020111}).
+On the left side of the condition expression is a blue box that generates a random number in a set interval (Fig. \ref{fig020111}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020111.png}
-  \caption{Лава страна на израза за условие}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020111.png}
+   \caption{Left side of condition expression}
 \label{fig020111}
 \end{figure}
 
-От дясната страна в условието застава синьо блокче с точно предефинирана стойност (Фиг. \ref{fig020112}). По този начин, при някои натискания на бутона, надписът ще се показва, а в другите няма да се показва. 
+On the right side in the condition there is a blue block with an exact predefined value (Fig. \ref{fig020112}). That way, on some button presses, the caption will be displayed, and on others it won't be displayed.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020112.png}
-  \caption{Дясна страна на израза за условие}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020112.png}
+   \caption{Right side of condition expression}
 \label{fig020112}
 \end{figure}
 
-Когато случайното число е под зададения праг, нотификацията се показва за кратък интервал от време и след това изчезва (Фиг. \ref{fig020113}).
+When the random number is below the set threshold, the notification is displayed for a short time interval and then disappears (Fig. \ref{fig020113}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020113.png}
-  \caption{Визуализация на нотификацията}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020113.png}
+   \caption{Notification Preview}
 \label{fig020113}
 \end{figure}
 
-Второто блокче в групата на кафявите е за условен преход, като се изпълнява конструкция от блокчета, когато условието е изпълнено, но и друга конструкция, когато условието не е изпълнено (Фиг. \ref{fig020114}).
+The second block in the brown group is for a conditional transition, executing a block construction when the condition is met, but another construction when the condition is not (Fig. \ref{fig020114}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020114.png}
-  \caption{Блокче за условен преход и алтернатива}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020114.png}
+   \caption{Conditional transition block and alternative}
 \label{fig020114}
 \end{figure}
 
-Третото блокче в групата на кафявите представлява каскада за условни преходи (Фиг. \ref{fig020115}). Проверяват се повече от едно условия.
+The third block in the brown group represents a cascade for conditional transitions (Fig. \ref{fig020115}). More than one condition is checked.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020115.png}
-  \caption{Блокче за каскада от условни преходи}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020115.png}
+   \caption{Conditional transition cascade block}
 \label{fig020115}
 \end{figure}
 
-Следващото блокче в групата на кафявите е блокче за цикъл със стъпка (Фиг. \ref{fig020116}). При всяко завъртане на цикъла, стойността на променливата се взема, чрез оранжево блокче и се показва под формата на нотификация. 
+The next block in the brown group is a step loop block (Fig. \ref{fig020116}). At each turn of the loop, the value of the variable is taken, via an orange block, and displayed as a notification.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020116.png}
-  \caption{Блокче за цикъл със стъпка}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020116.png}
+   \caption{Step loop block}
 \label{fig020116}
 \end{figure}
 
-Следващото блокче в групата на кафявите е за цикъл по елементите на списъчна структура (Фиг. \ref{fig020117}). За да се формира списък, много полезно е пурпурното блокче, което разделя символен низ на под низове, според предварително зададен разделител. 
+The next block in the brown group is for looping over the elements of a list structure (Fig. \ref{fig020117}). To form a list, the purple block is very useful, which divides a character string into substrings, according to a predefined delimiter.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020117.png}
-  \caption{Блокче за цикъл по списък}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020117.png}
+   \caption{List loop block}
 \label{fig020117}
 \end{figure}
 
-Следва блокче в групата на кафявите за цикъл по елементите на структура от тип „речник“ (Фиг. \ref{fig020118}). Този вид структура също е известна под названието „асоциативен масив“. Ключовата стойност, за достъп до елементите, не е задължително да бъде число, а може да е символен низ, примерно. Ключът се ползва за достъп до елементите. За създаването на речника се използва тъмно синьо блокче. Някои блокчета имат малко зъбно колелце в горния ляв ъгъл. Това колелце е иконка, която се разширява до меню за настройка на блокчето. В случая, през настройката се определят броя слотове за ключ-стойност двойките. С оранжевите блокчета се взема съдържанието на двете локални за цикъла променливи. Едната променлива съдържа ключа, а другата променлива съдържа стойността, отговаряща на този ключ. С помощта на пурпурно блокче за слепване на символни низове се формира текстовото съобщение, визуализирано в компонента за нотификация. 
+Next is a block in the brown group to loop over the elements of a "dictionary" type structure (Fig. \ref{fig020118}). This type of structure is also known as an "associative array". The key value to access the elements does not have to be a number, and can be a character string, for example. The key is used to access the items. A dark blue block is used to create the dictionary. Some blocks have a small gear in the upper left corner. This wheel is an icon that expands to a block setting menu. In this case, the number of slots for key-value pairs is determined through the setting. The orange blocks take the contents of the two variables local to the loop. One variable contains the key and the other variable contains the value corresponding to that key. Using a purple string concatenation block forms the text message displayed in the notification component.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020118.png}
-  \caption{Блокче за цикъл по речник}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020118.png}
+   \caption{Vocabulary loop block}
 \label{fig020118}
 \end{figure}
 
-Следващото блокче реализира цикъл с пред условие от тип „while“ (Фиг. \ref{fig020119}). При този цикъл условието за край на итерациите предхожда тялото на цикъла. За контрол на изпълнението е необходимо да се създаде външна променлива, чрез оранжево блокче за инициализация на променлива. В случая, променливата е инициализирана със случайна стойност. В заглавната част на цикъла се прави проверка за стойността на променливата и се взема решение дали цикълът да продължи да се върти. Стойността на променливата се визуализира в компонента за нотификации и след това, с подходящо оранжево блокче, се избира нова случайна стойност. Цикълът спира да се върти, когато стойността в променливата спадне под предварително зададения праг. 
+The next block implements a loop with a precondition of type "while" (Fig. \ref{fig020119}). In this loop, the iteration termination condition precedes the loop body. For execution control, it is necessary to create an external variable, via an orange variable initialization block. In this case, the variable is initialized with a random value. In the loop header, a check is made for the value of the variable and a decision is made whether the loop should continue running. The value of the variable is visualized in the notifications component and then, with an appropriate orange block, a new random value is selected. The loop stops spinning when the value in the variable drops below the preset threshold.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020119.png}
-  \caption{Блокче за цикъл с пред условие}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020119.png}
+   \caption{For loop block with precondition}
 \label{fig020119}
 \end{figure}
 
-Следващото блокче има смисъл на тернарна операция в програмния език Java и наподобява конструкцията за условен преход с алтернатива (Фиг. \ref{fig020120}). Ако условието бъде изчислено до „истина“, върнатият резултат е първата възможност. Ако е изчислено до „лъжа“, върнатият резултат е втората възможност. 
+The next block has the meaning of a ternary operation in the Java programming language and resembles the conditional transition construction with an alternative (Fig. \ref{fig020120}). If the condition evaluates to true, the result returned is the first possibility. If it evaluates to "false", the result returned is the second possibility.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020120.png}
-  \caption{Блокче за тернарна операция}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020120.png}
+   \caption{Ternary operation block}
 \label{fig020120}
 \end{figure}
 
-Следващото блокче изпълнява серия от други блокчета и връща резултат (Фиг. \ref{fig020121}). В случая се използва синьо блокче, което генерира случайно дробно число, което е в интервала от нула до едно, без да се включва единицата. 
+The next block executes a series of other blocks and returns a result (Fig. \ref{fig020121}). This case uses a blue block that generates a random fractional number that is in the range zero to one without including the unit.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020121.png}
-  \caption{Блокче за групиране на инструкции}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020121.png}
+   \caption{Instruction grouping block}
 \label{fig020121}
 \end{figure}
 
-Следващото блокче изпълнява инструкциите, прикачени към него, но игнорира получения резултат (Фиг. \ref{fig020122}). Това блокче е полезно, когато се вика функция, която връща резултат, но резултата е ненужен.
+The next block executes the instructions attached to it, but ignores the resulting result (Fig. \ref{fig020122}). This block is useful when calling a function that returns a result, but the result is unnecessary.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020122.png}
-  \caption{Блокче за изпълнение на инструкции без резултат}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020122.png}
+   \caption{Block to execute instructions with no result}
 \label{fig020122}
 \end{figure}
 
-Следващото блокче служи за отварянето на нов екран (Фиг. \ref{fig020123}), като за тази цел към проекта трябва да се добави и втори екран.
+The next block serves to open a new screen (Fig. \ref{fig020123}), and for this purpose a second screen must be added to the project.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020123.png}
-  \caption{Блокче за отваряне на нов екран}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020123.png}
+   \caption{Open new screen block}
 \label{fig020123}
 \end{figure}
 
-Новият екран трябва да получи служебно име (Фиг. \ref{fig020124}). Всеки екран си има свой собствен набор визуални компоненти и свой собствен набор от програмни конструкции. 
+The new screen should be given a service name (Fig. \ref{fig020124}). Each screen has its own set of visual components and its own set of program constructs.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020124.png}
-  \caption{Именуване на екран}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020124.png}
+   \caption{Screen Naming}
 \label{fig020124}
 \end{figure}
 
-За втория екран се използва същата концепция, с един бутон и един компонент за нотификация (Фиг. \ref{fig020125}).
+The second screen uses the same concept, with one button and one notification component (Fig. \ref{fig020125}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020125.png}
-  \caption{Потребителски интерфейс на втория екран}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020125.png}
+   \caption{Second screen user interface}
 \label{fig020125}
 \end{figure}
 
-В събитието за инициализация на втория екран се показва текст, чрез използване на компонента за нотификация във втория екран (Фиг. \ref{fig020126}).
+In the initialization event of the second screen, text is displayed by using the notification component in the second screen (Fig. \ref{fig020126}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020126.png}
-  \caption{Нотификация при отварянето на втория екран}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020126.png}
+   \caption{Notification when opening the second screen}
 \label{fig020126}
 \end{figure}
 
-Следващото блокче отваря нов екран, като предава и стойност към новоотворения екран (Фиг. \ref{fig020127}).
+The next block opens a new screen, passing a value to the newly opened screen (Fig. \ref{fig020127}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020127.png}
-  \caption{Отваряне на екран с предаване на параметър}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020127.png}
+   \caption{Open parameter passing screen}
 \label{fig020127}
 \end{figure}
 
-Следващото блокче взема стойността с която е стартиран екранът (Фиг. \ref{fig020128}).
+The next block takes the value with which the screen was started (Fig. \ref{fig020128}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020128.png}
-  \caption{Стойност с която е стартиран екранът}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020128.png}
+   \caption{Value the screen is started with}
 \label{fig020128}
 \end{figure}
 
-Следващото блокче служи за затваряне на екрана (Фиг. \ref{fig020129}). В случая, затварянето се изпълнява при натискане на бутона във втория екран. 
+The next block slclose the screen (Fig. \ref{fig020129}). In this case, the closing is performed when the button is pressed in the second screen.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020129.png}
-  \caption{Блокче за затваряне на екрана}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020129.png}
+   \caption{Screen close block}
 \label{fig020129}
 \end{figure}
 
-Следващото блокче затваря екрана, като връща резултат (Фиг. \ref{fig020130}). С помощта на стойността при стартиране и върната стройност, различните екрани могат да обменят информация по между си. 
+The next block closes the screen, returning a result (Fig. \ref{fig020130}). Using the startup value and the returned slenderness, the different screens can exchange information with each other.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020130.png}
-  \caption{Блокче за затваряне на екрана с връщане на стойност}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020130.png}
+   \caption{Screen close block with return value}
 \label{fig020130}
 \end{figure}
 
-Следващото блокче затваря цялата програма (Фиг. \ref{fig020131}).
+The next block closes the entire program (Fig. \ref{fig020131}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020131.png}
-  \caption{Блокче за затваряне на програмата}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020131.png}
+   \caption{Program close block}
 \label{fig020131}
 \end{figure}
 
-Следващото блокче дава стартовата стойност под формата на текст (Фиг. \ref{fig020132}).
+The next block gives the starting value in the form of text (Fig. \ref{fig020132}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020132.png}
-  \caption{Текст на стойността с която е стартиран екранът}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020132.png}
+   \caption{Text of the value with which the screen is started}
 \label{fig020132}
 \end{figure}
 
-Със следващия блок екранът се затваря, а като върната стойност се изпраща текст (Фиг. \ref{fig020133}).
+With the next block, the screen is closed, and text is sent as the return value (Fig. \ref{fig020133}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020133.png}
-  \caption{Блокче за затваряне на екрана с връщане на текстова стойност}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020133.png}
+   \caption{Screen close block with text value return}
 \label{fig020133}
 \end{figure}
 
-Последното блокче в групата на кафявите служи за аварийно прекъсване на въртящи се цикли (Фиг. \ref{fig020134}). Ако условието за край на един цикъл е винаги „лъжа“, то цикълът става безкраен и тогава блокчето за прекъсване е единственият начин цикълът да бъде спрян.
+The last block in the group of browns serves for emergency interruption of rotating cycles (Fig. \ref{fig020134}). If the termination condition of a loop is always false, then the loop becomes infinite and then the break block is the only way to stop the loop.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020134.png}
-  \caption{Блокче за аварийно прекъсване на цикли}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020134.png}
+   \caption{Emergency Loop Break Block}
 \label{fig020134}
 \end{figure}
 
-След групата на кафявите блокчета следва групата на зелените блокчета. Всички блокчета в тази група са предназначени за вграждане и представляват набора от основни логически операции. Първите две блокчета задават константите за „истина“ и „лъжа“. Логическите операции са основата на булевата алгебра, където всичко се свежда до изрази за „истина“ или „лъжа“. Третото блокче в групата е операцията „отрицание“. Ако аргументът на тази операция е „истина“, то резултатът от нея е „лъжа“. Ако аргументът е „лъжа“, то резултатът е „истина“. Четвъртото блокче в групата изпълнява операцията за сравнение/различие на две булеви стойности. При сравнението, ако са равни, то резултатът е „истина“ и обратното, а при различието, ако са различни, то резултатът е „истина“ и обратното. Петото блокче в групата е операцията „и“. При тази операция и двата операнда трябва да са „истина“, за да бъде резултатът от операцията „истина“. Последното блокче в групата е операцията „или“. При тази операция поне един от двата операнда трябва да е „истина“, за да бъде резултатът от операцията „истина“. Операциите „и“ и „или“ позволяват настройка на блокчетата, като настройката представлява добавяне на повече операнди. 
+The group of brown blocks is followed by the group of green blocks. All blocks in this group are intended for embedding and represent the set of basic logical operations. The first two boxes set the "true" and "false" constants. Logical operations are the basis of Boolean algebra, where everything boils down to "true" or "false" expressions. The third block in the group is the negation operation. If the argument of this operation is "true", then its result is "false". If the argument is "false", then the result is "true". The fourth block in the group performs the compare/difference operation of two boolean values. For comparison, if they are equal, then the result is "true" and vice versa, and for difference, if they are different, then the result is "true" and vice versa. The fifth block in the group is the "and" operation. In this operation, both operands must be true for the result of the operation to be true. The last block in the group is the "or" operation. In this operation, at least one of the two operands must be true for the result of the operation to be true. The "and" and "or" operations allow setting blocks, where setting is the addition of more operands.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020135.png}
-  \caption{Блокчета за логически операции}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020135.png}
+   \caption{Boolean operation blocks}
 \label{fig020135}
 \end{figure}
 
-След зелената група блокчета следва групата на сините блокчета, която съдържа математически операции и функции. Някои от блокчетата вече бяха използвани, така че представянето ще бъде за тези, които все още не са влизали в употреба. Блокчетата в тази група са предназначени основно за вграждане. В самото начало са блокчетата за аритметичните операции (Фиг. \ref{fig020136}). Целите числа могат да се представят в няколко различни бройни системи, като десетична, двоична, осмична и шестнадесетична. Първото от представените блокчета позволява точно това представяне в различните бройни системи. След това следват операциите за събиране, изваждане, умножение, деление и вдигане на степен. 
+The green block group is followed by the blue block group, which contains mathematical operations and functions. Some of the blocks have already been used, so the presentation will be for those that have not yet come into use. Blocks in this group are designed primarily for embedding. At the very beginning are the blocks for arithmetic operations (Fig. \ref{fig020136}). Integers can be represented in several different number systems, such as decimal, binary, octal, and hexadecimal. The first of the presented blocks allows exactly this representation in the different number systems. Then come the operations of addition, subtraction, multiplication, division and exponentiation.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020136.png}
-  \caption{Блокчета за аритметични операции}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020136.png}
+   \caption{Blocks for arithmetic operations}
 \label{fig020136}
 \end{figure}
 
-Следващата под група сини блокчета изпълняват някои по-специални математически операции (Фиг. \ref{fig020137}). Първото блокче дава възможност за извършване на логически операции, но побитово. Това означава, че съответната логическа операция се прилага по двойки битове, според бинарното представяне на двете числа, които са операнди на операцията. Второто блокче служи за захранване с начална стойност на генератора на случайни числа. Най-използваните в компютрите генератори на случайни числа по своята същност представляват математическа формула. Тази формула започва своето изчисление от явно зададена, предварителна стойност. Чрез блокчето за захранване на случайния генератор може да се постигне еднакво изпълнение на редицата случайни числа, при различни стартирания на програмата. В реалната практика, началната стойност се взема от системния часовник. Третото от представените блокчета определя минимална/максимална стойност. Това блокче също може да се параметризира, като се даде възможност за сравнение на повече от две стойности. Четвъртото представено блокче определя колко знака след запетаята да бъдат представени, при наличие на дробно число. Петото от представените блокчета проверява за число или бройна система на числото. Последното от блокчетата трансформира цяло число в зададена бройна система. 
+The next sub group of blue blocks perform some more special mathematical operations (Fig. \ref{fig020137}). The first block enables logical operations to be performed, but bit by bit. This means that the corresponding logical operation is applied in pairs of bits, according to the binary representation of the two numbers that are operands of the operation. The second block serves to feed the random number generator with an initial value. The most commonly used random number generators in computers are essentially a mathematical formula. This formula starts its calculation from an explicitly set, preset value. Through the power supply block of the random generator, the same exp can be achievedexcitement of the range of random numbers, at different starts of the program. In actual practice, the initial value is taken from the system clock. The third of the blocks presented defines a minimum/maximum value. This block can also be parameterized, allowing comparison of more than two values. The fourth block presented determines how many decimal places to present, if a fractional number is present. The fifth of the blocks presented checks for a number or number system of the number. The last of the blocks transforms an integer into a specified number system.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020137.png}
-  \caption{Блокчета за операции с числа}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020137.png}
+   \caption{Number Operations Blocks}
 \label{fig020137}
 \end{figure}
 
-Последната под група сини блокчета представя набор от математически функции (Фиг. \ref{fig020138}). Първото от тях е за функцията корен квадратен. Второто блокче дава абсолютна стойност на числото. Третото блокче дава отрицателна стойност на числото. Четвъртото блокче дава математическо закръгляне на дробно число до цяло. Петото блокче дава горна цяла стойност. Шестото блокче дава долна цяла стойност. Седмото блокче е предназначено за остатък от делене. Осмото блокче е функция синус. Деветото блокче е функция косинус. Деветото блокче е функция тангенс. Последното блокче изчислява ъгъл в градуси, по зададени координати с помощта на функцията аркустангенс. 
+The last subgroup of blue blocks represents a set of mathematical functions (Fig. \ref{fig020138}). The first of these is for the square root function. The second block gives the absolute value of the number. The third box gives a negative value of the number. The fourth block gives mathematical rounding of a fractional number to a whole number. The fifth block gives an upper integer value. The sixth block gives a lower integer value. The seventh block is intended for the remainder of division. The eighth block is a sine function. The ninth block is a cosine function. The ninth block is a tangent function. The last block calculates an angle in degrees, at given coordinates, using the arctangent function.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020138.png}
-  \caption{Блокчета за математически функции}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020138.png}
+   \caption{Math Function Blocks}
 \label{fig020138}
 \end{figure}
 
-В пурпурната група блокчета са организирани инструкции за работа със символни низове. Някои от блокчетата вече бяха използвани за илюстрирането на предходни примери, така че те няма да бъдат повторно представяни. Първата подгрупа от блокчета (Фиг. \ref{fig020139}) служат за следните неща: определяне на дължината, определяне дали стрингът е празен, лексикографско сравнение на стрингове, подрязване на стрингове (премахване на празните символи в началото и края), трансформация в малки/големи букви на стринга, индекс на подстринг, търсене на подстринг, определяне дали обектът е стринг и обръщане на буквите в стринга.
+Instructions for working with character strings are organized in the purple group of blocks. Some of the blocks have already been used to illustrate previous examples, so they will not be presented again. The first subset of blocks (Fig. \ref{fig020139}) do the following: determine length, determine if string is empty, lexicographic comparison of strings, trim strings (remove leading and trailing blank characters), transform to lowercase /uppercase string, index of substring, search for substring, determine if object is string, and reverse letters in string.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020139.png}
-  \caption{Блокчета за основни операции със стрингове}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020139.png}
+   \caption{Blocks for basic string operations}
 \label{fig020139}
 \end{figure}
 
-Втората подгрупа от блокчета (Фиг. \ref{fig020140}) служат за следните неща: разделяне на стринг по зададен разделител, разделяне на стринг по символа интервал, изрязване на подстринг, подмяна на подстринг със стринг, прекодиране на стринг и замяна на подстрингове по списък от стрингове.
+The second subset of blocks (Fig. \ref{fig020140}) do the following: split a string by a specified delimiter, split a string by a space character, cut a substring, replace a substring with a string, recode a string, and replace substrings by a list of strings.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020140.png}
-  \caption{Блокчета за по-сложни операции със стрингове}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020140.png}
+   \caption{Blocks for more complex string operations}
 \label{fig020140}
 \end{figure}
 
-Групата на светло сините блокчета е предназначена за работа със структури от данни тип списък. Списъците са контейнери за данни, които имат подредба и променлива дължина. Списъците могат да съдържат разнородни елементи, за разлика от повечето масиви. Някои от блокчетата в групата се разглеждат заедно с други групи блокчета и поради тази причина не са представени в следващите примери. Първата подгрупа светло сини блокчета (Фиг. \ref{fig020141}) изпълнява следните неща: създаване на празен списък (записва се като променлива), добавяне на стойности в списъка, проверка за елемент в списъка, дължина на списъка, проверка за празен списък, избор на случаен елемент от списъка, индекс на елемент в списъка и избор на елемент по индекс.
+The group of light blue blocks is for working with list data structures. Lists are data containers that are ordered and of variable length. Lists can contain heterogeneous elements, unlike most arrays. Some of the blocks in the group are considered together with other groups of blocks and are therefore not represented in the following examples. The first subset of light blue blocks (Fig. \ref{fig020141}) do the following: create an empty list (saved as a variable), add values to the list, check for an item in the list, length of the list, check for an empty list, selecting a random element from the list, index of an element in the list and selecting an element by index.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020141.png}
-  \caption{Блокчета за базови операции със списъци}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020141.png}
+   \caption{Blocks for basic list operations}
 \label{fig020141}
 \end{figure}
 
-Втората подгрупа от сините блокчета е за манипулации с елементите на списъците (Фиг. \ref{fig020142}). Действията, които могат да се извършват с тези блокчета са както следва: вмъкване на елемент на зададен индекс, подмяна на елемент на зададен индекс и премахване на елемент на зададен индекс.
+The second subset of the blue blocks is for manipulations with the elements of the lists (Fig. \ref{fig020142}). The actions that can be performed with these blocks are as follows: insert an element at a given index, replace an element at a given index, and remove an element at a given index.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020142.png}
-  \caption{Блокчета за манипулации с елементите на списъка}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020142.png}
+   \caption{List element manipulation blocks}
 \label{fig020142}
 \end{figure}
 
-Следващата подгрупа от сините блокчета е предназначена за работа с повече от един списък (Фиг. \ref{fig020143}). Действията, които могат да се изпълняват с тях са както следва: копиране на списък, добавяне на един списък към друг списък, обръщане на елементите на списъка, преобразуване на списъка до текст от ред в CSV формат, преобразуване на списъка до текст от таблица в CSV формат, зареждане на списък от ред в CSV формат и зареждане на списък от таблица в CSV формат.
+The next subset of blue blocks is for working with more than one list (Fig. \ref{fig020143}). The actions that can be performed with them are as follows: copy a list, add one list to another list, reverse the elements of the list, convert the list to text from a row in CSV format, convert the list to text from a table in CSV format, loading list from row in CSV format and loading list from table in CSV format.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020143.png}
-  \caption{Блокчета за работа с повече от един списък}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020143.png}
+   \caption{Blocks for working with more than one list}
 \label{fig020143}
 \end{figure}
 
-Последните две блокчета в групата на светло сините са за търсене на двойка (двойки от групата на речниците) по ключ и слепване на елементите на списъка, чрез предварително зададен разделител (Фиг. \ref{fig020144}).
+The last two blocks in the light blue group are for searching for a pair (pairs from the dictionary group) by key and concatenating the list elements, using a predefined separator (Fig. \ref{fig020144}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020144.png}
-  \caption{Блокчета за търсене на двойки по ключ и слепване на елементите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020144.png}
+   \caption{Blocks for searching pairs by key and concatenation of elements}
 \label{fig020144}
 \end{figure}
 
-Групата на тъмно сините блокчета е група за работа със структури от тип речник. Структурите от тип речник са аналогия на асоциативните масиви. Характерното за тях е, че информацията е организирана на ключ-стойност двойки. Ключът служи като адрес за достъп до стойността. Ключовете могат да бъдат различни типове данни, като не е задължително да са числа. В първата подгрупа тъмно сини блокчета са представени базовите действия (Фиг. \ref{fig020145}), които може да се извършват с речници, както следва: създаване на речник, представяне на двойка ключ-стойност, създаване на празен речник, достъп до стойност по зададен ключ, задаване на стойност по посочен ключ, премахване на стойност по зададен ключ, извличане на всички ключове, извличане на всички стойности и проверка за наличие на ключ в речника.
+The group of dark blue blocks is a group for working with dictionary-type structures. Dictionary-type structures are analogous to associative arrays. Their characteristic is that the information is organized in key-value pairs. The key serves as the address to access the value. Keys can be different data types, but don't have to be numbers. The first subset of dark blue blocks represents the basic actions (Fig. \ref{fig020145}) that can be performed with dictionaries as follows: create a dictionary, represent a key-value pair, create an empty dictionary, access a value by specified key, set value by specified key, remove value by specified key, retrieve all keys, retrieve all values, and check for key in dictionary.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020145.png}
-  \caption{Блокчета за базови операции с речници}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020145.png}
+   \caption{Blocks for basic dictionary operations}
 \label{fig020145}
 \end{figure}
 
-Втората подгрупа от тъмно сини блокчета служат за малко по-сложни операции с речници (Фиг. \ref{fig020146}), както следва: размер на речника, трансформиране на списък от двойки до речник, трансформиране на речник до списък от двойки, копиране на речник, сливане на речници и проверка дали даден обект е речник.
+The second subset of dark blue blocks serve for slightly more complex dictionary operations (Fig. \ref{fig020146}), as follows: dictionary size, transform a list of pairs to a dictionary, transform a dictionary to a list of pairs, copy dictionary, merging dictionaries and checking if an object is a dictionary.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020146.png}
-  \caption{Блокчета за по-сложни операции с речници}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020146.png}
+   \caption{Blocks for more complex dictionary operations}
 \label{fig020146}
 \end{figure}
 
-Следваща по ред е групата на сивите блокчета, които са предназначени за работа с цветове. В първата подгрупа са представени предефинираните стойности на някои от базовите цветове (Фиг. \ref{fig020147}). В примерът се избира един случаен елемент от списъчна структура с цветовете и този цвят се поставя за фон на бутона.
+Next in order is the group of gray blocks, which are intended for working with colors. In the first subgroup, the predefined values of some of the base colors are presented (Fig. \ref{fig020147}). The example selects a random item from a list structure with the colors and sets that color as the background of the button.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020147.png}
-  \caption{Блокчета за работа с предефинирани цветове}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020147.png}
+   \caption{Work blocks with predefined colors}
 \label{fig020147}
 \end{figure}
 
-Последните две блокчета в групата на сивите са предназначени за съставяне на цвят и за декомпозиране на цвят (Фиг. \ref{fig020148}). Цветовете на компютърния екран се формират от три базови компонента – червено, зелено и синьо. Всеки от тези компоненти има 256 стойности, което позволява генерирането на малко повече от 16 милиона цвята. Освен трите цветни компоненти е възможно да се използва още една, четвърта стойност, която задава нивото на прозрачност и също може да се определя в диапазон от 0 до 255.
+The last two blocks in the gray group are for color composition and color decomposition (Fig. \ref{fig020148}). The colors on the computer screen are formed from three basic components - red, green and blue. Each of these components has 256 values, allowing the generation of just over 16 million colors. In addition to the three color components, it is possible to use another, fourth value that sets the level of transparency and can also be specified in the range from 0 to 255.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020148.png}
-  \caption{Блокчета за съставяне и декомпозиране на цвят}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020148.png}
+   \caption{Blocks for composing and decomposing color}
 \label{fig020148}
 \end{figure}
 
-Групата на оранжевите блокчета е предназначена за работа с променливи. От тази група само блокчето за променлива при върната стойност от процедура не е представяно (Фиг. \ref{fig020149}). Това блокче ще бъде представено заедно с групата на лилавите блокчета, които служат за работа с процедури.
+The group of orange blocks is for working with variables. Of this group, only the block for a variable on a return value from a procedure is not represented (Fig. \ref{fig020149}). This block will be presented along with the group of purple blocks that are used to work with procedures.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020149.png}
-  \caption{Блокчета за работа с продецури}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig020149.png}
+   \caption{Blocks for working with designs}
 \label{fig020149}
 \end{figure}
 
-Процедурите са малки парчета код (сглобка от блокчета), които биват извиквани и в някои случаи връщат резултат. Процедурите могат да получават входящи параметри, а като върната стойност могат да имат и изходящ параметър. Първото блокче в групата на лилавите създава процедура без върната стойност. Второто блокче създава процедура, връщаща стойност. За всяка процедура, която е създадена от потребителя се поява блокче, позволяващо нейното извикване.
+Procedures are small pieces of code (an assembly of blocks) that are called and in some cases return a result. Procedures can receive input parameters and can have an output parameter as a return value. The first block in the purple group creates a procedure with no return value. The second block creates a procedure that returns a value. For each procedure created by the user, a block appears allowing it to be called.
 
-\section{Проектиране на програмен код}
+\section{Program Code Design}
 
-При програмните езици от голяма важност е програмистът да познава добре възможностите на езика. Това познание включва изразните средства на езика, както и наличните библиотеки, предоставени от производителя. С тези познания и голяма доза творчески усилия, всеки програмист може ефективно да създава програми. Не без причина софтуерното инженерство се причислява към вид инженерна дейност. Това се дължи на факта, че добре написаните програми са подредба на малките градивни блокчета, които развойните среди предлагат. След запознаването с изразните средства на Scratch и App Inventor може да се пристъпи към създаването на програми, които изпълняват поставените от програмиста задачи.
-
+With programming languages, it is of great importance that the programmer knows the capabilities of the language well. This knowledge includes the expressive means of the language as well as the available libraries provided by the manufacturer. With this knowledge and a great deal of creative effort, any programmer can effectively create programs. It is not without reason that software engineering is classified as a type of engineering activity. This is because well-written programs are an arrangement of the small building blocks that development environments offer. After familiarizing yourself with the expressions of Scratch and App Inventor, you can proceed to create programs that perform the tasks set by the programmer.

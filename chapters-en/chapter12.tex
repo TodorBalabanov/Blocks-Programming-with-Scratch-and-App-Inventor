@@ -1,247 +1,247 @@
-\chapter{Събери плодовете}
+\chapter{Gather the Fruit}
 
-Целта на тази игра е играчът да улавя падащите плодове, за да не позволява да паднат на земята. За всеки паднал плод той губи един живот. За всеки уловен плод той печели по една точка. Играта приключва, когато загуби трите си живота. Целта е да събере максимален брой точки.
+The objective of this game is for the player to catch the falling fruits to prevent them from falling to the ground. For each fallen fruit, he loses a life. For each fruit caught, he earns one point. It's game over when you lose your three lives. The goal is to collect the maximum number of points.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120001.png}
-  \caption{Събери плодовете}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120001.png}
+   \caption{Collect the fruits}
 \label{fig120001}
 \end{figure}
 
-\section{Създаване на дизайна}
-Конструирането на играта започва със създаването на дизайна, как ще изглежда играта. Първата стъпка е добавяне на Layout, който да бъде VerticalArrangement. Той е необходим за началния екран, когато играта започне. Размерите на този елемент трябва да бъдат такива каквито са на екрана на телефона. За това свойствата височина и ширина трябва да се сменят.
+\section{Creating the Design}
+Building the game starts with creating the design, what the game will look like. The first step is to add a Layout to be a VerticalArrangement. It is required for the splash screen when the game starts. The dimensions of this element should be as they are on the phone screen. For this, the height and width properties must be changed.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120002.png}
-  \caption{Начален екран}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120002.png}
+   \caption{Home screen}
 \label{fig120002}
 \end{figure}
 
-За да е по- атрактивно началото може да се добави изображение. Всички изображения, които са показани в този пример могат да бъдат заменени. Може да се използват всякакви изображения, които се разпространяват със свободен лиценз.
+To make the beginning more attractive, an image can be added. All images shown in this example can be replaced. Any images distributed under a free license may be used.
 
-Към свойството Image трябва да се добави избраното изображение, за да се визуализира върху екрана на телефона, когато играта започне.
+The selected image should be added to the Image property to be displayed on the phone screen when the game starts.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120003.png}
-  \caption{Фон на началния екран}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120003.png}
+   \caption{Home Screen Background}
 \label{fig120003}
 \end{figure}
 
-Играта ще започне, когато играчът натисне бутона за начало. За тази цел трябва да бъде добавен и елемент за бутона. Възможно е да се използва вградения елемент за бутон, но за да се направи играта по- атрактивна може да се използва елемента Image. Може да се използва изображение за бутона. Важно е да се маркира свойството Clickable. Свойствата Height и Width отговарят за това колко да бъде високо и широко изображението.
+The game will start when the player presses the start button. A button element should also be added for this purpose. It is possible to use the built-in button element, but to make the game more attractive the Image element can be used. An image can be used for the button. It is important to highlight the Clickable property. The Height and Width properties are responsible for how tall and wide the image should be.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120004.png}
-  \caption{Бутон за начало}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120004.png}
+   \caption{Start button}
 \label{fig120004}
 \end{figure}
 
-Когато играта започне ще се появява този изглед. Когато играчът натисне бутонът трябва да се появи друг изглед, в който ще се появи героят, който ще бъде управляван и падащите плодове. С цел да се различават различните изгледи на играта, когато се програмират е добра практика да имат описателни имена. Елементът VerticalArrangement1 ще се казва StartLayout, а елементът Image1 ще се казва StartButton.
+When the game starts this view will appear. When the player presses the button another view should appear in which the character to be controlled and the falling fruits will appear. In order to distinguish different game views when programming, it is good practice to have descriptive names. The VerticalArrangement1 element will be named StartLayout and the Image1 element will be named StartButton.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120005.png}
-  \caption{Финална версия на началния екран}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120005.png}
+   \caption{Final version of splash screen}
 \label{fig120005}
 \end{figure}
 
-За създаването на другия изглед отново трябва да се добави елемент VerticalArrangement, който да се казва MainLayout. Височината и ширината на този елемент трябва да бъдат същите, каквито са на екрана. С цел да се направи по- лесно дизайна на този изглед трябва да се размаркира свойството Visible на елемента StartLayout.
+To create the other view, a VerticalArrangement element called MainLayout must be added again. The height and width of this element must be the same as they are on the screen. In order to make the design of this view easier, the Visible property of the StartLayout element should be unchecked.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120006.png}
-  \caption{Създаване на основен екран на играта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120006.png}
+   \caption{Creating main game screen}
 \label{fig120006}
 \end{figure}
 
-Към елемента MainLayout следва да се добавят елементите Canvas и HorizontalArrangement.
-Елементът Canvas е необходим, защото той позволява на елементите, които са вътре в него да се движдат. В играта съществуват няколко елемента, които ще се движат. От една страна това е героят, който ще улавя плодовете, а от друга самите плодове.
-Височината и ширината на този елемент трябва да бъдат същите, каквито са на екрана. Отново може да бъде добавен и фон на този елемент.
+The Canvas and HorizontalArrangement elements should be added to the MainLayout element.
+The Canvas element is necessary because it allows the elements inside it to move. There are several items in the game that will move. On the one hand, it is the character who will catch the fruits, and on the other, the fruits themselves.
+The height and width of this element must be the same as they are on the screen. Again, a background can also be added to this element.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120007.png}
-  \caption{Добавяне на фон към основния екран на играта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120007.png}
+   \caption{Adding background to main game screen}
 \label{fig120007}
 \end{figure}
 
-Към този елемент трябва да бъдат добавени няколко изображения на плодове. Също така изображение, което да е героят и три изображения, които да са неговите животи. С промяната на свойствата Height и Width може да се променят размерите им, а чрез промяна на свойствата X, Y и Z може да се промени и тяхното положение. Важно е да се променят и имената на елементите, за да може да се разпознават, когато се премине към програмирането им.
-На фигурата е показано примерно разположение на плодовете, героя и неговите животи. За целите на играта не е от значение броя на плодовете или тяхното разположение.
+Several fruit images should be added to this element. Also an image to be the character and three images to be his lives. Changing the Height and Width properties can change their sizes, and changing the X, Y, and Z properties can change their position. It is also important to change the names of the elements so that they can be recognized when it comes to programming them.
+The figure shows an example arrangement of the fruits, the character and his lives. For the purposes of the game, the number of fruits or their placement is irrelevant.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120008.png}
-  \caption{Добавяне на плодовете, животите и героя към играта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120008.png}
+   \caption{Adding the fruits, lives and character to the game}
 \label{fig120008}
 \end{figure}
 
-За да бъде завършен този изглед трябва да се добави елемент HorizontalArrangement, към който ще се добавят двата бутона - стрелка наляво и стрелка надясно. Тези бутони ще контролират играча да се движи. Между тях може да бъде поставен и елемент Label, в който ще се показва колко точки е спечелил играчът.
-Ширината на елемента HorizontalArrangement трябва да бъде колкото е тази на екрана. Височината му трябва да бъде малка, например 10 процента. За да могат елементите вътре да се подредят трябва да се променят свойствата AlignHorizontal и AlignVertical да бъдат със стойност Center.
+To complete this view, a HorizontalArrangement element must be added, to which the two buttons - left arrow and right arrow - will be added. These buttons will control the player to move. A Label element can be placed between them, in which the number will be displayed how many points did the player earn?
+The width of the HorizontalArrangement element should be the width of the screen. Its height should be small, for example 10 percent. In order for the elements inside to align, the AlignHorizontal and AlignVertical properties must be changed to Center.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120009.png}
-  \caption{Добавяне на лента за контролите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120009.png}
+   \caption{Add control bar}
 \label{fig120009}
 \end{figure}
 
-Следва да бъдат добавени бутоните, като се променят техните размери и се добавят изображения, така че да заприличат на стрелки лява и дясна. 
+The buttons should be added by resizing them and adding images to look like left and right arrows.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120010.png}
-  \caption{Добавяне на контролите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120010.png}
+   \caption{Adding the controls}
 \label{fig120010}
 \end{figure}
 
-За елемента Label, където ще се изписват точките трябва да се промени стойността на свойството FontSize, за да може текста да бъде по- голям и да се вижда.
+For the Label element, where the points will be written, the value of the FontSize property must be changed so that the text can be larger and visible.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120011.png}
-  \caption{Промяна на размера на точките}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120011.png}
+   \caption{Change point size}
 \label{fig120011}
 \end{figure}
 
-Последният изглед, на който трябва да бъде направен дизайн е когато играчът загуби животите си. Тогава следва да се покаже бутон “Опитай пак”. За да може по- лесно да се направи дизайна трябва да се размаркира свойството Visible на елемента MainLayout.
+The last view to be designed is when the player loses their lives. Then a "Try again" button should be displayed. In order to make the design easier, the Visible property of the MainLayout element must be unchecked.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120012.png}
-  \caption{Добавяне на изглед за край на играта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120012.png}
+   \caption{Add end game view}
 \label{fig120012}
 \end{figure}
 
-Изгледът, който е ще е за край на играта трябва да бъде отново HorizontalArrangement, като размерите височина и ширина трябва да бъдат същите, каквито са на екрана. Може да се промени цвета на фона на този елемент или да се добави картинка за край на играта. Стойностите на свойствата AlignHorizontal и AlignVertical трябва да бъдат със стойност Center, за да може бутона за рестартиране на играта да бъде поставен в средата.
+The view that is going to end the game should be HorizontalArrangement again, with the height and width dimensions being the same as they are on the screen. The background color of this element can be changed or an endgame image can be added. The AlignHorizontal and AlignVertical property values must be set to Center in order for the game restart button to be centered.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120013.png}
-  \caption{Промяна на цвета на фона}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120013.png}
+   \caption{Change background color}
 \label{fig120013}
 \end{figure}
 
-Последно трябва да бъде добавен и бутона за рестартиране на играта. Свойствата за формата, големината на текста и цвета на бутона могат да бъдат променени.
+Lastly, the game restart button should be added. The shape, text size and color properties of the button can be changed.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120014.png}
-  \caption{Добавяне на бутон за рестарт на играта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120014.png}
+   \caption{Add game restart button}
 \label{fig120014}
 \end{figure}
 
-Свойството Visible на елемента GameOverLayout трябва да бъде размаркирано. Единствено екрана за начало на играта трябва да се вижда. За това трябва да се макрика за елемента StartLayout.
+The Visible property of the GameOverLayout element should be unchecked. Only the game start screen should be visible. For this, you need to macro the StartLayout element.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120015.png}
-  \caption{Маркиране на свойството Visible за началния екран}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120015.png}
+   \caption{Checking the Visible property for the home screen}
 \label{fig120015}
 \end{figure}
 
-\section{Създаване на програмата}
-В конструирането на кода на играта ще бъдат използвани блокове, които се наричат “процедури”. Процедурата се характеризира с име и набор от инструкции. Те се изпълняват тогава, когато тя бъде извикана. Целта на процедурата е да съдържа инструкции, които се повтарят в даден момент в кода. В следващите стъпки е обяснено къде и защо има нужда да се използват процедури.
+\section{Creating the Program}
+Blocks called "procedures" will be used in the construction of the game code. A procedure is characterized by a name and a set of instructions. They are executed when it is called. The purpose of a procedure is to contain instructions that are repeated at some point in the code. The following steps explain where and why procedures need to be used.
 
-Първата процедура, която трябва да се създаде е за начало на играта. Инструкциите, които ще бъдат в нея са за първоначалните позиции на плодовете и задаване на скоростите, с които ще се движдат. Тази последователност от стъпки трябва да се изпълни, когато играта започне, т.е. играчът натисне бутона за начало на играта, но също така и когато играчът натисне бутона за рестартиране на играта. За това се използва процедура с цел избягването на конструиране на едни и същи стъпки два пъти.
+The first procedure to create is to start the game. The instructions that will be in it are for the initial positions of the fruits and setting the speeds at which they will move. This sequence of steps must be performed when the game starts, ie. the player presses the start game button, but also when the player presses the restart game button. For this, a procedure is used to avoid constructing the same steps twice.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120016.png}
-  \caption{Създаване на процедура за начало на играта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120016.png}
+   \caption{Create Game Start Procedure}
 \label{fig120016}
 \end{figure}
 
-Първият път когато ще се извика тази процедура е когато се натисне бутона StartButton. Освен извикването на процедурата, другите инструкции, които трябва да се изпълнят са стартовия изгледа да се скрие и да се появи основния изглед. Това се реализира с помощта на свойството Visible, което може да се контролира освен през дизайна, а и програмно.
+The first time this procedure will be called is when the StartButton is pressed. Besides calling the procedure, the other instructions to execute are to hide the start view and bring up the main view. This is implemented using the Visible property, which can be controlled not only through design, but also programmatically.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120017.png}
-  \caption{Програмиране на бутона за начало на играта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120017.png}
+   \caption{Programming the start game button}
 \label{fig120017}
 \end{figure}
 
-Героят на играта ще се движи наляво и надясно, когато се клика върху стрелка наляво или стрелка надясно съответно. За тази цел трябва да бъдат добавени две събития - когато се кликне върху стрелка наляво или когато се кликне върху стрелка надясно. Инструкциите в тези две събития са подобни - героят трябва да си смени позицията спрямо X координатата. В единия случай трябва да се увеличи, а в другия да се намали.
+The game character will move left and right when clicking left arrow or right arrow respectively. For this purpose, two events should be added - when a left arrow is clicked or when a right arrow is clicked. The instructions in these two events are similar - the character must change his position relative to the X coordinate. In one case it should increase, and in the other it should decrease.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120018.png}
-  \caption{Програмиране на героя да се движи}
+   \centering
+\includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120018.png}
+   \caption{Programming the character to move}
 \label{fig120018}
 \end{figure}
 
-В тази игра трябва да се създадат следните променливи - 3, които ще отговарят за скоростта на трите плода и една, която ще бъде за животите на героя.
+In this game, the following variables must be created - 3 that will be responsible for the speed of the three fruits and one that will be for the hero's lives.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120019.png}
-  \caption{Добавяне на променливи към играта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120019.png}
+   \caption{Adding variables to the game}
 \label{fig120019}
 \end{figure}
 
-Когато играчът докосне плод следва точките му да се увеличат. За тази цел отново ще се конструира процедура, тъй като и за трите плода трябва да се извика инструкцията, която променя точките.
+When the player touches a fruit, his points will increase. A procedure will again be constructed for this purpose, since the instruction that changes the points must be called for all three fruits.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120020.png}
-  \caption{Процедура за промяна на точките}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120020.png}
+   \caption{Procedure for changing points}
 \label{fig120020}
 \end{figure}
 
-В следващата стъпка ще се добавят инструкции, които ще се изпълнят, когато играчът докосне плод. Алгоритъмът е следния - сменя се позицията на плода, увеличават се точките с 1 (има създадена процедура) и се увеличава скоростта на героя.
+In the next step, instructions will be added that will be executed when the player touches a fruit. The algorithm is as follows - the position of the fruit is changed, the points are increased by 1 (there is a procedure created) and the character's speed is increased.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120021.png}
-  \caption{Алгоритъм когато играчът докосне плод}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120021.png}
+   \caption{Algorithm when player touches fruit}
 \label{fig120021}
 \end{figure}
 
-Този алгоритъм трябва да се конструира и за останалите герои плодове.
+This algorithm should also be constructed for the other fruit characters.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120022.png}
-  \caption{Алгоритъмът за всички плодове}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120022.png}
+   \caption{The All Fruit Algorithm}
 \label{fig120022}
 \end{figure}
 
-Последната процедура, която трябва да се създаде е да се направи проверка дали играта трябва да приключи. Ако броя на животите е равен на 0, то тогава трябва да се скрие основния екран и да се появи екрана за край на играта. Също така скоростта на всички плодове трябва да стане равна на 0.
+The last procedure to create is to check if the game should end. If the number of lives is equal to 0, then the main screen should be hidden and the endgame screen should appear. Also the speed of all fruits should become equal to 0.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120023.png}
-  \caption{Проверка дали героят губи играта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120023.png}
+   \caption{Checking if the character loses the game}
 \label{fig120023}
 \end{figure}
 
-Следва да се направят проверки ако животите са 2 или 1. Ако са два, това означава, че играчът е загубил 1 и трябва един от животите да се скрие. Отново трябва да се промени свойството Visible. Ако броят е 1, то това означава, че играчът е загубил 2 живота и следва да се скрие картинката и на още един от животите.
+Checks should be made if the lives are 2 or 1. If there are two, it means the player has lost 1 and must hide one of the lives. Again the Visible property needs to be changed. If the number is 1, it means that the player has lost 2 lives and the picture of one more life should be hidden.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120024.png}
-  \caption{Проверка дали героят има живот}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120024.png}
+   \caption{Checking if character has life}
 \label{fig120024}
 \end{figure}
 
-Когато героят плод докосне края на екрана, тогава трябва да се извика процедурата, за проверка за край на играта и да промени позицията си.
+When the fruit character touches the end of the screen, then the endgame check procedure should be called and change its position.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120025.png}
-  \caption{Проверка дали плод е докоснал ръба}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120025.png}
+   \caption{Checking if a fruit has touched the edge}
 \label{fig120025}
 \end{figure}
 
-Последните инструкции, които трябва да се конструират са, когато играта е приключила и играчът натисне бутона за рестартиране на играта.
+The last instructions to be constructed are when the game is over and the player presses the restart game button.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120026.png}
-  \caption{Завършване на играта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig120026.png}
+   \caption{Game Over}
 \label{fig120026}
 \end{figure}
 
-Играта е завършена. Следва да се тества върху телефона.
+Game over. It should be tested on the phone.

@@ -1,291 +1,290 @@
-﻿\chapter{Бикове и крави}
+﻿\chapter{Bulls and Cows}
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080001.png}
-  \caption{„Бикове и крави“ \\ https://i.ytimg.com/vi/r\_dw8iV\_52g/hqdefault.jpg}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080001.png}
+   \caption{"Bulls and cows" \\ https://i.ytimg.com/vi/r\_dw8iV\_52g/hqdefault.jpg}
 \label{fig080001}
 \end{figure}
 
-Играта „Бикове и крави“ (Фиг. \ref{fig080001}) е от групата игри за разгадаване на шифър. Играе се от двама играчи, с лист и молив, като всеки играч си намисля четири цифрено число (тайна), което не може да започва с цифрата нула. Всеки от играчите се опитва да разгадае числото на противника. Процесът на разгадаване включва споменаването на четири цифрено число, като противникът отговаря с информация за това колко цифри от предположението са на точните си места и колко цифри са на други места. За всяка цифра, която съвпада по позиция с тайното число се докладва по един бик, а за всяка цифра, която не съвпада по позиция се докладва по една крава. Играта приключва, когато един от играчите успее да предположи число, което води до четири бика. 
+The Bulls and Cows game (Fig. \ref{fig080001}) is from the group of cipher games. It is played by two players, with paper and pencil, with each player thinking of a four-digit number (secret) that cannot start with the number zero. Each of the players tries to guess the opponent's number. The guessing process involves mentioning a four-digit number, with the opponent responding with information about how many digits of the guess are in their correct places and how many digits are in other places. For each digit that matches in position with the secret number, a bull is reported, and for each digit that does not match in position, a cow is reported. The game ends when one of the players succeeds in guessing a number that results in four bulls.
 
-\section{Оформяне на графичния интерфейс}
+\section{Designing the GUI}
 
-Играта не е сложна, но е идеален вариант да се демонстрира компютърен опонент, който използва похвати от теорията за множествата. Разработката на играта започва със създаването на нов проект (Фиг. \ref{fig080002}).
+The game isn't complicated, but it's an ideal way to demonstrate a computer opponent who uses set theory tricks. Game development begins with the creation of a new project (Fig. \ref{fig080002}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080002.png}
-  \caption{Създаване на нов проект за „Бикове и крави“}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080002.png}
+   \caption{Creating a new Bulls and Cows project}
 \label{fig080002}
 \end{figure}
 
-Възможни са различни начини за организиране на графичния потребителски интерфейс, но с демонстрационна цел е удачно да се използва най-опростеният вариант. В мениджър за управление на визуалните колони от тип таблица може да се разположат визуални контроли в матрица от 9 колони и 2 реда (Фиг. \ref{fig080003}).
+Various ways of organizing the graphical user interface are possible, but for demonstration purposes it is appropriate to use the simplest option. In a table-type visual column control manager, visual controls can be arranged in a matrix of 9 columns and 2 rows (Fig. \ref{fig080003}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080003.png}
-  \caption{Мениджър на визуалните компоненти 9x2}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080003.png}
+   \caption{9x2 Visual Component Manager}
 \label{fig080003}
 \end{figure}
 
-Тъй като всеки играч прави запитвания за четири цифрени числа, то на първия ред в таблицата, първите четири позиции, се запълват с четири визуални компонента за избор от списък (Фиг. \ref{fig080004}). Тези четири списъчни контроли ще служат за визуализация на четири цифрените числа, предполагани от компютърния опонент. Всеки от компонентите първоначално визуализира символа звезда, а списъка от възможни стойности са цифрите от нула до девет. В първият визуален компонент не би трябвало да е възможно избирането на нулата, но за симетрия нулата е оставена в списъка. 
+Since each player queries four digit numbers, the first row in the table, the first four positions, is filled with four visual components to select from a list (Fig. \ref{fig080004}). These four list controls will serve to visualize the four digit numbers guessed by the computer opponent. Each of the components initially displays the star symbol, and the list of possible values is the digits zero through nine. In the first visual component it should not be possible to select the zero, but for symmetry the zero is left in the list.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080004.png}
-  \caption{Визуални контроли за предположенията на компютъра}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080004.png}
+   \caption{Visual controls for computer assumptions}
 \label{fig080004}
 \end{figure}
 
-По аналогичен начин се подреждат още четири списъчни контрола (Фиг. \ref{fig080005}), които ще се използват от играча, за да прави предположения кое е тайното число на компютърния опонент. Между двете групи контроли се оставя една празна клетка, която ще бъде използвана за бутон, който да стартира процедурите по разгадаване. 
+Similarly, four more list controls (Fig. \ref{fig080005}) are arranged, which will be used by the player to guess what the computer opponent's secret number is. A blank cell is left between the two sets of controls, which will be used for a button to start the guessing procedures.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080005.png}
-  \caption{Визуални контроли за предположенията на човека}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080005.png}
+   \caption{Visual controls for human assumptions}
 \label{fig080005}
 \end{figure}
 
-На втория ред се разполагат още четири списъчни контрола, които ще служат за отбелязване на броя бикове и броя крави (Фиг. \ref{fig080006}). Първите два са за броя бикове и крави, познати от компютърния опонент, а вторите два са за броя бикове и крави, познати от играча. В двойките, левият контрол ще показва биковете, а десният контрол кравите. Възможните опции са от нула до четири, тъй като възможните бикове или крави са от нула, до четири включително.
+On the second row there are four more list controls that will serve to mark the number of bulls and the number of cows (Fig. \ref{fig080006}). The first two are for the number of bulls and cows known by the computer opponent, and the second two are for the number of bulls and cows known by the player. In pairs, the left control will show the bulls and the right control the cows. The possible options are from zero to four, as the possible bulls or cows are from zero to four inclusive.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080006.png}
-  \caption{Визуални контроли за отчитане на биковете и кравите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080006.png}
+   \caption{Visual controls for counting bulls and cows}
 \label{fig080006}
 \end{figure}
 
-Компонентите за списъчен избор не визуализират в текста си избраната опция автоматично. Поради тази причина е нужно да се прихване събитието за направен избор и избраната опция да се впише в текстовото поле на визуалния компонент. За тази цел се прихваща общо събитие, генерирано от всички списъчни компоненти на екрана (Фиг. \ref{fig080007}).
+List selection components do not display the selected option in their text automatically. For this reason, it is necessary to intercept the selection made event and write the selected option to the text field of the visual component. For this purpose, a common event generated by all list components on the screen is caught (Fig. \ref{fig080007}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080007.png}
-  \caption{Визуализация на избраната опция}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080007.png}
+   \caption{Preview of selected option}
 \label{fig080007}
 \end{figure}
 
-Пред клетките за отчитане на броя бикове и броя крави е разумно да се поставят етикети (Фиг. \ref{fig080008}). Латинската буква B се ползва за биковете, а латинската буква C за броя на кравите. 
+It is reasonable to place labels in front of the cells for counting the number of bulls and the number of cows (Fig. \ref{fig080008}). The Latin letter B is used for the bulls and the Latin letter C for the number of cows.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080008.png}
-  \caption{Етикети пред контролите за отчитане на биковете и кравите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080008.png}
+   \caption{Labels in front of bull and cow counting controls}
 \label{fig080008}
 \end{figure}
 
-Потребителският интерфейс завършва с два бутона (Фиг. \ref{fig080009}). Първият активизира компютърния опонент да познае числото на играча, а втория активизира компютърния опонент да съобщи броя уцелени от човека бикове и крави.
+The user interface ends with two buttons (Fig. \ref{fig080009}). The first activates the computer opponent to guess the player's number, and the second prompts the computer opponent to report the number of bulls and cows hit by the human.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080009.png}
-  \caption{Бутони за активизиране на процеса по разгадаване}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080009.png}
+   \caption{Buttons to activate the guessing process}
 \label{fig080009}
 \end{figure}
 
-\section{Използване на структури от данни}
+\section{Using Data Structures}
 
-За нуждите на компютърния опонент и според теорията на множествата, важно е да се създаде списъчна структура (Фиг. \ref{fig080010}), която да съдържа всички възможни комбинации на четири цифрени числа, цифрите на които не се повтарят и не започват с нула. При всеки отговор на човека, от списъка се изключват всички комбинации, които не отговарят на условията за установени бикове и крави.
+For the needs of the computer adversary and according to set theory, it is important to create a list structure (Fig. \ref{fig080010}) that contains all possible combinations of four-digit numbers, the digits of which do not repeat and do not start with zero . For each person's response, all combinations that do not meet the conditions for established bulls and cows are excluded from the list.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080010.png}
-  \caption{Списък на комбинациите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080010.png}
+   \caption{List of combinations}
 \label{fig080010}
 \end{figure}
 
-Числата са четири цифрени, така че списъкът с комбинациите може да се запълни с помощта на четири цикъла (Фиг. \ref{fig080011}). Първият се върти от едно до девет, тъй като нулата не може да участва, като първа цифра. Другите три цикъла се въртят от нула до девет. За броячи на циклите се избират латинските букви a, b, c и d. Всеки от броячите ще участва във формирането на четири цифрено число.
+The numbers are four digits, so the list of combinations can be filled using four loops (Fig. \ref{fig080011}). The first rotates from one to nine, since zero cannot participate as the first digit. The other three cycles rotate from zero to nine. The Latin letters a, b, c and d are chosen as cycle counters. Each of the counters will participate in the formation of a four-digit number.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080011.png}
-  \caption{Цикли за генериране на комбинациите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080011.png}
+   \caption{Cycles to generate the combinations}
 \label{fig080011}
 \end{figure}
 
-За да се избегне повторение на цифрите е нужно да се направят серия проверки (Фиг. \ref{fig080012}). За първия цикъл проверка няма да се прави, но вторият цикъл се завърта само, ако броячът b се различава от брояча a. Третият цикъл се завърта само, ако броячът c се различава от брояча a и броячът c се различава от брояча b. Четвъртият цикъл се завърта само, ако броячът d се различава от брояча a, различава се от брояча b и се различава от брояча c. 
+In order to avoid repeating the numbers, a series of checks must be made (Fig. \ref{fig080012}). For the first loop, no check will be made, but the second loop is rotated only if counter b differs from counter a. The third loop is looped only if counter c differs from counter a and counter c differs from counter b. The fourth loop only rotates if counter d is different from counter a, different from counter b, and different from counter c.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080012.png}
-  \caption{Проверки за избягване на дублиращи се цифри}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080012.png}
+   \caption{Checks to avoid duplicate digits}
 \label{fig080012}
 \end{figure}
 
-Две глобални променливи спомагат за съхраняването на тайните числа за компютърния опонент и опонентът човек (Фиг. \ref{fig080013}). Още две глобални променливи пък помагат за обработка на предположението от компютърния опонент и предположението на човека. И четирите променливи, първоначално са служебно инициализирани с нули.
+Two global variables help store the secret numbers for the computer opponent and the human opponent (Fig. \ref{fig080013}). Two more global variables help handle the computer opponent's guess and the human guess. All four variables are initially initialized to zeros.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080013.png}
-  \caption{Помощни променливи за тайните числа на играчите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080013.png}
+   \caption{Helper variables for players' secret numbers}
 \label{fig080013}
 \end{figure}
 
-\section{Алгоритми за манипулации в играта}
+\section{Game Manipulation Algorithms}
 
-Циклите за инициализация на списъка с комбинации и последващия избор на една от тях, като тайно число на компютърния опонент, трябва да се случат в събитие маркиращо инициализацията на работния екран (Фиг. \ref{fig080014}).
+The cycles for initializing the list of combinations and the subsequent selection of one of them as the computer opponent's secret number must occur in an event marking the initialization of the work screen (Fig. \ref{fig080014}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080014.png}
-  \caption{Начална инициализация на екрана}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080014.png}
+   \caption{Initial screen initialization}
 \label{fig080014}
 \end{figure}
 
-Задачата на първия бутон е да вземе предположение от компютърния опонент (извикване на допълнителна процедура) и да нулира всички останали цифри по визуалните компоненти (Фиг. \ref{fig080015}).
+The task of the first button is to take a guess from the computer opponent (calling an additional procedure) and reset all other digits on the visual components (Fig. \ref{fig080015}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080015.png}
-  \caption{Действия на първия бутон}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080015.png}
+   \caption{First Button Actions}
 \label{fig080015}
 \end{figure}
 
-Компютърният опонент прави предположение за тайното число на играча, като избира един елемент от списъка с останали комбинации. Ако списъкът е празен (Фиг. \ref{fig080016}), то това означава, че човекът е подал неправилна информация на някой от предишните ходове и познаването на числото му е невъзможно. В компонент за нотификации се издава съобщение, че играта не може да продължи. 
+The computer opponent guesses the player's secret number by choosing one item from the list of remaining combinations. If the list is empty (Fig. \ref{fig080016}), then this means that the person has given incorrect information on one of the previous moves and knowing his number is impossible. In the notification component, a message is issued that the game cannot continue.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080016.png}
-  \caption{Проверка за останали налични комбинации}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080016.png}
+   \caption{Checking for remaining available combinations}
 \label{fig080016}
 \end{figure}
 
-Ако в списъка с комбинации има елементи, то се избира един от елементите на случаен принцип (Фиг. \ref{fig080017}). Избраното число се визуализира в първите четири клетки от интерфейса, като за тази цел се вземат отделните цифри. 
+If there are elements in the list of combinations, one of the elements is chosen at random (Fig. \ref{fig080017}). The selected number is visualized in the first four cells of the interface, taking the individual digits for this purpose.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080017.png}
-  \caption{Избор на число за предположение}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080017.png}
+   \caption{Choose a number to guess}
 \label{fig080017}
 \end{figure}
 
-При натискането на втория бутон се изпълняват три действия, като за всяко от тях се извиква помощна процедура (Фиг. \ref{fig080018}). Първо се взема информацията от визуалните контроли, за предположението направено от човека. Второто действие е да се визуализират броя бикове и крави, уцелени от човека. Третото действие е да се изключат всички комбинации в списъка, които не отговарят на критериите от последното предположение, направено от компютърния опонент.
+When the second button is pressed, three actions are performed, and for each of them a helper procedure is called (Fig. \ref{fig080018}). First, the information is taken from the visual controls, for the assumption made by the person. The second action is to visualize the number of bulls and cows hit by the human. The third action is to exclude all combinations in the list that do not meet the criteria of the last guess made by the computer opponent.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080018.png}
-  \caption{Действия на първия бутон}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080018.png}
+   \caption{First Button Actions}
 \label{fig080018}
 \end{figure}
 
-Предположението на човека се взема от визуалните контроли, като всяка от цифрите се слепва с останалите и се записва в помощната глобална променлива (Фиг. \ref{fig080019}).
+The human's guess is taken from the visual controls, and each digit is lumped together and written to the auxiliary global variable (Fig. \ref{fig080019}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080019.png}
-  \caption{Вземане на предположението от човека}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080019.png}
+   \caption{Taking the guesswork out of the human}
 \label{fig080019}
 \end{figure}
 
-Броят познати бикове и крави от човека се определят с помощна процедура, която връща списък с два елемента. Първият елемент съдържа броя на биковете, а втория елемент броя на кравите. За да се изчислят тези бройки се използва тайното число на компютърния опонент и предположението, направено от играча (Фиг. \ref{fig080020}). Резултатът се показва в последните два компонента от графичния потребителски интерфейс.
+The number of bulls and cows known by the human is determined by a helper procedure that returns a list of two elements. The first element contains the number of bulls and the second element the number of cows. To calculate these numbers, the computer opponent's secret number and the guess made by the player are used (Fig. \ref{fig080020}). The result is displayed in the last two components of the GUI.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080020.png}
-  \caption{Визуализация на броя бикове и крави познати от човека}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080020.png}
+   \caption{Visualization of the number of bulls and cows known to man}
 \label{fig080020}
 \end{figure}
 
-За да се редуцира броят на комбинациите, трябва да се вземе резултатът от проверката на направеното предположение, тоест броя бикове и крави, докладвани от човека. Това се постига с помощна процедура, която също връща списък, на който първият елемент съдържа броя бикове, а вторият елемент броя крави (Фиг. \ref{fig080021}).
+To reduce the number of combinations, the result of checking the assumption made, that is, the number of bulls and cows reported by the person, should be taken. This is accomplished with a helper procedure that also returns a list whose first element contains the number of bulls and the second element the number of cows (Fig. \ref{fig080021}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080021.png}
-  \caption{Вземане на броя бикове и крави обявени от човека}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080021.png}
+   \caption{Retrieving the number of bulls and cows declared by the person}
 \label{fig080021}
 \end{figure}
 
-Отсяването на ненужните комбинации става чрез вземане на отговора, даден от човекът опонент. След това се създава нов празен списък, в който списък ще влязат само числата, които отговарят на посочените в отговора критерии. Отсяването се постига с прехождане на списъка с комбинации (Фиг. \ref{fig080022}). Всяка комбинация се подава на помощната функция, която да определи колко бика и крави формира комбинацията, спрямо предположението, направено от компютърния опонент. Ако текущо проверяваната комбинация има същите характеристики (брой бикове и брой крави), както са характеристиките, подадени в отговор от човека опонент, то текущата комбинация влиза в новия списък. След цялостното прехождане на списъка от комбинации, старият списък се подменя с новия списък.
+Weeding out unnecessary combinations is done by taking the answer given by the human opponent. After that, a new empty list is created, in which only the numbers that meet the criteria specified in the response will enter the list. Screening is achieved by traversing the list of combinations (Fig. \ref{fig080022}). Each combination is fed to the utility function to determine how many bulls and cows the combination makes, based on the guess made by the computer opponent. If the currently checked combination has the same characteristics (number of bulls and number of cows) as the characteristics returned by the human opponent, then the current combination enters the new list. After traversing the list of combinations completely, the old list is replaced with the new list.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080022.png}
-  \caption{Отсяване на ненужните комбинации}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080022.png}
+   \caption{Weeding out unnecessary combinations}
 \label{fig080022}
 \end{figure}
 
-Изчисляването на броя бикове и броя крави, за две числа става, чрез завъртането на два цикъла. Единият цикъл обхожда първото число, цифра по цифра, а вторият цикъл второто число, пак цифра по цифра (Фиг. \ref{fig080023}).
+The calculation of the number of bulls and the number of cows for two numbers is done by rotating two loops. One cycle traverses the first number, digit by digit, and the second cycle the second number, again digit by digit (Fig. \ref{fig080023}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080023.png}
-  \caption{Обхождане на цифрите на две числа}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080023.png}
+   \caption{Treading the digits of two numbers}
 \label{fig080023}
 \end{figure}
 
-Текущо разглежданите цифри на двете числа се зареждат в две помощни променливи (Фиг. \ref{fig080024}). С тези две променливи и с броячите на циклите се правят нужните сравнения за наличие на бик или крава. 
+The currently viewed digits of the two numbers are loaded into two auxiliary variables (Fig. \ref{fig080024}). With these two variables and with the cycle counters, the necessary comparisons are made for the presence of a bull or a cow.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080024.png}
-  \caption{Помощни променливи за цифрите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080024.png}
+   \caption{Helper variables for the numbers}
 \label{fig080024}
 \end{figure}
 
-Ако двете цифри съвпадат, то това означава или бик или крава (Фиг. \ref{fig080025}). Дали съвпадението е бик или крава се определя от стойностите на броячите за двата цикъла.
+If the two numbers match, it means either a bull or a cow (Fig. \ref{fig080025}). Whether the match is a bull or a cow is determined by the values of the counters for the two cycles.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080025.png}
-  \caption{Съвпадение на цифрите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080025.png}
+   \caption{Number Match}
 \label{fig080025}
 \end{figure}
 
-Ако двата брояча са с една и съща стойност, то е налице бик, в противен случай е на лице крава (Фиг. \ref{fig080026}).
+If the two counters have the same value, then a bull is present, otherwise it is a cow (Fig. \ref{fig080026}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080026.png}
-  \caption{Съвпадение на броячите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080026.png}
+   \caption{Counter match}
 \label{fig080026}
 \end{figure}
 
-При срещането на бик се увеличава с единица стойността на първия елемент в резултата, а при срещането на крава се увеличава с единица вторият елемент на списъка с резултата (Фиг. \ref{fig080027}).
+Encountering a bull increases the value of the first element in the result by one, and encountering a cow increases the value of the second element of the result list by one (Fig. \ref{fig080027}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080027.png}
-  \caption{Отброяване на биковете и кравите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080027.png}
+   \caption{Counting the bulls and cows}
 \label{fig080027}
 \end{figure}
 
-Играта се играе в последователност (Фиг. \ref{fig080028}), като първо се натисне първият бутон. Натискането на първия бутон дава възможност на компютърния опонент да направи предположение за тайното число на човека опонент. След това, човекът маркира колко бика и колко крави е успял да познае компютърният опонент. Третата стъпка е човекът опонент да направи своето предположение за тайното число на компютърния опонент. Следва натискане на втория бутон, при който компютърният опонент съобщава колко бика и колко крави е познал човекът. 
+The game is played in sequence (Fig. \ref{fig080028}) by pressing the first button first. Pressing the first button allows the computer opponent to guess the human opponent's secret number. Then, the human marks how many bulls and how many cows the computer opponent was able to guess. The third step is for the human opponent to make their guess about the computer opponent's secret number. The second button is pressed, in which the computer opponent reports how many bulls and how many cows the human guessed.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080028.png}
-  \caption{Начален екран на играта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080028.png}
+   \caption{Game Home Screen}
 \label{fig080028}
 \end{figure}
 
-Чрез следване на последователността от стъпки за работа с графичния интерфейс (Фиг. \ref{fig080029}), играта продължава докато един от играчите уцели четири бика.
+By following the sequence of steps for working with the graphical interface (Fig. \ref{fig080029}), the game continues until one of the players hits four bulls.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080029.png}
-  \caption{Междинен ход в играта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080029.png}
+   \caption{Intermediate game move}
 \label{fig080029}
 \end{figure}
 
-\section{Публикуване на проекта}
+\section{Publish the project}
 
-След достигане на пълнофункционален вариант на играта, проектът може да бъде публикуван в галерията, така че да бъде достъпен за широката аудитория (Фиг. \ref{fig080030}).
+After reaching a fully functional version of the game, the project can be published in the gallery so that it is available to a wide audience (Fig. \ref{fig080030}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080030.png}
-  \caption{Описание на проекта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080030.png}
+   \caption{Project Description}
 \label{fig080030}
 \end{figure}
 
-След публикуването, в страницата на приложението се появяват хипервръзки за стартиране на програмата или разглеждане на кода й в развойната среда (Фиг. \ref{fig080031}).
+After publishing, hyperlinks appear on the application page to run the program or view its code in the development environment (Fig. \ref{fig080031}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080031.png}
-  \caption{Страница на публикувания проект}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig080031.png}
+   \caption{Published Project Page}
 \label{fig080031}
 \end{figure}
 
-Макар и пълнофункционална, играта все още не е завършена до нивото на краен продукт. Липсват серия от проверки за това дали потребителят въвежда коректно числата (примерно повтарящи се цифри). Липсва функционалност за обявяване на победителя, въпреки че появата на четири бика ясно обозначават кой побеждава. Липсва екран с помощна информация, както и звуково оформление. Липсващата функционалност е извън обхвата на настоящото изложение и би могла да послужи, като допълнително упражнение за желаещите да надградят знанията си.
-
+Although fully functional, the game is still not finished to the level of a final product. A series of checks to ensure that the user is entering numbers correctly (eg repeating digits) are missing. There is no functionality to announce the winner, although the appearance of four bulls clearly indicates who wins. It lacks a help screen as well as a sound layout. The missing functionality is beyond the scope of this presentation and could serve as an additional exercise for those wishing to upgrade their knowledge.

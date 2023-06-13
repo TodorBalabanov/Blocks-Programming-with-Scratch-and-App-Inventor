@@ -1,228 +1,227 @@
-﻿\chapter{Играта 15}
+﻿\chapter{Game 15}
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060001.png}
-  \caption{„Играта 15“ \\ http://www.murderousmaths.co.uk/games/loyd/15 puzzle wood.gif}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060001.png}
+   \caption{"The 15 Game" \\ http://www.murderousmaths.co.uk/games/loyd/15 puzzle wood.gif}
 \label{fig060001}
 \end{figure}
 
-„Играта 15“ (Фиг. \ref{fig060001}) е детски пъзел от групата игри „пътешествие по граф“. Игралното поле е оформено в 4x4 клетки, като в него са поместени 15 плочки. Плочките са номерирани и шестнадесетата позиция е празна. Празната позиция служи като буфер в който могат да се местят съседните плочки. С помощта на буферната клетка, играта се разбърква и целта е плочките да бъдат подредени според началната номерация. 
+"Game 15" (Fig. \ref{fig060001}) is a children's puzzle from the "graph journey" group of games. The playing field is formed in 4x4 cells, and it contains 15 tiles. The tiles are numbered and the sixteenth position is empty. The empty position serves as a buffer into which adjacent tiles can be moved. Using the buffer cell, the game is shuffled and the goal is to arrange the tiles according to the starting numbering.
 
-\section{Структуриране на графичния интерфейс}
+\section{Structuring the GUI}
 
-Това е детска игра, подреждането на която не е особено трудно и сложност създава единствено последния ред в пъзела. Относително простичката организация на играта я прави идеална за реализация като App Inventor приложение. С помощта само на 16 бутона може да се изгради целият нужен интерфейс. Изработката започва със създаването на нов проект (Фиг. \ref{fig060002}).
+This is a children's game, the arrangement of which is not particularly difficult, and only the last row of the puzzle creates complexity. The relatively simple organization of the game makes it ideal for implementation as an App Inventor application. With the help of only 16 buttons, the entire necessary interface can be built. Crafting begins with the creation of a new project (Fig. \ref{fig060002}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060002.png}
-  \caption{Стартиране на нов проект за „Играта 15“}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060002.png}
+   \caption{Starting a new project for "The Game 15"}
 \label{fig060002}
 \end{figure}
 
-Тъй като ще се използват 15 номерирани бутона и един без номерация, то най-удачно е те да бъдат организирани с мениджър на разположението от тип таблица, с 4 реда и 4 колони (Фиг. \ref{fig060003}).
+Since 15 numbered buttons and one unnumbered button will be used, it is best to organize them with a table-type layout manager, with 4 rows and 4 columns (Fig. \ref{fig060003}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060003.png}
-  \caption{Мениджър на съдържанието с 4x4 клетки}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060003.png}
+   \caption{4x4 cell content manager}
 \label{fig060003}
 \end{figure}
 
-Следва поставяне на 16 бутона (Фиг. \ref{fig060004}), като нечетните числа се оцветяват в червено, а четните числа в синьо. Оцветяването подсилва визуалния ефект на играта. Шестнадесетият бутон вместо надпис има два празни интервала, така че ширината му да съвпада с ширината на другите бутони. Без допълнителни настройки, ширината на бутоните се определя от броя символи в надписите им. 
+Then 16 buttons are placed (Fig. \ref{fig060004}), with the odd numbers colored red and the even numbers blue. Coloring enhances the visual effect of the game. The sixteenth button instead of a label has two blank spaces so that its width matches the width of the other buttons. Without additional settings, the width of the buttons is determined by the number of characters in their labels.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060004.png}
-  \caption{Поставяне на 16 бутона}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060004.png}
+   \caption{Placement of 16 buttons}
 \label{fig060004}
 \end{figure}
 
-Възможно е да се разменят самите бутони, когато се натисне бутон в съседство на празната клетка, но значително по-лесно е да се разменят надписите и цветовете на бутоните, а самите бутони да остават винаги на първоначалните си места. Натискането на бутона ще се прихваща в общо събитие за всички бутони, но след натискането трябва да се определи дали в съседство е празната клетка. Най-елегантно съседството може да бъде установено, ако структура от тип речник съдържа всички бутони като ключове (Фиг. \ref{fig060005}), а като стойности списъчни структури със съседите.
+It is possible to swap the buttons themselves when a button adjacent to the empty cell is pressed, but it is much easier to swap the labels and colors of the buttons and have the buttons themselves always stay in their original places. The button press will be caught in a common event for all buttons, but after the press it must be determined if the empty cell is adjacent. The most elegant adjacency can be established if a dictionary-type structure contains all the buttons as keys (Fig. \ref{fig060005}) and as values list structures with the neighbors.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060005.png}
-  \caption{Бутоните като ключови стойности}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060005.png}
+   \caption{Buttons as key values}
 \label{fig060005}
 \end{figure}
 
-\section{Структури от данни}
+\section{Data Structures}
 
-Този речник на съответствията става достъпен като глобална променлива, така че да се ползва в различните събития от визуалния интерфейс. Бутон едно за съседи има бутон две и бутон пет  (Фиг. \ref{fig060006}). 
+This dictionary of matches is made available as a global variable to be used in the various events of the visual interface. Button one for neighbors has button two and button five (Fig. \ref{fig060006}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060006.png}
-  \caption{Бутони като списък от съседи}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060006.png}
+   \caption{Buttons as neighbor list}
 \label{fig060006}
 \end{figure}
 
-Бутон две има за съседи бутон едно, шест и три. Съседи на бутон три са две, седем и четири. Съседи на бутон четири са три и осем. Съседи на бутон пет са едно, шест и девет. Съседи на бутон шест са две, пет, седем и десет. Съседи на бутон седем са три, шест, осем и единадесет. Съседи на бутон осем са четири, седем и дванадесет. Съседи на бутон девет са пет, десет и тринадесет. Съседи на бутон десет са шест, девет, единадесет и четиринадесет. Съседи на бутон единадесет са седем, десет, дванадесет и петнадесет. Съседи на бутон дванадесет са осем, единадесет и шестнадесет. Съседи на бутон тринадесет са девет и четиринадесет. Съседи на бутон четиринадесет са десет, тринадесет и петнадесет. Съседи на бутон петнадесет са единадесет, четиринадесет и шестнадесет. Съседи на бутон шестнадесет са дванадесет и петнадесет. Списъците за съседство се попълват по идентичен начин (Фиг. \ref{fig060007}).
+Button two has as neighbors buttons one, six and three. Neighbors of button three are two, seven and four. The neighbors of button four are three and eight. Button five's neighbors are one, six, and nine. Neighbors of button six are two, five, seven and ten. Neighbors of button seven are three, six, eight and eleven. Eight's neighbors are four, seven, and twelve. The neighbors of button nine are five, ten and thirteen. Ten's neighbors are six, nine, eleven, and fourteen. The neighbors of button eleven are seven, ten, twelve and fifteen. Button twelve's neighbors are eight, eleven, and sixteen. The neighbors of button thirteen are nine and fourteen. Fourteen's neighbors are ten, thirteen, and fifteen. The neighbors of button fifteen are eleven, fourteen and sixteen. Sixteen's neighbors are twelve and fifteen. Adjacency lists are completed in an identical manner (Fig. \ref{fig060007}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060007.png}
-  \caption{Идентично попълване на съседните бутони}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060007.png}
+   \caption{Identical filling of adjacent buttons}
 \label{fig060007}
 \end{figure}
 
-Натискането на който и да е от бутоните предизвика събитие, което е общо за всички бутони (Фиг. \ref{fig060008}). Тъй като не е определено кой бутон ще натисне потребителя, то се прави проверка за натиснатия бутон (идва като параметър на събитието). 
+Pressing any of the buttons triggers an event that is common to all buttons (Fig. \ref{fig060008}). Since it is not specified which button the user will press, it is checked for the pressed button (comes as an event parameter).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060008.png}
-  \caption{Събитие за натиснат бутон}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060008.png}
+   \caption{Button pressed event}
 \label{fig060008}
 \end{figure}
 
-\section{Алгоритми за обработка на състоянието на играта}
+\section{Game State Handling Algorithms}
 
-Проверката дали празната клетка е съседство и евентуалната размяна с празната клетка се поверява на допълнителна процедура (Фиг. \ref{fig060009}). Процедурата получава като входен параметър компонента, предизвикал събитието. 
+The check whether the different cell is a neighbor and the possible exchange with the empty cell is entrusted to an additional procedure (Fig. \ref{fig060009}). The procedure receives as an input parameter the component that caused the event.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060009.png}
-  \caption{Процедура за размяна}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060009.png}
+   \caption{Exchange Procedure}
 \label{fig060009}
 \end{figure}
 
-За да се определи дали празната клетка е в съседство на натиснатия бутон се проверява целият списък, който се намира в речника на ключова позиция, посочена от компонента предизвикал събитието. Тази проверка е възможна с цикъл за обхождане на елементите в списъчна структура (Фиг. \ref{fig060010}). Ключовата стойност би трябвало винаги да връща списък със съседните бутони, но ако ключът не е намерен, за безопасност, се връща празен списък.
+To determine if the empty cell is adjacent to the pressed button, the entire list that is in the dictionary of the key position specified by the component that raised the event is checked. This check is possible with a loop for traversing the elements in a list structure (Fig. \ref{fig060010}). The key value should always return a list of adjacent buttons, but if the key is not found, an empty list is returned to be safe.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060010.png}
-  \caption{Цикъл за обхождане на съседите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060010.png}
+   \caption{Neighbor Traversal Cycle}
 \label{fig060010}
 \end{figure}
 
-Размяна с прави само, ако в списъка бъде открита празната клетка. Направата на размяната спира и цикъла за търсене на празната клетка. Условието съседен бутон да обозначава праната клетка е неговият надпис да бъде два интервала (Фиг. \ref{fig060011}). 
+Replace with only if the empty cell is found in the list. Doing the swap also stops the cycle of looking for the empty cell. The condition for an adjacent button to indicate the washed cell is that its label should be two spaces (Fig. \ref{fig060011}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060011.png}
-  \caption{Проверка за празната клетка}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060011.png}
+   \caption{Checking for the empty cell}
 \label{fig060011}
 \end{figure}
 
-За улесняване на размяната се залагат четири локални, помощни променливи. Две променливи за текстовете на двата бутона и две променливи за цветовете на текстовете (Фиг. \ref{fig060012}).
+To facilitate the exchange, four local, helper variables are set. Two variables for the texts of the two buttons and two variables for the colors of the texts (Fig. \ref{fig060012}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060012.png}
-  \caption{Локални помощни променливи}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060012.png}
+   \caption{Local Helper Variables}
 \label{fig060012}
 \end{figure}
 
-Размяната се осъществява, чрез записване на помощните променливи, като нови стойности за двата бутона (Фиг. \ref{fig060013}).
+The exchange is done by writing the auxiliary variables as new values for the two buttons (Fig. \ref{fig060013}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060013.png}
-  \caption{Размяна на стойностите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060013.png}
+   \caption{Swap Values}
 \label{fig060013}
 \end{figure}
 
-На този етап играта притежава абсолютно цялата функционалност, която притежава и механичната играчка (Фиг. \ref{fig060014}).
+At this stage, the game has absolutely all the functionality that the mechanical toy has (Fig. \ref{fig060014}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060014.png}
-  \caption{Завършен вид на играта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060014.png}
+   \caption{Finished Game View}
 \label{fig060014}
 \end{figure}
 
-Въпреки, че всичко необходимо е налично, използването на компютър позволява да се добави още една полезна функция, а именно – автоматично разбъркване на пъзела. Операционната система позволява да се прихване събитие за дълго натискане на бутон (Фиг. \ref{fig060015}).
+Although everything you need is available, the use of a computer allows one more useful feature to be added, namely automatic puzzle shuffling. The operating system allows a long press event to be intercepted (Fig. \ref{fig060015}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060015.png}
-  \caption{Събитие за дълго натискане на бутон}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060015.png}
+   \caption{Button Long Press Event}
 \label{fig060015}
 \end{figure}
 
-Бутонът за празната клетка не е натоварен с много действия и поради тази причина може да се използва точно като бутон за разбъркване, стига да бъде натиснат за продължително време (Фиг. \ref{fig060016}).
+The empty cell button is not loaded with many actions and therefore can be used just like a shuffle button as long as it is pressed for a long time (Fig. \ref{fig060016}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060016.png}
-  \caption{Активиране на разбъркването}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060016.png}
+   \caption{Enable Shuffle}
 \label{fig060016}
 \end{figure}
 
-Тъй като при разбъркването празната клетка ще се мести, то е добър вариант позицията й да се съхранява в локална, помощна променлива (Фиг. \ref{fig060017}).
+Since the empty cell will move during shuffling, it is a good idea to store its position in a local, helper variable (Fig. \ref{fig060017}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060017.png}
-  \caption{Помощна променлива за позицията на празната клетка}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060017.png}
+   \caption{Helper variable for empty cell position}
 \label{fig060017}
 \end{figure}
 
-Игралното табло се състои от 16 позиции. За да може всяка позиция да участва, средно-статистически, 10 пъти в разбъркването, случайно избрани размествания могат да се направят 160 пъти, което е 16 клетки по десет пъти. За целта на разбъркването, цикъл с единична стъпка е най-удачната конструкция (Фиг. \ref{fig060018}).
+The game board consists of 16 positions. In order for each position to participate, statistically, 10 times in the shuffle, randomly chosen shuffles can be made 160 times, which is 16 cells ten times. For the purpose of stirring, a single-step loop is the most suitable design (Fig. \ref{fig060018}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060018.png}
-  \caption{Цикъл за разбъркване}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060018.png}
+   \caption{Shuffle Loop}
 \label{fig060018}
 \end{figure}
 
-Изборът на следваща празна клетка се прави на случаен принцип от съседите на текущата празна клетка  (Фиг. \ref{fig060019}). Следващата празна клетка се записва във временна променлива, докато се извърши размяната.
+The next empty cell is chosen randomly from the neighbors of the current empty cell (Fig. \ref{fig060019}). The next empty cell is written to a temporary variable until the swap is done.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060019.png}
-  \caption{Избор на случаен съсед на празната клетка}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060019.png}
+   \caption{Choosing a random neighbor of the empty cell}
 \label{fig060019}
 \end{figure}
 
-Самата размяна се извършва с помощната процедура (Фиг. \ref{fig060020}). След размяната, празната клетка за следващото завъртане на цикъла се сменя.
+The exchange itself is carried out with the auxiliary procedure (Fig. \ref{fig060020}). After the swap, the empty cell for the next spin of the loop is swapped.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060020.png}
-  \caption{Размяна на празната клетка}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060020.png}
+   \caption{Swap the empty cell}
 \label{fig060020}
 \end{figure}
 
-\section{Публикуване на проекта}
+\section{Publish the project}
 
-След като играта е завършена, проектът може да се публикува за широката аудитория с помощта на бутона „Publish to Gallery“ (Фиг. \ref{fig060021}).
+After the game is completed, the project can be published to the general audience using the "Publish to Gallery" button (Fig. \ref{fig060021}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060021.png}
-  \caption{Бутон за публикуване в галерия}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060021.png}
+   \caption{Post to gallery button}
 \label{fig060021}
 \end{figure}
 
-Дори семпло описание (Фиг. \ref{fig060022}) на приложението е важно за потребителите, тъй като това е второто нещо, което привлича вниманието им.
+Even a simple description (Fig. \ref{fig060022}) of the application is important to users, as it is the second thing that catches their attention.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060022.png}
-  \caption{Описание на приложението}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060022.png}
+   \caption{Application Description}
 \label{fig060022}
 \end{figure}
 
-Първото най-важно нещо в едно софтуерно приложение е картинка, която най-много може да привлече вниманието на потребителите (Фиг. \ref{fig060023}).
+The first most important thing in a software application is a picture, which can most attract the attention of users (Fig. \ref{fig060023}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060023.png}
-  \caption{Картинка за представяне на приложението}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060023.png}
+   \caption{Image to introduce the application}
 \label{fig060023}
 \end{figure}
 
-В публичната страница на проекта (Фиг. \ref{fig060024}), потребителите могат да стартират програмата или да я заредят в средата на App Inventor.
+On the project's public page (Fig. \ref{fig060024}), users can run the program or load it into the App Inventor environment.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060024.png}
-  \caption{Публична страница на проета}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig060024.png}
+   \caption{Public project page}
 \label{fig060024}
 \end{figure}
 
-Играта е напълно използваема, но все още липсват някои функционалности. Хубаво би било да се добави възможност за автоматично нареждане на пъзела. Липсата на помощна информация също е недостатък. Възможно е да се добави отчитане на времето за подреждане, така че в по-напреднал етап да има възможност за организиране на онлайн класация. Изброените функционалности носят определена сложност и излизат извън рамките на настоящото изложение, но пък са идеална възможност за допълнително упражнение за читателите. 
-
+The game is fully usable, but some functionality is still missing. It would be nice to add an option to auto-order the puzzle. The lack of supporting information is also a drawback. It is possible to add timekeeping to the arrangement, so that at a more advanced stage there is the possibility of organizing an online leaderboard. The listed functionalities carry a certain complexity and go beyond the scope of this presentation, but they are an ideal opportunity for additional exercise for the readers.
