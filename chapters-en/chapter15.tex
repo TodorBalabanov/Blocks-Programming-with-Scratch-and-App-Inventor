@@ -1,155 +1,155 @@
-\chapter{Darts}
+\chapter{Дартс}
 
-This project represents the popular darts game. The player shoots short arrows at a circular target. The closer it is to the center of the target, the more points it earns. The goal of the player is to collect the maximum number of points for the three shots available. If the collected points are more than 13 - win the game, otherwise lose the game.
+Този проект представлява популярната дартс игра. Играчът хвърля къси стрели по кръгла мишена. Колкото по- близо е до центъра на мишената, толкова повече точки печели. Целта на играча е да събере максимален брой точки за трите удъра, с които разполага. Ако събраните точки са над 13 - печели играта, в противен случай губи играта.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150001.png}
-   \caption{Darts}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150001.png}
+  \caption{Дартс}
 \label{fig150001}
 \end{figure}
 
-\section{Creating the Design}
-Before you start programming the game, you must first create the design. First, add the two main characters of the game - the target (Fig. \ref{fig150002}) and the arrow (Fig. \ref{fig150003}). Use the tools in Scratch to draw the required characters.
+\section{Създаване на дизайна}
+Преди да започнете с програмирането на играта, първо трябва да създадете дизайна. Първо добавете двата основни героя на играта - мишената (Фиг. \ref{fig150002}) и стрелата (Фиг. \ref{fig150003}). Използвайте инструментите в Scratch, за да нарисувате необходимите герои.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150002.png}
-   \caption{Target}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150002.png}
+  \caption{Мишена}
 \label{fig150002}
 \end{figure}
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150003.png}
-   \caption{Arrow}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150003.png}
+  \caption{Стрела}
 \label{fig150003}
 \end{figure}
 
-Add a new character that you can also draw using the Scratch tools. This character will be responsible for showing how many shots the player has left. To show how many shots are left, add costumes to that character. For example, on the first suit you can write that there are 3 shots left, and on the second - 2 shots.
+Добавете нов герой, който също може да нарисувате с помощта на Scratch инструментите. Този герой ще бъде отговрен за това да показва колко изстрела остават на играча. За да покажете колко изстрела остават, добаявте костюми на този герой. Например на първия костюм може да напишете, че остават 3 изстрела, а на втория - 2 изстрела.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150004.png}
-   \caption{Number of Shots}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150004.png}
+  \caption{Брой изстрели}
 \label{fig150004}
 \end{figure}
 
-The next character to add is the one that shows how many points the player has earned. Again, add costumes to the character with the corresponding number of points he can earn. In this case, these are from 0 to 5.
+Следващият герой, който следва да добавите е, този, който показва колко точки е спечелил играчът. Отново добавете костюми на героя със съответния брой точки които той може да спечели. В случая това са от 0 до 5.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150005.png}
-   \caption{Number of points}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150005.png}
+  \caption{Брой точки}
 \label{fig150005}
 \end{figure}
 
-The last Scratch character is the inscription whether the player wins or loses. Like the previous two characters, add two suits with different inscriptions - one for winning and the other for losing.
+Последният Scratch герой е надписа дали играчът печели или губи. Подобно на предишните два героя, добавете два костюма с различни надписа - единият да бъде за победа, а другият за загуба.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150006.png}
-   \caption{End of Game Caption}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150006.png}
+  \caption{Надпис за край на играта}
 \label{fig150006}
 \end{figure}
 
-\section{Programming the target and boom}
-Before we move on to programming the respective characters, add a new variable points to the game. This variable will contain the score that the character will accumulate during the game. From the Variables section, select Make a Variable and name the variable.
+\section{Програмиране на мишената и стрелата}
+Преди да преминем към порграмирането на съответните герои, добавете нова променлива points към играта. Тази променлива ще съдържа в себе си резултата, който героят ще трупа по време на играта. От секция Variables изберете Make a Variable и задайте име на променливата.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150007.png}
-   \caption{Creating in-game variable}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150007.png}
+  \caption{Създаване на променлива в играта}
 \label{fig150007}
 \end{figure}
 
-Let's move on to programming the target. The only instructions you need to add to this character are that it stays in the same position throughout the game. Don't forget to also set an initial value to the variable you created. At the beginning of each game, the player must have 0 points.
+Нека да преминем към програмирането на мишената. Единствените инструкции, които трябва да добавите към този герой са, той да бъде на една и съща позиция по време на цялата игра. Не забравяйте да зададете и първоначална стойност на променливата, която създадохте. В началото на всяка игра, играчът трябва да има 0 точки.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150008.png}
-   \caption{Target instructions}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150008.png}
+  \caption{Инструкции на мишената}
 \label{fig150008}
 \end{figure}
 
-You should also add instructions for the arrow. If the arrow is too big, you can resize it. Create a new variable to hold what the status of the arrow is. There are two statuses - shoot or throw. At the start of the game, the status of the arrow will be shoot.
+Следва да добавите инструкции и за стрелата. Ако стрелата в твърде голяма, може да промените размерите ѝ. Създайте нова променлива, която да съдържа в себе си какъв е статуса на стрелата. Съществуват два статуса - shoot или throw. В началото на играта статуса на стрелата ще бъде shoot.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150009.png}
-   \caption{Set Arrow Status}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150009.png}
+  \caption{Задаване на статус на стрелата}
 \label{fig150009}
 \end{figure}
 
-Add the following check - if the arrow's status is shoot, then the arrow must follow the player's mouse. Also add a new event which is when this sprite clicked. When the player clicks the arrow, you need to change the value of the status variable to throw. Also, the character must send a message to the other characters that the player has clicked the mouse, which means he is shooting.
+Добавете следната проверка - ако статуса на стрелата е shoot, то тогава стрелата трябва да следва мишката на играча. Също така добавете и ново събитие, което е when this sprite clicked. Когато играчът кликне върху стрелата, трябва да промените стойността на променливата status да бъде throw. Също така героят трябва да изпрати съобщение на другите герои, че играчът е натиснал мишката, което означава, че стреля.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150010.png}
-   \caption{Send shooting message}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150010.png}
+  \caption{Изпращане на съобщение за стрелба}
 \label{fig150010}
 \end{figure}
 
-After the player has fired the arrow you need to program it to change its direction so that you can imitate a shot. Also resize it to make it smaller, as if it is moving away from the player. You know that when the player clicks on the arrow, it sends a message. Use this message to change the direction and size of the arrow after firing.
+След като играчът е изстрелял стрелата трябва да я програмирате да променя посоката си, за да може да имитирате изстрел. Също така променете и размерите ѝ да става по- малка, все едно се отдаличава от играчът. Знаете, че когато играчът кликне върху стрелата, то се изпраща съобщение. Използвайте това съобщение за да промените посоката и размера на стрелата след изстрел.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150011.png}
-   \caption{Change arrow direction and size after shot}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150011.png}
+  \caption{Промяна на посоката и размера на стрелата след изстрел}
 \label{fig150011}
 \end{figure}
 
-When the player fires the arrow, it starts moving away and sends a Check Points message, which should check how many points the player has earned. To determine the number of points earned, it is necessary to check what color the arrow touched. In order for the game to be fairest, the check that will be made is the black color (this is the tip of the arrow) to which color it has touched. Add a new variable to hold the currently earned points. The last instruction to add is for the arrow to send a message that it gives points to the player.
+Когато играчът изстреля стрелата, тя започва да се отдаличава и изпраща съпбщение Check Points, което трябва да провери колко точки е спечелил играчът. За да се определи броя на спечелените точки, трябва да се провери до какъв цвят се е докоснала стрелата. За да бъде най- честна играта проверката, която ще се направи е черният цвят (това е върхът на стрелата) до кой цвят се е докоснал. Добавете нова променлива, която да съдържа текущо спечелните точки. Последната иснтрукция, която трябва да добавите е, стрелата да изпраща съобщение, че дава точки на играча.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150012.png}
-   \caption{Check Points Earned}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150012.png}
+  \caption{Проверка на спечелените точки}
 \label{fig150012}
 \end{figure}
 
-To make the game even more interesting, you can add a variable to be a randomly assigned number. This variable will deflect the arrow to the side depending on what random number has landed.
+За да направите играта още по- интересна може да добавите променлива, която да бъде случайно зададено число. Тази променлива ще отклонява стрелата настрани, спрямо това какво случайно число се е паднало.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150013.png}
-   \caption{Arrow deflection to the side}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150013.png}
+  \caption{Отклоняване на стрелата встрани}
 \label{fig150013}
 \end{figure}
 
-\section{Programming the character that counts the number of shots}
+\section{Програмиране на героя, който отброява броя изстрели}
 
-In this step, you will add instructions that will show the player how many more shots he is allowed to make. To do this, select the character you added for the number of shots. Place this character in a position of your choice. Create a new variable that will contain the number of shots fired. Then make the necessary checks - if the number of shots is 3, then one should switch to a suit that shows three shots, if the number of shots is two - then one should switch to the suit with two shots, and so on. At the last check - if the number of shots is 0, then a message should be sent that the game is over.
+В тази стъпка ще добавите инструкции, които ще показват на играча колко изстрела още има право да направи. За целта изберете героя, който добавихте за брой изстрели. Поставете този герой на избрана от вас позиция. Създайте нова променлива, която ще съдържа в себе си броя на изтрелите. След това направете нужните проверки - ако броя на изстрелите е 3, то тогава трябва да се премине към костюм, който показва три изстрела, ако броя на изстрелите е две - то тогава трябва да се премине към костюма с два изстрела и т.н. При последната проверка - ако броя на изстрелите е 0, то тогава трябва да се изпрати съобщение, че играта е приключила.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150014.png}
-   \caption{Programming the number of shots}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150014.png}
+  \caption{Програмиране на брой изстрели}
 \label{fig150014}
 \end{figure}
 
-\section{Programming the character that displays the number of points}
+\section{Програмиране на героя, който показва броя на точките}
 
-Select the character that shows how many points the player has earned. This hero, in addition to showing how many points there are, will also be responsible for reducing the number of shots, setting a new wind direction, as well as changing the status of the arrow to ready to shoot again.
+Изберете героя, който показва колко точки е спечелил играчът. Този герой освен за това да покаже колко са точките, той ще отговаря и за това да намали броя на изстрелите, да зададе нова посока на вятъра, както и да промени статуса на стрелката да бъде готова отново за изстрел.
 
-Since you don't know how many points the player will earn, and to avoid doing thousands of checks, you can cross out the suit names by the number of points. So you can easily switch from suit to suit, since you have a variable that holds the number of points currently earned.
+Тъй като не знаете колко точки ще спечели играчът и за да не правите хиляди проверки, може да си скръсисте имената на костюмите на броя точки. Така лесно ще може да преминавате от костюм на костюм, тй като имате променлива, която държи в себе си броя на текущо спечелените точки.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150015.png}
-   \caption{Programming the number of points}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150015.png}
+  \caption{Програмиране броя на точките}
 \label{fig150015}
 \end{figure}
 
-\section{Programming the end game}
+\section{Програмиране края на играта}
 
-The last step left to do is program the endgame. Depending on how many points the player has earned, he will either win or lose after the third shot. If the number of points is greater than 13 - he wins. Otherwise, he loses.
+Последната стъпка, която остана да направите е да програмирате края на играта. Спрямо това колко точки е спечелил играчът той или ще спечели или ще загуби след третия изстрел. Ако броя на точките е по- голям от 13 - той печели. В противен случай той губи.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150016.png}
-   \caption{Programming the end game}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig150016.png}
+  \caption{Програмиране края на играта}
 \label{fig150016}
 \end{figure}
 
-You are ready to test how accurate and good you are in the game you created.
+Готови сте да проверите колко сте точни и добри в играта, която създадохте.

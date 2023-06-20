@@ -1,104 +1,104 @@
-\chapter{Bouquet for Mom}
+\chapter{Букет за мама}
 
-The ultimate goal of this project is for the children to create a bouquet for their mothers. When the player clicks on this spot, a beautiful flower will appear. In order to get the most beautiful bouquet, the player can change the type of flowers using the up arrow. Use the left and right arrows to change the size of the flower.
+Крайната цел на този проект е децата да създадат букет за своите майки. Когато играчът кликне на това място ще се появи прекрасно цвете. За да се получи най- красивият букет играчът може да променя вида на цветята с помощта на стрелка нагоре. С помощта на лявата и дясната стрелка се променя размерът на цветето.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040001.png}
-   \caption{Bouquet for Mom}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040001.png}
+  \caption{Букет за мама}
 \label{fig040001}
 \end{figure}
 
-\section{Adding Background and Characters}
-The first step in creating the game is adding a suitable background. From the Backdrops->Choose a Backdrop section, a suitable one can be selected from the available ones that Scratch provides.
+\section{Добавяне на фон и герои}
+Първата стъпка от създаването на играта е добавяне на подходящ фон. От секция Backdrops->Choose a Backdrop може да се избере подходящ от наличните, които Scratch предоставя.
 
-In this game, there will be no need for the main character in Scratch the cat, for this he must be deleted.
+В тази игра няма да има нужда от основния герой в Scratch котката, за това трябва да бъде изтрит.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040002.png}
-   \caption{Game Background}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040002.png}
+  \caption{Фон на играта}
 \label{fig040002}
 \end{figure}
 
-The character that represents a petal of the flower that will be created when the player clicks on the screen should be added. This sprite must be drawn using the tools. To make the game more interesting, more than one costume can be added for this character. Each of the suits will represent a different petal.
+Следва да се добави героят, който представлява венчелистче на цветето, което ще се създаде, когато играчът кликне върху екранът. Този спрайт трябва да бъде нарисуван използвайки инструментите. За да бъде по- интересна играта може да бъдат добавени повече от един костюм за този герой. Всеки един от костюмите ще представлява различно венчелистче.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040003.png}
-   \caption{Drawing Petal Character}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040003.png}
+  \caption{Рисуване на героя венчелистче}
 \label{fig040003}
 \end{figure}
 
-\section{Drawing Flowers}
+\section{Рисуване на цветя}
 
-When the player clicks on the background a flower will start to be drawn. This means that instructions should be placed on the background when it is clicked to send a "draw" message.
+Когато играчът кликне върху фона ще започне да се рисува цвете. Това означава, че трябва да бъдат поставени инструкции на фона, когато се кликне върху него да изпраща съобщение "draw".
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040004.png}
-   \caption{Background Instructions}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040004.png}
+  \caption{Инструкции на фона}
 \label{fig040004}
 \end{figure}
 
-A new instruction section should be added to draw the flowers and stems. This is the Pen section.
+За да се рисуват цветята и стъблата трябва да бъде добавена нова секция с инструкции. Това е секцията Pen.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040005.png}
-   \caption{Add Pen Section}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040005.png}
+  \caption{Добавяне на секция Pen}
 \label{fig040005}
 \end{figure}
 
-When the game starts the petal character must be hidden and everything drawn up to that point must be erased. The instruction that erases everything on the screen is located in the new Pen section and is "erase all".
+Когато играта започне героят венчелистче трябва да се скрие и всичко нарисувано до този момент да бъде изтрито. Инструкцията, която трие всичко по екрана се намира в новата секция Pen и е "erase all", което означава "изтрий всичко".
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040006.png}
-   \caption{Start of the game}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040006.png}
+  \caption{Начало на играта}
 \label{fig040006}
 \end{figure}
 
-Before drawing the flower itself, its companion will be drawn first. Drawing the handle will start when the "draw" message is received. First, the thickness of the pencil that will be drawn, as well as the color, will be set. First the pencil must be positioned. The initial x coordinate is the same as the mouse's at this moment. In the light blue group is the instruction that gives the mouse position for x. The initial y coordinate should be -150. Once the character is positioned the pencil should be instructed to come down to start drawing. To complete the stem of the flower the character must go to where the mouse is and pick up the pencil.
+Преди да се нарисува самото цвете първо ще се нарисува дружката му. Рисуването на дръжката ще започне когато се получи съобщението "draw". Първо ще се зададе дебелина на молива, който ще рисува, както и цветът. Първо трябва да се позиционира моливът. Първоначалната координатата x е същата каквато е тази на мишката в този момент. В светло синята група се намира инструкцията, която дава позицията на мишката за x. Първоначалната координата за y трябва да бъде -150. След като героят е позициониран трябва да се даде инструкция молива да слезе надолу, за да започне да рисува. За да се завърше дръжката на цветето героят трябва да отиде там, където е мишката и да се вдигне молива.
 
-The result of the following code (Fig. \ref{fig040007}) is that when the player clicks on different places on the screen, the flower stems will be drawn.
+Резултатът от следния код (Фиг. \ref{fig040007}) е, че когато играчът клика върху различни места по екрана ще се нарисуват стъблата на цветята.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040007.png}
-   \caption{Drawing the flower stems}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040007.png}
+  \caption{Рисуване на стеблата на цветята}
 \label{fig040007}
 \end{figure}
 
-In order to get the flower, the character that was drawn must leave traces, like a stamp. Each time it leaves a trail it must rotate and decrease its size by one. This algorithm must be repeated. In this way, the effect of the flowers is achieved. To obtain different flowers the iterations of the drawing algorithm will be a random number between 40 and 60.
+За да се получи цветето трябва героят, който е нарисува да оставя следи, като печат. Всеки път щом остави следа трябва да се завърти и да намали размерът си с едно. Този алгоритъм трябва да се повтори. По този начин се постига ефектът на цветята. За да се получат различни цветя повторенията на алгоритъма за рисуване ще бъде случайно число между 40 и 60.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040008.png}
-   \caption{Drawing the flowers}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040008.png}
+  \caption{Рисуване на цветята}
 \label{fig040008}
 \end{figure}
 
-The result so far is that when the player clicks on different places on the screen the flowers for mom will appear.
+Резултатът до този момент е, че когато играчът клика върху различни места на екрана ще се появяват цветята за мама.
 
-\section{Changing the type and size of flowers}
+\section{Промяна на вида и размерите на цветята}
 
-To make the game more interesting, using the up arrow will change the character's costumes. So the more suits there are, ie. the more petals there are, the more diverse the bouquet will be.
+За да се направи по- интересна играта с помощта на стрелка нагоре ще се сменят костюмите на героя. Така колкото повече костюми има, т.е. колкото повече венчелистчета има, толкова по- разнообразен ще бъде букетът.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040009.png}
-   \caption{Character Costume Changes}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040009.png}
+  \caption{Променя на костюма на героя}
 \label{fig040009}
 \end{figure}
 
-Another improvement that can be made is to change the size of the flowers. For this purpose, the first thing that needs to be done is a variable to hold the size of the character. A characteristic of variables is that they have an initial value and that value can be changed. In this case, the initial value of a variable will be 100. Pressing the left arrow will decrease the variable by 10, and pressing the right arrow will increase it by 10. This is what the final program code looks like:
+Друго подобрение, което може да се направи е да се променя размерът на цветята. За тази цел първото нещо, което трябва да се направи е променлива, която да държи размерът на героя. Характерно за променливите е, че имат първоначална стойност и може да бъде променена тази стойност. В случая първоначалната стойност на променливата ще бъде 100. С натискането на стрелка наляво променливата ще намалява с 10, а при натискане на стрелка надясно - ще се увеличава с 10. Така изглежда финалния код на програмата:
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040010.png}
-   \caption{Full program code}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig040010.png}
+  \caption{Целия код на програмата}
 \label{fig040010}
 \end{figure}
 
-The children must present the most beautiful bouquet to their mothers!
+Следва децата да подарят най- красивия букет на своите майки!

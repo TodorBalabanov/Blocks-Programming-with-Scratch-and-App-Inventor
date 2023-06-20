@@ -1,167 +1,167 @@
-\chapter{Bowling}
+\chapter{Боулинг}
 
-In this project you will create a favorite game of children - bowling. The player will have to shoot a ball from the bottom of the screen that will reach the pins located at the top. The goal is for the player to knock down all the pins.
+В този проект ще създадете една любима игра на детацата - боулинг. Играчът ще трябва да изстреля топка от долната част на екрана, която ще достигне до кеглите, които се намират в горната част. Целта е играчът да събори всички кегли.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130001.png}
-   \caption{Bowling}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130001.png}
+  \caption{Боулинг}
 \label{fig130001}
 \end{figure}
 
-\section{Creating the Design}
+\section{Създаване на дизайна}
 
-In the first step, you will create the game's home screen. There will be a button on it, which will be the start of the game. From the Layout group, the VerticalArrangement element must be added. The dimensions of the element must be the same as the dimensions of the screen. For this the height and width properties need to be changed. For the background of the game, in addition to the ready-made colors, you can also create your own color.
+В първата стъпка ще създадете началният екран на играта. Върху него ще има един бутон, който ще бъде начало на играта. От групата с елементите Layout трябва да бъде добавен елемента VerticalArrangement. Размерите на елемента трябва да бъдат такива, каквито са размерите на екрана. За това свойствата за височина и ширина трябва да се сменят. За фон на играта освен готовите цветове, може да създадете и свой цвят.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130002.png}
-   \caption{Home screen}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130002.png}
+  \caption{Начален екран}
 \label{fig130002}
 \end{figure}
 
-You should also add a button to start the game. Change the design of the button and position it in the middle of the screen.
+Следва да добавите и бутон за начало на играта. Променете дизайна на бутона и го позиционирайте в средата на екрана.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130003.png}
-   \caption{Start Game Button}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130003.png}
+  \caption{Бутон за начало на играта}
 \label{fig130003}
 \end{figure}
 
-In the next step, you will create the endgame screen. There will be a button on it to restart the game. You will also need to add a caption that says the game is over. First, from Layout, add a VerticalArrangment element. The dimensions of the element should again be as they are on the screen. Also choose a suitable background color for this screen.
+В следващата стъпка ще създадете екранът за край на играта. Върху него ще има един бутон за стартиране отново на играта. Също така ще трябва да добавите и надпис, че играта е приключила. Първо от Layout добавете елемент VerticalArrangment. Размерите на елемента трябва да бъдат отново, такива каквито са на екрана. Изберете и подходящ цвят за фон на този екран.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130004.png}
-   \caption{End screen}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130004.png}
+  \caption{Краен екран}
 \label{fig130004}
 \end{figure}
 
-Add the button to start the game again. Change its design and position it in the middle of the screen.
+Добавете бутона за започване на играта отново. Променете дизайна му и го позиционирайте в средата на екрана.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130005.png}
-   \caption{Start Game Again Button}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130005.png}
+  \caption{Бутон за начало на играта отново}
 \label{fig130005}
 \end{figure}
 
-Also add a Lable element that says Game Over.
+Добавете и елемент Lable, който да казва Game Over.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130006.png}
-   \caption{End of Game Caption}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130006.png}
+  \caption{Надпис за край на играта}
 \label{fig130006}
 \end{figure}
 
-In the final step, you will create a game design. Add a VerticalArrangment element again. Resize the element so that the height and width are as they are on the screen. Inside this element, add the Canvas element from the Drawing and Animation section. Change element size and background color.
+В последната стъпка ще създадете дизайн на играта. Добавете отново елемент VerticalArrangment. Променете размерите на елемента, като височината и ширината трябва да бъдат толкова, колкото са на екрана. Вътре в този елемент добавете елементът Canvas от секция Drawing and Animation. Променете размера на елемента и цвета на фона.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130007.png}
-   \caption{Game Screen}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130007.png}
+  \caption{Екран на играта}
 \label{fig130007}
 \end{figure}
 
-Add the ball element and change the dimensions, position and color of the element. The ball must be placed at the bottom of the screen.
+Добавете елемента топка и променете размерите, позицията и цвета на елемента. Топката трябва да бъде поставена в долната част на екрана.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130008.png}
-   \caption{Adding the ball to the game}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130008.png}
+  \caption{Добавяне на топката в играта}
 \label{fig130008}
 \end{figure}
 
-For the pins, you can use an image that is distributed under a free license. Add three ImageSprite elements to the Canvas element. Add the image you downloaded to each of the items. Change the dimensions and position. The three pins must be at the top of the screen.
+За кеглите може да използвате изображение, което се разпространява със свободен лиценз. Добавете три елемента ImageSprite към елемента Canvas. Към всеки от елементите добавете изображението, което сте изтеглили. Променете размерите и позицията. Трите кегли трбява да се намират в горната част на екрана.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130009.png}
-   \caption{Add the pins}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130009.png}
+  \caption{Добавяне на кеглите}
 \label{fig130009}
 \end{figure}
 
-In the last part of the design, you should also add the ball launch button. First, add a HorizontalArrangement element. Change the width of the element to fit on the screen.
+В последната част от дизайна трябва да добавите и бутона за изстрелване на топката. Първо добавете елемент HorizontalArrangement. Променете ширината на елемента да бъде толкова, колкото е на екрана.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130010.png}
-   \caption{Add space for shot button}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130010.png}
+  \caption{Добавяне на място за бутона за изстрел}
 \label{fig130010}
 \end{figure}
 
-Add two more elements to this element - a button and an element that will display how many balls the character has. Position the elements and change the text of the elements. You can also change the color and shape.
+Към този елемент добавете още два елемент - бутон и елемент, в който ще за изписва с колко топки разполага героят. Позиционирайте елементите и променете текста на елементите. Може също да промените цвета и формата.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130011.png}
-   \caption{Add button to shoot the ball}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130011.png}
+  \caption{Добавяне на бутон за изстрел на топката}
 \label{fig130011}
 \end{figure}
 
-\section{Creating the Program}
+\section{Създаване на програмата}
 
-Before you start programming the game, leave only the game start screen visible. Then switch to the Add Blocks view.
+Преди да започнете да програмирате играта оставете видим само екранът за начало на играта. След това пременете към изгледът за добавяне на блокове.
 
-Start by programming the game start button. Add the Click statement, which means that when the button is pressed, then the instructions will be executed. When this button is pressed it will set the speed of the ball.
+Започнете с програмирането на бутона за начало на играта. Добавете инструкцията Click, което означава, че когато бутонът е натиснат, тогава ще се изпълнят инструкциите. Когато този бутон бъде настиснат ще задава скорост на топката.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130012.png}
-   \caption{Instructions for the home button}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130012.png}
+  \caption{Инструкции за началния бутон}
 \label{fig130012}
 \end{figure}
 
-Add a variable that will be the number of pins. Let the initial value be 3.
+Добавете променлива, която ще е броя на кеглите. Първоначалната стойност нека да бъде 3.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130013.png}
-   \caption{Variable for the number of pins}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130013.png}
+  \caption{Променлива за броя кегли}
 \label{fig130013}
 \end{figure}
 
-When the ball touches one of the edges it must deflect. To execute the ball deflection instructions, an event must first be added. Inside this event, the following checks must be done:
-- if the ball is at the leftmost edge of the screen, it must move to the right
-- if the ball is at the far right of the screen, it must move to the left
-- if the ball is at the top edge of the screen, it must move to its original position.
+Когато топката доконсе някой от ръбовете тя трябва да се отклони. За да се изпълнят инструкциите за отклоняване на топката, първо трябва да се добави събитие. Вътре в това събитие трябва да се направят следните проверки:
+- ако топката се намира в най- левия край на екран, тя трябва да се движи надясно
+- ако топката се намира в най- десния край на екрана, тя трябва да се движи наляво
+- ако топката се намира в най- горния край на екрана, тя трябва да се премести в първоначална позиция.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130014.png}
-   \caption{Movement of the ball when it touches the edge of the screen}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130014.png}
+  \caption{Движение на топката когато докосне ръб на екрана}
 \label{fig130014}
 \end{figure}
 
-The other event that applies to the ball is when it touches something other than the screen. In this game it can only be a pin. Then the number of pins must be changed by removing one. Another important thing to do is to check if there are more pins on the screen. If not, then this screen should be hidden and the last screen should be shown. It is important to change the message to say Winner.
+Другото събитие, което се отнася за топката е, когато тя докосне нещо различно от екрана. В тази игра това може да бъде единствено кегла. Тогава трябва да се промени броя на кеглите, като се извади едно. Друго важно нещо, което трябва да се направи е да се провери дали има още кегли на екрана. Ако няма, то тогава трябва да се скрие този екран и да се покаже последния екран. Важно е да се промени съобщението да изписва Winner.
 
-If the number of pins is not equal to 0, then a check for which pin touched the ball must be added. The purpose of this is to be able to make it invisible and not be part of the game.
+Ако броя на кеглите не е равен на 0, то тогава трябва да се добави проверка коя кегла е докоснала топката. Целта на това е да може да се направи невидима и да не бъде част от играта.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130015.png}
-   \caption{Instructions when the ball hits the pin}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130015.png}
+  \caption{Инструкции, когато топката докосне кегла}
 \label{fig130015}
 \end{figure}
 
-The next instructions will be when the ball launch button is pressed. The first check to be made is if the number of balls fired field is 0 then the game is over and the end of game screen should be displayed. If it is not equal to 0, then the direction of the ball should be set and the count should be decremented by 1.
+Следващите инструкции ще бъдат когато се натисне бутона за изстрелване на топката. Първаа проверка, която трябва да се направи е, ако полето за броя на изстреляните топки е 0, то тогава играта приключва и трябва да се покаже екранът за край на играта. Ако не е равен на 0, то тогава трябва да се зададе посока на топката и да се намали броя с 1.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130016.png}
-   \caption{Ball Shoot Button Instructions}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130016.png}
+  \caption{Инструкции за бутона за изстрел на топката}
 \label{fig130016}
 \end{figure}
 
-The last instructions to add are for the button that starts the game from the beginning. These instructions include displaying the game screen, displaying the pins, setting the number of pins to 3 and the number of balls to 10.
+Последните инструкции, които трябва да се добавят са за бутона, който стартира играта от начало. Тези инструкции включват показване на игровия екран, показване на кеглите, задаване на техния брой да бъде 3 и броя на топките да бъде 10.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130017.png}
-   \caption{Instructions for restart button}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig130017.png}
+  \caption{Инструкции за бутона за започване на играта отначало}
 \label{fig130017}
 \end{figure}
 
-We wish you a pleasant game!
+Пожелаваме ви приятна игра!

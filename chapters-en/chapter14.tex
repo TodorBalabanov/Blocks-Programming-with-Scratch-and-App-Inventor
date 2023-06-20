@@ -1,143 +1,143 @@
-\chapter{Jump the Obstacles}
+\chapter{Прескочи препятствията}
 
-With this project you will create a popular computer game. The player will control a character using the arrow keys. His goal will be to cross the course without touching the obstacles. In cases where it touches them, it will start from the beginning. If he manages to pass the entire route, he moves to the next level.
+С този проект ще създадете една популярна компютърна игра. Играчът ще управлява герой с помощта на стрелките. Неговата цел ще е да премине трасето без да докосва препятствията. В случаите, когато ги докосне, ще започва от началото. Ако успее да премине през цялото трасе преминава към следващо ниво.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140001.png}
-   \caption{Jump the obstacles}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140001.png}
+  \caption{Прескочи препятствията}
 \label{fig140001}
 \end{figure}
 
-\section{Creating the Design}
-The first step in creating the game will be adding the appropriate characters and background. For the game character, you can choose from ready-made characters in Scratch. Another option is to draw it to make your game more interesting. Using the drawing tools you can create your character (Fig. \ref{fig140002}). In this project I will demonstrate how to create an effect when the character moves. For this purpose, one more suit should be added to it.
+\section{Създаване на дизайна}
+Първата стъпка от създаването на играта ще бъде добавянето на подходящи герои и фон. За героят на играта може да изберете от готовите герои в Scrach. Друг вариант е да го нарисувате, за да може играта ви да бъде по- интересна. Използвайки инструментите за рисуване може да създадете вашия герой (Фиг. \ref{fig140002}). В този проект ще демонстрира как да се създаде ефект, когато героят се движи. За тази цел трябва да бъде добавен още един костюм към него.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140002.png}
-   \caption{Adding Main Character}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140002.png}
+  \caption{Добавяне на основния герой}
 \label{fig140002}
 \end{figure}
 
-The game will need one character to be in the lower part of the track. This is a revenge hero that will serve as a reference point. The purpose of the purple character is to move on it. Create it using the drawing tools.
+В играта ще има нужда от един герой, който да е в долнаата част на трасето. Това е помщен герой, който ще служи за ориентир. Целта на лилавият герой е да се движи по него. Създайте го с помощта на инструментите за рисуване.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140003.png}
-   \caption{Adding the supporting character}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140003.png}
+  \caption{Добавяне на помощтния герой}
 \label{fig140003}
 \end{figure}
 
-The last character to add is the one for the obstacles. It must be drawn again with the auxiliary tools. To have more levels in the game, add more costumes to your character. When your purple character crosses the track, ie. reach the rightmost point of the screen, then that character will change his costume, which means the player will go to the second level.
+Последният герой който трябва да добавите е този за препятствията. Той отново трябва да бъде нарисуван с помощтните инструменти. За да имате повече нива в играта, добавете повече костюми на героят ви. Когато лилавият ви герой премине през трасето, т.е. достигне фо най- дясната точка на екрана, то тогава този герой ще си сменя костюма, която означава, че играчът ще премине на второ ниво.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140004.png}
-   \caption{Add obstacles}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140004.png}
+  \caption{Добавяне на препятствия}
 \label{fig140004}
 \end{figure}
 
-To make the game more attractive, add a suitable background. Also, like the characters, you can choose it from the ready-made ones in Scratch or draw it yourself using the tools.
+За да ви бъде по- атрактивна играта добавете и подходящ фон. Също, както героите може да го изберете от вече готовите в Scratch или да си го нарисувате с помощта на инструментите.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140005.png}
-   \caption{Add background}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140005.png}
+  \caption{Добавяне на фон}
 \label{fig140005}
 \end{figure}
 
-\section{Programming Character Movement}
+\section{Програмиране на движението на героя}
 
-The main code you need to add is located in the character you will be controlling, in this case the purple character. In this game you will need 3 variables - xVel, yVel and jump. From the Variables section, select the Make a Variable option and add the variables with the appropriate names. To prevent them from appearing during gameplay, you can remove their ticks.
+Основният код, който трябва да добавите се намира в героят, който ще управлявате, в този случай лилавия герой. В тази игра ще имате нужда от 3 променливи - скорост на движение по остта x (xVel), скорост на движение по остта y (yVel) и скок (jump). От секция Variables изберете опцията Make a Variable и добавете променливите със съответните имена. За да не се показват по време на игра, може да махнете техните тикчета.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140006.png}
-   \caption{Adding the variables}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140006.png}
+  \caption{Добавяне на променливите}
 \label{fig140006}
 \end{figure}
 
-At the beginning of the game, the value of these variables should be equal to 0. To make the game more interesting, the character's position will be in the middle part of the screen. When the game starts he will drop down to the platform.
+В началото на играта Стойността на тези променливи трябва да бъде равна на 0. За да бъде по- интересна играта позицията на героя ще бъде в средната част на екрана. Когато играта започне той ще се спусне надолу до платформата.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140007.png}
-   \caption{Initialize variables}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140007.png}
+  \caption{Инициализиране на променливите}
 \label{fig140007}
 \end{figure}
 
-The character must move until it reaches the right side of the screen or until the character touches an obstacle. For this purpose, the first statement you need to add is a repeat until block. The conditions you need to add are two that are separated by the OR operator. The first condition is that the character's x position is greater than 240, which is the end of the screen. The second condition is to touch the red character.
+Героят трябва да се движи докато не достигне до дясната част на екрана или докато не докосне героят препятствие. За тази цел първата инструкция, която трябва да добавите е repeat until блок. Условията, които трябва да добавите са две, които са разделени с операторът ИЛИ. Първото условие е x позицията на героя да бъде по- голяма от 240, което е краят на екрана. Второто условие е да докосва червеният герой.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140008.png}
-   \caption{Loop with character movement condition}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140008.png}
+  \caption{Цикъл с условие за движение на героя}
 \label{fig140008}
 \end{figure}
 
-To move the character left and right you will use the xVel variable. From the variable section, the change xVel by statement is needed. From the operators section, select the one to subtract. On one side put the instruction for key right arrow pressed, and on the right arrow key left arrow pressed. This statement will set a value to the variable. All that remains is to add the change x by instruction and place the variable. So if you start the game, the character will move very fast left and right. For this add the instruction set xVel to xVel * 0.9. Start the game to test how the character moves left and right.
+За да се движи героят наляво и надясно ще използвате променливата xVel. От секцията за променливите е нужна инструкцията change xVel by. От секцията с операторите изберете този за изваждане. От едната страна сложете инструкцията за key right arrow pressed, а от дясната стрелка key left arrow pressed. Тази инструкция ще зададе стойност на променливата. Остава само да добавите инструкцията change x by и да поставите променливата. Така ако стартирате играта, героят ще се движи много бързо наляво и надясно. За това добавете инструкцията set xVel to xVel * 0.9. Стартирайте играта, за да тествате как героят се движи наляво и надясно.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140009.png}
-   \caption{Character movement left and right}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140009.png}
+  \caption{Движение на героят наляво и надясно}
 \label{fig140009}
 \end{figure}
 
-You must program the character to jump In the first part, you will program when the game starts or another level that the character from the initial position goes down to the platform. To do this, you need to change the variable yVel to -1 and use the statement change y by with the value variable. Next is the check if it touches the platform. If the condition is met, then the value of the variable yVel should be set to 0. So the only problem will be that the character will not stop moving when it touches the platform, because the main loop will spin one more time, because not ready condition is not met. For this, the y position must be changed by yVel multiplied by -1.
+Следва да програмирате героят да подскача. В първата част ще програмирате, когато стартира играта или друго ниво героят от първоначалната позиция да слезе до платформата. За тази цел трябва да промените променливата yVel с -1 и да използвате инструкцията change y by със стойност променливата. Следва проверката ако докосва платфорамта. Ако условието е изпълнено, то тогава трябва да се сложи стойността на променливата yVel да бъде 0. Така единсственият проблем ще е, че няма да спре да се движи героят, когато докосне платформата, защото главният цикъл ще се завърти още един път, защото неготово условие не е изпълнено. За това трябва да се промени позицията на y с yVel умножено по -1.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140010.png}
-   \caption{Moving Character Down}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140010.png}
+  \caption{Движение на героя надолу}
 \label{fig140010}
 \end{figure}
 
-The last part of creating the purple character's movement algorithm will be adding the jumps. If the player presses the up arrow, then the jump variable will be equal to 1. In any of the other cases, it should be equal to 0, which means that the character will not jump. First you need to add a check before making yVel equal to 0. This check should check if yVel is less than 0 then the character should not jump.
+В последната част от създаването на алгоруитъма за движението на лилавия герой ще бъде добавянето на подскоците. Ако играчът натисне стрелка нагоре, то променливата jump ще бдъде равна на 1. Във всеки един от другите случаи тя трябва да бъде равна на 0, която означава, че героят няма да подскача. Първо трябва да добавите една проверка преди да направите стойността на yVel да бъде равна на 0. Тази проверка е трябва да проверява, ако yVel е по- амлко от 0, то тогава героят не трябва да скача.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140011.png}
-   \caption{Checking when character doesn't jump}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140011.png}
+  \caption{Проверка, кога героят не скача}
 \label{fig140011}
 \end{figure}
 
-There is also a check to see if the player has pressed the up arrow. If it is and the character is not jumping, then yVel should be changed to a positive number and the jump variable should be set to 1. Playtest to see how your character jumps and moves left and right.
+Следва и проверка дали играчът е натиснал стрелка нагоре. Ако е и героят не подскача, то тогава трябва да се промени yVel с положително число и да се сложи променливата jump да е 1. Тествайте играта, за да видите как героят ви скача и се движи наляво и надясно.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140012.png}
-   \caption{Hero jump when pressing up arrow}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140012.png}
+  \caption{Скок на героя при натискане на стрелка нагоре}
 \label{fig140012}
 \end{figure}
 
-\section{Creating an effect when the character moves}
+\section{Създаване на ефект, когато героят се движи}
 
-After you have finished moving the character, you can add additional instructions to create an effect when the character moves. After checking for the pressed up arrow, add the create clone of myself statement. The reason for this is that a clone of that character will be created, but with his second costume. For this add a new instruction which is When I start as a clone. Then the character's costume should be changed, it should be his second. Add a loop that repeats 10 times. Inside the loop, reduce the size of the clone character and add a transparent effect. After the cycle, delete the clone. Test the game to see what effect is added when you move.
+След като сте приключили с движението на героя може да добавите и допълнителни инстркции, които да създават ефект, когато героят се движи. След проверката за натисната стрелка нагоре добавете инструкцията create clone of myself. Причината за това е, че ще бъде създаден клонинг на този герой, но с вторият му костюм. За това добавете нова инструкция, която е When I start as a clone. Тогава трябва да се смени костюма на героят, да бъде вторият му. ДОбавете цикъл, който да повтаря 10 пъти. Вътре в цикъла намалете размерите на героя клонинг и добавете прозрачен ефект. След цикъла изтрийте клонинга. Тествайте играта, за да видите какъв ефект се добави, когато се движите.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140013.png}
-   \caption{Add motion effect}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140013.png}
+  \caption{Добавяне на ефект про движение}
 \label{fig140013}
 \end{figure}
 
-\section{Go to next level}
+\section{Преминаване към следващо ниво}
 
-In the last step, you need to add instructions for the character to be able to move to the next level. For this purpose, in the main character, add the check if he has reached the end of the screen. If it is, then let it send a message.
+В последната стъпка трябва дадобавите инструкции героят да може да премине към следващо ниво. За тази цел в основният герой добавете проверката дали е достигнал до края на екрана. Ако е, то тогава нека да изпрати въобщение.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140014.png}
-   \caption{Send Next Level Message}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140014.png}
+  \caption{Изпращане на съобщение за следващо ниво}
 \label{fig140014}
 \end{figure}
 
-Choose the hero with the red obstacles. Add the event when the game starts, then the character should be in his original costume. Also add a second event when he gets the next level message, he then has to change his suit. Start the game and have fun.
+Изберете героят с червените препятствия. Добавете събитието, когато играта започне, тогава героят трябва да бъде с първоначалният си костюм. Добавете и второ събитие, когато получи съобщението за следващо ниво, то тогава трябва да смени костюма си. Стартирайте играта и се забавлявайте.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140015.png}
-   \caption{Go to next level}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig140015.png}
+  \caption{Преминаване към следващо ниво}
 \label{fig140015}
 \end{figure}

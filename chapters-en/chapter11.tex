@@ -1,130 +1,130 @@
-\chapter{Soccer}
+\chapter{Футбол}
 
-One of the favorite games for children is soccer. The goal of this game is for the player to score as many goals as possible. If he misses, it's game over.
+Една от любимите игри за децата е футболът. Целта на тази игра е играчът да вкара максимално много гола. Ако пропусне - играта приключва.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110001.png}
-   \caption{Football}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110001.png}
+  \caption{Футбол}
 \label{fig110001}
 \end{figure}
 
-\section{Creating Game Design}
-The first step of creating this game is adding all the components that will be programmed. The color of the field should be green, for this the value of the BackgroundColor property should be changed to green.
+\section{Създаване на дизайн на играта}
+Първата стъпка от създаването на тази игра е добавяне на всички компоненти, които ще бъдат програмирани. Цветът на игрището трябва да бъде зелен, за това трябва да се промени стойността на свойството BackgroundColor да бъде зелен.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110002.png}
-   \caption{Change background color}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110002.png}
+  \caption{Промяна на цвета на фона}
 \label{fig110002}
 \end{figure}
 
-One of the most important tasks in mobile application programming is their interface. To make this game more attractive, you can change the value of the Theme property to Device Default and the name of the Title property to Footbal.
+Една от най- важните задачи при програмирането на мобилни приложения е техния интерфейс. За да се направи по- атрактивна тази игра може да се смени стойността на свойството Theme да бъде Device Default, а името на свойството Title да бъде Footbal.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110003.png}
-   \caption{Change topic}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110003.png}
+  \caption{Промяна на темата}
 \label{fig110003}
 \end{figure}
 
-In order for the player to shoot the ball when he touches the screen of his phone and also for the goalkeeper to move on the screen, the Canvas element must be added. Its width and height should be the same as it is on the phone screen. To do this the Height property values to be Fill parent... The Width property value is the same. This element should blend in with the background color. For this purpose, the value of the BackgroundColor property must be changed.
+За да може играчът да изстрелва топката, когато докосне екрана на телефона си, а също и вратаря да се движи по екрана, трябва да се добави елементът Canvas. Ширината и височината му трябва да бъде същата каквато е на екрана на телефона. За да се направи това се задават стойности на свойството Height да бъде Fill parent... Същата е и стойността на свойството Width. Този елемент трябва да се слее с цвета на фона. За тази цел трябва да се промени стойността на свойството BackgroundColor.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110004.png}
-   \caption{The Canvas Element}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110004.png}
+  \caption{Елементът Canvas}
 \label{fig110004}
 \end{figure}
 
-Three ImageSprite elements should be added for the net, goalkeeper and ball respectively. They can be renamed to make it clear which element is for what. Images of these elements can be used which are freely licensed for non-commercial use.
+Следва да се добавят три елемента ImageSprite съответно за мрежата, вратаря и топката. Може да се преименуват, за да бъде ясно кой елемент за какво е. За изображенията на тези елементи може да се използват картинки, които се разпространяват със свободен лиценз за не търговска употреба.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110005.png}
-   \caption{Image of a soccer ball}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110005.png}
+  \caption{Изображение на футболна топка}
 \label{fig110005}
 \end{figure}
 
-Once the images are available they should be placed on the appropriate ImageSprite elements and the height, width and position properties should be changed. This means they need to scale to the phone screen. The end result should look like this:
+След като изображенията са налични трябва да се поставят на съответните ImageSprite елементи и да се променят свойствата за височина, ширина и позиция. Това означава, че трябва да се оразмерят спрямо екрана на телефона. Крайният резултат трябва да изглежда така:
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110006.png}
-   \caption{Game Design}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110006.png}
+  \caption{Дизайн на играта}
 \label{fig110006}
 \end{figure}
 
-In addition to these elements, a place where the result will be written must be added. From the Layout element group, a HorizontalArrangement element must be added so that two Label elements can be placed inside it. One will be for the result message and the second will be for the result value. This means that the property value for the first label will be "Your score is: " and for the second - "0". It is a good practice to rename elements to make them easier to program. In a later stage of the game, the element "Notifier" will be needed. It is from the group of hidden elements.
+Освен тези елементи, трябва да се добави и място, където ще се изписва резултатът. От групата с елементи Layout трябва да бъде добавен елментът HorizontalArrangement, за да може вътре в него да се поставят два елемента Label. Единият ще е за съобщението за резултатът, а вторият ще е за стойността на резултатът. Това означава, че стойността на свойството за първия етикет ще е "Your score is: ", а за втория - "0". Добра практика е да се преименуват елементите, за да може по- лесно да се програмират. В по- късен етап от играта ще има нужда и от елемента "Notifier". Той е от групата на скритите елементи.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110007.png}
-   \caption{All Game Elements}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110007.png}
+  \caption{Всички елементи на играта}
 \label{fig110007}
 \end{figure}
 
-\section{Programming}
-Necessary instructions should also be added to the items that are added for the game. For this purpose, it is necessary to switch to the other view, which is for adding the instructions.
+\section{Програмиране}
+Следва да се добавят и необходимите инструкции към елементите, които са добавени за играта. За тази цел трябва да се премине към другия изглед, който е за добавяне на инструкциите.
 
-The first instructions will be for the goalkeeper. It will move left and right. Its purpose is to keep the goal from scoring. When the game starts, the goalkeeper must start moving. This means adding the when Screen1.Initialize statement found in the Screen1 element. Inside this event, two instructions should be added, which are located in the goalkeepr element. One instruction is to set a value to the Interval property, which specifies how many milliseconds this character's position will change. The second instruction sets a value to the Speed property, which is responsible for the movement of the character.
+Първвите инструкции ще са за вратаря. Той ще се движи в ляво и дясно. Неговата цел е да пази вратата от това да се вкара гол. Когато играта започне, вратаря трябва да започне да се движи. Това означава, че трябва да се добави инструкцията when Screen1.Initialize, която се намира в елемента Screen1. Вътре в това събитие трябва да се добавят две инструкции, които се намират в елемента goalkeepr. Едната инструкция е да се зададе стойност на свойството Interval, което определя на колко милисекунди ще се променя позицията на този герой. Втората инструкция задава стойност на свойството Speed, което отговря за движението на героя.
 
-One more event should be added - when goalkeeper.EdgeReached. The instructions from this event will be executed when the goalkeeper touches the edge of the screen. When this happens, the instruction goalkeeper.Bounce edge is called, and the value that is set is get edge.
+Още едно събитие трябва да се добави - when goalkeeper.EdgeReached. Инструкциите от това събитие ще се изпълнят, тогава, когато вратаря докосне ръба на екрана. Когато това стане се извиква инструкцията goalkeeper.Bounce edge, а стойността която се поставя е get edge.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110008.png}
-   \caption{Goalkeeper Movement}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110008.png}
+  \caption{Движение на вратаря}
 \label{fig110008}
 \end{figure}
 
-When the game starts, it is noticed that the goalkeeper turns with his head down. This can be changed by unchecking the Rotates property.
+Когато се стартира играта се забелязва, че вратаря се завърта с надолу главата. Това може да се промени, като се размаркира свойството Rotates.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110009.png}
-   \caption{Stopping goalkeeper rotation}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110009.png}
+  \caption{Спиране на въртенето на вратаря}
 \label{fig110009}
 \end{figure}
 
-Instructions should be added so that when the player drags the ball, it moves. First the when football.Flug event needs to be added. Similarly, Interval and Speed values should be set for the goalkeeper. The value of the Interval property should be 10, and that of the Speed 20. In addition to the movement, the angle at which the ball will move should also be set. For this purpose, a value must be set for the Heading property, which comes from the get heading event.
+Следва да се добавят инструкции за това, когато играчът плъзне топката, тя да се движи. Първо трябва да се добави събитието when football.Flug. Аналогично на вратаря трябва да се зададат стойности за Interval и Speed. Стойността на свойството Interval трябва да бъде 10, а тази за Speed 20. Освен движението трябва да се зададе и ъгълът, в който ще се движи топката. За тази цел трябва да се зададе стойност за свойството Heading, която идва от събитието - get heading.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110010.png}
-   \caption{Ball Movement}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110010.png}
+  \caption{Движение на топката}
 \label{fig110010}
 \end{figure}
 
-In the last phase of the game, what happens when the ball touches the net and when it touches the goalkeeper must be programmed. According to the rules of the game, when the ball touches the net, the score increases by 1, and when it touches the goalkeeper, then the game ends. This means that a variable must be created in which the result of the game will be stored. The initial value of this variable is 0.
+В последната фаза на играта трябва да се програмира какво се случва когато топката докосне мрежата и когато докосне вратаря. По правилата на играта, когато топката докосне мрежата, резултатът се увеличава с 1, а когато докосне вратаря, тогава играта приключва. Това означава, че трябва да се създаде променлива, в която ще се съхранява резултатът от играта. Началната стойност на тази променлива е 0.
 
-The event that is needed is when football.CollidedWith. Two checks must be added inside this event - whether the ball touched the net and whether the ball touched the goalkeeper.
+Събитието, което е необходимо е when football.CollidedWith. Вътре в това събитие трябва да се добавят две проверки - дали топката е докоснала мрежата и дали топката е докоснала вратаря.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110011.png}
-   \caption{Adding the checks}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110011.png}
+  \caption{Добавяне на проверките}
 \label{fig110011}
 \end{figure}
 
-When the ball touches the goalkeeper the game must end. In the language of the instructions, some of the properties of the ball should be changed and a message should be displayed that the game is over. The first ball property to change is Enabled to false. That means it won't move. Its position should be changed. The values for the coordinates are x=120, y=320 and z=1. The Speed property should be changed to 0.
+Когато топката докосне вратаря играта трябва да приключи. Казано с езика на инструкциите трябва да се променят някои от свойствата на топката и да се покаже съобщение, че играта е приключила. Първото свойство на топката, което трябва да се промени е това Enabled да е със стойност false. Това означава, че няма да се движи. Следва да се промени позицията ѝ. Стойностите за координатите са x=120, y=320 и z=1. Свойството Speed трябва да се промени да бъде 0.
 
-To display a dialog message, an instruction is added from the Notifier1 element, which is ShowMessageDialog. It should have the following fields - message="Game over", title, which consists of score.Text and scoreValue.Text and the last one is buttonText="Restart game". When the game is over, the initial values of the variable, which is 0, must be returned to the scoreValue text field, which is also 0. Don't forget to change the value of the ball Enabled to true, so that it can again be moves the ball.
+За да се появи диалогово съобщение се добавя инструкция от елемента Notifier1, която е ShowMessageDialog. Тя трябва да има следните полета - message="Game over", title, което се състои от score.Text и scoreValue.Text и поседното е buttonText="Restart game". Когато приключи играта трябва да се върнат първоначалните стойности на променливата, която е 0, на текстовото поле за scoreValue, което също е 0. Не трябва да се забравя да се промени и стойнсотта на топката Enabled да бъде true, за да може отново да се движи топката.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110012.png}
-   \caption{When the ball touches the goalkeeper}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110012.png}
+  \caption{Когато топката докосне вратаря}
 \label{fig110012}
 \end{figure}
 
-When the ball touches the net, the instructions are basically the same. First the position of the ball must be changed. The difference is that the variable must be incremented and the new result displayed.
+Когато топката докосне мрежата, инструкциите са долу горе аналогични. Първо трябва да се промени позицията на топката. Разликата е в това, че трябва да се увеличи променливата и да се покаже новия резултат.
 
 \begin{figure}[H]
-   \centering
-   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110013.png}
-   \caption{When the ball hits the net}
+  \centering
+  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig110013.png}
+  \caption{Когато топката докосне мрежата}
 \label{fig110013}
 \end{figure}
 
-The game is ready. You can make a competition with your friends to see who is better at scoring goals.
+Играта е готова. Може да направите състезание с приятелите си, за да видите кой е по- добър във вкарването на голове.
