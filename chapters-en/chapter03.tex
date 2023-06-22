@@ -1,212 +1,214 @@
-\chapter{Кликни и победи}
+\chapter{Click and Win}
 
-В този проект двата героя се придвижват напред, когато играчът клика върху синия или червения бутон. Колкото по- бързо играчът клика върху бутона, толкова по- бързо неговият герой се придвижва напред. Печели този играч, който първи достигне до зелената финална линия.
+In this project, the two characters move forward when the player clicks the blue or red button. The faster the player clicks the button, the faster their character moves forward. The first player to reach the green finish line wins.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030001.png}
-  \caption{Кликни и победи}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030001.png}
+   \caption{Click and win}
 \label{fig030001}
 \end{figure}
 
-\section{Добавяне на фон и герои}
-Конструирането на играта започва с избора на фон. От секция Backdrops->Choose a Backdrop може да се избере подходящ от наличните, които Scratch предоставя.
+\section{Adding Background and Characters}
+
+Building the game starts with choosing a background. From the Backdrops->Choose a Backdrop section. A suitable one can be selected from the available ones that Scratch provides.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030002.png}
-  \caption{Избор на подходящ фон за играта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030002.png}
+   \caption{Choosing a suitable background for the game}
 \label{fig030002}
 \end{figure}
 
-В тази гира, за да се направи състезателното трасе заедно със зелената финална линия, трябва фонът да бъде подобрен. За тази цел първо се избира опция Bacdrops.
+In this dumbbell, the background needs to be enhanced to make the race course along with the green finish line. For this purpose, the Backdrops option is first selected.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030003.png}
-  \caption{Рисуване на допълнителни елементи върху фона}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030003.png}
+   \caption{Drawing additional elements on the background}
 \label{fig030003}
 \end{figure}
 
-С помощта на инструмента линия се добавя състезателното трасе. Ако се смени дебелината и цвета на линията може да бъде добавена и финалната линия.
+Using the line tool, the race track is added. If the thickness and color of the line are changed, the finish line can also be added.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030004.png}
-  \caption{Финален фон на играта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030004.png}
+   \caption{Final Game Background}
 \label{fig030004}
 \end{figure}
 
-Ако играта няма нужда от основния герой в Scratch котката, той може да бъде изтрит.
+If the game does not need the main character in the Scratch cat, he can be deleted.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030005.png}
-  \caption{Изтриване на основния герой}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030005.png}
+   \caption{Delete main character}
 \label{fig030005}
 \end{figure}
 
-Следва да бъдат добавени и героите към играта. В Scratch има налични много спрайтове. За целите на тази игра са необходими два - един, който е позициониран в ляво и друг - в дясно (Фиг. \ref{fig030006}). Чрез свойствата Size и Direction се променя размерът и посоката на героя.
+The characters should also be added to the game. There are many sprites available in Scratch. For this game, two are needed - one positioned on the left and one on the right (Fig. \ref{fig030006}). The Size and Direction properties change the size and direction of the character.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030006.png}
-  \caption{Герои в играта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030006.png}
+   \caption{In-Game Characters}
 \label{fig030006}
 \end{figure}
 
-Освен тези два спрайта са необходими и още два, които са бутоните, върху които играчите трябва да кликат. Те се намират отново в секция Sprite. В тази игра бутоните трябва да бъдат различен цвят, за да се различават. За да се промени цвета на бутон, то трябва да се промени неговия костюм .
+In addition to these two sprites, two more are needed: the buttons the players must click on. They are found again in the Sprite section. In this game, the buttons must be a different color to differentiate them. To change the color of a button, it must change its suit.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030007.png}
-  \caption{Син бутон}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030007.png}
+   \caption{Blue Button}
 \label{fig030007}
 \end{figure}
 
-С помощта на инструмента Fill се сменя цвета на бутона (Фиг. \ref{fig030008}). Същото може да се направи и за червения бутон. Отново чрез свойството Size може да промени размерът на този спрайт.
+Using the Fill tool, change the color of the button (Fig. \ref{fig030008}). The same can be done for the red button. Again, the Size property can change the size of this sprite.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030008.png}
-  \caption{Червен бутон}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030008.png}
+   \caption{Red Button}
 \label{fig030008}
 \end{figure}
 
-\section{Програмиране на синия бутон}
-Когато играчът кликне върху синия бутон, той трябва да изпрати съобщение "blue". Първото начално блокче, което трябва да се постави е когато този спрайт бъде кликнат.
+\section{Blue Button Programming}
+When the player clicks the blue button, the message "blue" should be sent. The first starting block to be placed is when this sprite is clicked.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030009.png}
-  \caption{Когато героят е кликнат}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030009.png}
+   \caption{When the character is clicked}
 \label{fig030009}
 \end{figure}
 
-Следва героят да изпрати съобщение "blue". От тъмно оранжевата група инструкцията за разпространение на съобщение. Съобщението, което трябва да разпространи е "blue".
+Next, the character sends a "blue" message. From the dark orange group, the message propagation instruction. The message to spread is "blue".
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030010.png}
-  \caption{Изпращане на съобщение}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030010.png}
+   \caption{Send Message}
 \label{fig030010}
 \end{figure}
 
-Кодът на този герой изглежда по следния начин:
+The code for this character looks like this:
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030011.png}
-  \caption{Целият код на синия бутон}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030011.png}
+   \caption{The entire blue button code}
 \label{fig030011}
 \end{figure}
 
-\section{Програмиране на червения бутон}
-Когато играчът кликне върху червения бутон, аналогично на синия, той трябва да изпрати съобщение "red". Кодът на червения бутон е следния:
+\section{Programming the Red Button}
+
+When the player clicks on the red button, similarly to the blue one, it should send a "red" message. The code for the red button is as follows:
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030012.png}
-  \caption{Целият код на червения бутон}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030012.png}
+   \caption{All red button code}
 \label{fig030012}
 \end{figure}
 
-До този момент програмата се състои в това, когато играчът натисне синия или червения бутон, те да изпращат съответните съобщения.
+Up to this point, the program consists of when the player presses the blue or red button, they send the corresponding messages.
 
-\section{Програмиране героите да се движат}
-Инструкциите на синия бутон са, че той изпраща съобщение. Левият герой трябва да се абонира да получи съобщението.
+\section{Programming characters to move}
+The instructions on the blue button are that it sends a message. The left character must subscribe to receive the message.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030013.png}
-  \caption{Абониране за съобщението от синия бутон}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030013.png}
+   \caption{Subscribe to the message from the blue button}
 \label{fig030013}
 \end{figure}
 
-Героят трябва да се премести надясно към зелената финална линия, което означава, че трябва да се промени x координатата, като се увеличи с 3 стъпки.
+The character must move right to the green finish line, which means the x coordinate must be changed, increasing it by 3 steps.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030014.png}
-  \caption{Движение на героя надясно}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030014.png}
+   \caption{Move Character Right}
 \label{fig030014}
 \end{figure}
 
-Инструкциите за другият герой е аналогичен. Основните разлики са две:
-- съобщението, за което този герой се абонира е изпратено от червения бутон
-- героят трябва да се движи наляво към зелената финална линия, което означава, че трябва да се промени x координатата, като се намали с 3 стъпки
+The instructions for the other character are similar. The main differences are two:
+- the message this character subscribes to was sent by the red button
+- the character must move left towards the green finish line, which means the x coordinate must be changed, decreasing it by 3 steps
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030015.png}
-  \caption{Движение на героя наляво}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030015.png}
+   \caption{Move Character Left}
 \label{fig030015}
 \end{figure}
 
-\section{Програмиране победителя}
-За да се завърши играта остава да се направи проверка кой от героите е достигнал зелената финална линия.
+\section{Programming the winner}
+To complete the game, check which characters have reached the green finish line.
 
-В десния герой първата инструкция, която трябва да се добави е началната за начало на играта. Във всеки един момент на играта трябва да се проверява дали героят е достигнал до финалната линия. Поради тази причина трябва да се добави инструкция за цикъл завинаги.
+In the right character, the first instruction to add is the initial to start the game. At each moment of the game, it must be checked whether the character has reached the finish line. For this reason, a forever loop instruction must be added.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030016.png}
-  \caption{Цикъл завинаги}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030016.png}
+   \caption{Cycle Forever}
 \label{fig030016}
 \end{figure}
 
-Вътре в тялото на цикъла следва да се направи проверката, за това дали героят е докоснал финалната линия.
+The check should be inside the loop's body to see if the character has touched the finish line.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030017.png}
-  \caption{Проверка дали героят е достигнал финал}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030017.png}
+   \caption{Checking if the character has reached finish}
 \label{fig030017}
 \end{figure}
 
-За да се избере същия зелен цвят, какъвто е на финалната линия, трябва да се използва инструментът пипетка.
+The eyedropper tool should be used to select the same green color as the finish line.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030018.png}
-  \caption{Избор на цвят}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030018.png}
+   \caption{Choose a color}
 \label{fig030018}
 \end{figure}
 
-Инструкциите, които се намират вътре в условието ще се изпълнят, когато героят победи. Тогава той трябва да уголеми размера си и да изпише съобщение "Победих!".
+The instructions inside the condition will be executed when the character wins. Then he should increase his size and write a message "I won!".
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030019.png}
-  \caption{Инструкциите за победа}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030019.png}
+   \caption{Instructions for victory}
 \label{fig030019}
 \end{figure}
 
-Последното подобрение, което трябва да се направи, за да се завърши този герой е да бъде поставен в начална позиция всеки път, когато играта започне. В синята секция се намира инструкцията, която казва къде да бъде позициониран героят.
+The last improvement needed to complete this character is to be placed in the starting position every time the game starts. In the blue section is the instruction that tells where to position the character.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030020.png}
-  \caption{Инструкцията за позициониране на героя}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030020.png}
+   \caption{Hero Positioning Instructions}
 \label{fig030020}
 \end{figure}
 
-Финалния код на този герой е:
+The final code of this character is:
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030021.png}
-  \caption{Финален код на левия герой}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030021.png}
+   \caption{Final code of left character}
 \label{fig030021}
 \end{figure}
 
-След като този герой е готов, остава да се добавят и инструкциите за победа и на другия герой. Кодът е аналогичен. Единствената разлика е в началните координати.
+Once that character is ready, it remains to add the instructions for defeating the other character. The code is similar. The only difference is in the starting coordinates.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030022.png}
-  \caption{Финален код на десния герой}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig030022.png}
+   \caption{Final code of the right character}
 \label{fig030022}
 \end{figure}
 
-Време е за забавление заедно с приятели и съпоставяне на силите, за това кой герой по- бързо ще достигне до финала.
+It's time to have fun with friends and compete to see which character will reach the finish line faster.

@@ -1,120 +1,120 @@
-\chapter{Спукай балоните}
+\chapter{Pop the Balloons}
 
-Целта на тази игра е за 30 секунди, играчът да спука максимално много балони. Играчът ще има катапулт, с помощта на който играчът ще пука балоните.
+The goal of this game is for the player to pop as many balloons as possible in 30 seconds. The player will have a catapult with the help of which the player will pop the balloons.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090001.png}
-  \caption{Спукай балоните}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090001.png}
+   \caption{Pop the balloons}
 \label{fig090001}
 \end{figure}
 
-\section{Добавяне на фон и герои}
-Първата стъпка от играта е да се изберат подходящ фон и герои. Необходимите герои в тази игра са стрелка, която ще представлява катапулта, балон и герой, който ще обяви резултатът, когато изтекат 30 секунди.
+\section{Adding Background and Characters}
+The first step of the game is to choose a suitable background and characters. The required characters in this game are an arrow representing the catapult, a balloon, and a character announcing the score when the 30 seconds are up.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090002.png}
-  \caption{Добавяне на фон и герои}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090002.png}
+   \caption{Adding background and characters}
 \label{fig090002}
 \end{figure}
 
-\section{Програмиране на катапулта}
-В тази игра трябва да се дефинират две променливи - първата ще съхранява времето, а втората резултатът. В началото на играта първоначалната стойност на променливата време трябва да бъде 30, а стойността на променливата за резултатът трябва да бъде 0.
+\section{Programming the Catapult}
+In this game, two variables must be defined - the first will store the time, and the second the score. At the start of the game, the initial value of the time variable should be 30, and the value of the score variable should be 0.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090003.png}
-  \caption{Инициализиране на променливите}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090003.png}
+   \caption{Initialize variables}
 \label{fig090003}
 \end{figure}
 
-Играта продължава докато променливата за време не стане равна на 0. Тя трябва да намалява стойността си през 1 секунда.
+The game continues until the time variable is equal to 0. It must decrease its value every 1 second.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090004.png}
-  \caption{Промяна на променливата за време}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090004.png}
+   \caption{Change time variable}
 \label{fig090004}
 \end{figure}
 
-Когато времето стане равно на 0, това означава, че играта е приключила. Тогава този герой трябва да изпрати съобщение "stop game" (Фиг. \ref{fig090005}. Когато се стартира играта променливата за време ще се намалява с 1 всяка секунда.
+When the time becomes equal to 0, the game is over. Then that character should send a "stop game" message (Fig. \ref{fig090005}. When the game starts, the time variable will be decremented by 1 every second.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090005.png}
-  \caption{Изпращане на съобщение за край на играта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090005.png}
+   \caption{Send Game End Message}
 \label{fig090005}
 \end{figure}
 
-По време на играта катапулта трябва да бъде позициониран в долната част на екрана и да следва посоката на мишката, докато играчът не кликне с нея. Трябва да се използва вложен цикъл, което означава, че ще има цикъл, който вътре в себе си съдържа друг цикъл. Външният цикъл ще бъде безкраен. Той ще приключи, когато играта приключи. Вътрешният цикъл ще бъде цикъл с цел, като целта е докато не бъде кликнато с мишката. Вътре в тялото на цикъла инструкцията трябва да бъде "point towards mouse-pointer", което означава "следвай мишката".
+During gameplay, the catapult must be positioned at the bottom of the screen and follow the direction of the mouse until the player clicks it. A nested loop must be used, meaning there will be a loop that contains another inside of itself. The outer loop will be infinite. It will end when the game is over. The inner loop will be a loop with a goal, with the goal being until the mouse is clicked. Inside the loop body, the statement should be "point towards mouse-pointer, " meaning "follow the mouse".
  
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090006.png}
-  \caption{Проследяване на мишката}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090006.png}
+   \caption{Mouse Tracking}
 \label{fig090006}
 \end{figure}
 
-Когато се стартира играта се забелязва, че катапулта следва посоката на мишката. Това, което остава да се направи е, когато се кликне да се изстреля, а когато докосне някой от ръбовете на екрана да се върне в първоначалното си състояние. Създадено чрез инструкции, това става, като се добави още един вътрешен цикъл. Този път условието на този цикъл трябва да бъде - докато катапулта не докосне някой ръб на екрана. А в тялото на цикъла трябва да се постави инструкцията - движи се с 20 стъпки. Инструкциите извън този цикъл се изпълняват когато героят докосне ръба. За това последната инструкция е да се позиционира героя в начална позиция.
+When the game is launched, it is noticed that the catapult follows the direction of the mouse. What remains to be done is when it is clicked to fire, and when it touches any of the edges of the screen, it returns to its original state. Created by instructions, this is done by adding one more inner loop. This time the condition of this loop should be - until the catapult touches some edge of the screen. And in the body of the cycle, the instruction should be placed - it moves by 20 steps. The instructions outside this loop are executed when the character touches the edge. For this, the last instruction is to position the character in a starting position.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090007.png}
-  \caption{Финален код на катапулта}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090007.png}
+   \caption{Final catapult code}
 \label{fig090007}
 \end{figure}
 
-\section{Програмиране на балона}
-В следващата стъпка ще се конструират и инструкциите за балона. По време на играта се появяват много балони, а героят е само един. Това става, като се добавят инструкции за клониране на героя балон. Инструкциите, които ще са необходими за клониране се намират в оранжевата група и са "create clone of myself", което означава "направи клонинг на мен" и инструкцията "delete this clone", което означава "изтрий този клонинг".
+\section{Programming the Balloon}
+In the next step, the instructions for the balloon will also be constructed. Many balloons appear during the game, and the hero is only one. This is done by adding instructions to clone the balloon character. The instructions needed for cloning are in the orange group and are "create a clone of myself" and the instruction "delete this clone".
 
-Когато играта започне оригиналният герой балон трябва да се скрие. Неговата единствена цел е да създава клонинги. Нека балонът да създава 10 клонинги на себе си, след което да изчаква 5 секунди и да изтрива един клонинг. Този алгоритъм трябва да се повтори 5 пъти. Тук отново трябва да бъде използвана конструкцията - вложен цикъл.
+When the game starts, the original balloon character must hide. His sole purpose is to create clones. Have the bubble create 10 clones of itself, then wait 5 seconds and delete one clone. This algorithm should be repeated 5 times. Here again, the nested loop construct must be used.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090008.png}
-  \caption{Създаване на клонинги}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090008.png}
+   \caption{Clone Creation}
 \label{fig090008}
 \end{figure}
 
-Следва да се програмира и клонинга на балона. От оранжевата група трябва да се използва инструкцията "When I start as a clone", което означава "Когато стартирам, като клонинг". Първото нещо, което трябва да се направи е да се позиционира клонинга. За да бъде по интересна играта нека позицията му да бъде на случаен принцип, но да бъде в горната част на екрана. Това означава, че числото за координатата x трябва да бъде случайно между -200 и 200 (това са границите на екрана), а за y координатата трябва да бъдат между 50 и 150 (горната част на екрана).
+The balloon clone should also be programmed. From the orange group, the instruction "When I start as a clone" should be used, which means "When I start a clone". The first thing to do is position the clone. To make the game more interesting, let its position be random but at the top of the screen. This means that the number for the x-coordinate should be randomly between -200 and 200 (that's the borders of the screen), and the y-coordinate should be between 50 and 150 (the top of the screen).
 
-След като се позиционира клонинга следва да се покаже и да се промени размерът му да бъде по- малък. Двете инструкции се намират в лилавата група с инструкции.
+Once positioned, the clone should be displayed and resized to be smaller. The two instructions are located in the purple instruction group.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090009.png}
-  \caption{Позициониране на клонинга}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090009.png}
+   \caption{Clone Positioning}
 \label{fig090009}
 \end{figure}
 
-След като се появи балонът той трябва да се придвижи с една стъпка. Освен движението на балона трябва да се направят и две проверки. Едната проверка е за това дали стрелката не е докоснала клонинга. Ако условието е вярно, то тогава трябва стойността на променливата за резултата трябва да се увеличи с 1 и отново да се постави балонът на случайна позиция.
+Once the bubble appears, it must move one step. In addition to the balloon's movement, two checks must be made. One check is to see if the arrow has touched the clone. If the condition is true, then the value of the result variable should be incremented by 1, and the bubble should be placed at a random position again.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090010.png}
-  \caption{Увеличаване на резултатът}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090010.png}
+   \caption{Increasing score}
 \label{fig090010}
 \end{figure}
 
-Втората проверка, която трябва да се направи е, ако балонът не е бъде уцелен от катапулта и достигне до края на екрана. Трябва да се провери дали x координатата е по- голяма от 220. Ако условието е вярно, то тогава клонинга трябва да се постави в лявата част на екрана и за да е по- интересна играта ще смени и костюма си (цвета си).
+The second check to be made is if the balloon is not hit by the catapult and reaches the end of the screen. It must be checked if the x coordinate is greater than 220. If the condition is true, the clone must be placed on the left side of the screen, and to make the game more attractive, it will also change its costume (color).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090011.png}
-  \caption{Кодът на балона}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090011.png}
+   \caption{The Bubble Code}
 \label{fig090011}
 \end{figure}
 
-Играта е почти готова. Когато се стартира се появяват клонингите на балона и може да бъдат спукани с помощта на катапулта. Също така променливата за време намалява, а тази за резултатът се увеличава.
+The game is almost ready. When launched, clones of the balloon appear and can be burst using the catapult. Also, the time variable decreases, and the result variable increases.
 
-Последната стъпка, която трябва да се направи е да се програмира героят, който да съобщи крайният резултат. Когато играта започне този герой трябва да бъде скрит. Той трябва да се покаже, когато получи съобщението от катапулта "stop game". Инструкцията, която ще изпише резултатът е от лилавата група - "thing Hmm... for 2 seconds". На мястото на съобщението "Hmm..." трябва да се покаже резултатът. От зелената група с инструкции, инструкцията "join apple banana" залепва двете думи. В тази игра отново трябва да се залепят две неща. Едното е съобщението "Your score is ", а второто е стойността на променливата score.
+The final step is to program the character to report the final result. When the game starts, this character must be hidden. He should show up when he gets the "stop game" message from the catapult. The instruction to print the result is from the purple group - "thing Hmm... for 2 seconds". The result should be displayed instead of the "Hmm..." message. The "join apple banana" instruction pastes the two words from the green group of instructions. In this game, again, two things need to stick together. One is the message "Your score is," and the second is the value of the score variable.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090012.png}
-  \caption{Кодът на героят, който обявява резултатът}
+   \centering
+   \includegraphics[width=1.0\linewidth,height=0.5\linewidth]{fig090012.png}
+   \caption{The character code that announces the result}
 \label{fig090012}
 \end{figure}
 
-Играта е завършена. Играйте я заедно с вашите приятели, за да премерите сили, който от вас ще спука най- много балони за 30 секунди.
+Game over. Play it with your friends to see who can pop the most balloons in 30 seconds.
