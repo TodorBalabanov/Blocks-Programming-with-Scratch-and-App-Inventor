@@ -21,7 +21,6 @@
 \usepackage{fancyhdr}
 
 % Use quotation marks when quoting.
-%\usepackage{dirtytalk}
 \usepackage{csquotes}
 
 % Used to create an alphabetical index.
@@ -76,9 +75,6 @@
 % Replaces the word a used for numbering program code fragments.
 \renewcommand{\lstlistingname}{Listing}
 
-% Change the name for the list from the listings.
-%\renewcommand{\lstlistlistingname}{Listing List}
-
 % Defines the listing characteristics for the program code.
 \lstset{backgroundcolor=\color{gray!30}, breaklines=true, language=r, frame=single}
 
@@ -87,9 +83,6 @@
 
 % Start of document.
 \begin{document}
-
-% Front cover.
-\includepdf[pages={1}]{covers-en/front}
 \thispagestyle{empty}
 
 % Copyright page.
@@ -106,14 +99,6 @@
 % List of figures.
 \addcontentsline{toc}{chapter}{List of Figures}
 \listoffigures\newpage
-
-% List of tables.
-%\addcontentsline{toc}{chapter}{List of Tables}
-%\listoftables\newpage
-
-% List of listings.
-%\addcontentsline{toc}{chapter}{List of Source Codes}
-%\lstlistoflistings\newpage
 
 % Numbering of the pages with the main exposition.
 \pagenumbering{arabic}
@@ -138,14 +123,7 @@
 \include{chapters-en/chapter15}\newpage
 \include{chapters-en/conclusion}\newpage
 
-% List of references and sources of information.
-%\addcontentsline{toc}{chapter}{References}
-%\input{chapters/references}\newpage
-
 % Alphabetical index of terms used.
 \printindex
-
-% Back cover.
-\includepdf[pages=-]{covers-en/back}
 
 \end{document}

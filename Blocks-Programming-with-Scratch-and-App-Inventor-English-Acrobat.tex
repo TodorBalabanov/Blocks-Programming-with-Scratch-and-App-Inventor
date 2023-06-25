@@ -1,0 +1,135 @@
+\documentclass[14pt, letterpaper, openany]{book}
+
+% Use of Bulgarian language.
+\usepackage[T2A, T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+% Used to group images.
+\usepackage{subcaption}
+
+% Using the graph.
+\usepackage[pdftex]{graphicx}
+
+% Use more precise positions for the images.
+\usepackage{float}
+
+% Using PDFs for covers.
+\usepackage{pdfpages}
+
+% Using header and footer.
+\usepackage{fancyhdr}
+
+% Use quotation marks when quoting.
+\usepackage{csquotes}
+
+% Used to create an alphabetical index.
+\usepackage{imakeidx}
+
+% Adds the possibility of sensitive hyperlinks in the document itself.
+\usepackage[pdftex, bookmarks, linktocpage]{hyperref}
+
+% A command with many options for setting the behavior of the hyperref package, with the most useful option being the Cyrillicization of titles from Bookmarks in Acrobat.
+\hypersetup{unicode=true, colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black}
+
+% Used for listings with program code.
+\usepackage{listings}
+
+% Used for multiline comments.
+\usepackage{verbatim}
+
+% Used for line spacing.
+\usepackage{lipsum}
+
+% Used for tables that span more than one page.
+\usepackage{longtable}
+
+% Title.
+\title{Block Programming with Scratch and App Inventor}
+
+% Authors.
+\author{Todor Balabanov, Galya Petrova, Antonia Guzgunova}
+
+% Directory with images.
+\graphicspath{{images/}}
+
+% Select active language.
+\selectlanguage{english}
+
+% Texts to decorate the page at the top and bottom.
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{Block Programming with Scratch and App Inventor}
+\fancyhead[LO]{Todor Balabanov, Galya Petrova, Antonia Guzgunova}
+\fancyfoot[LE,RO]{Publishing House ''Education and Knowledge'', 2023, Sofia}
+
+% Thickness of dividing lines.
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+% Generate alphabetical index.
+\onecolumn
+\makeindex[columns=2, title=Index, intoc]
+
+% Replaces the word a used for numbering program code fragments.
+\renewcommand{\lstlistingname}{Listing}
+
+% Defines the listing characteristics for the program code.
+\lstset{backgroundcolor=\color{gray!30}, breaklines=true, language=r, frame=single}
+
+% One and a half line spacing.
+\linespread{1.5}
+
+% Start of document.
+\begin{document}
+
+% Front cover.
+\includepdf[pages={1}]{covers-en/front}
+\thispagestyle{empty}
+
+% Copyright page.
+\include{chapters-en/copyrights}
+
+% Numbering of service information pages.
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+% Table of contents.
+\addcontentsline{toc}{chapter}{Table of Contents}
+\tableofcontents\newpage
+
+% List of figures.
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures\newpage
+
+% Numbering of the pages with the main exposition.
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% Individual chapters are in separate files.
+\include{chapters-en/introduction}\newpage
+\include{chapters-en/chapter01}\newpage
+\include{chapters-en/chapter02}\newpage
+\include{chapters-en/chapter03}\newpage
+\include{chapters-en/chapter04}\newpage
+\include{chapters-en/chapter05}\newpage
+\include{chapters-en/chapter06}\newpage
+\include{chapters-en/chapter07}\newpage
+\include{chapters-en/chapter08}\newpage
+\include{chapters-en/chapter09}\newpage
+\include{chapters-en/chapter10}\newpage
+\include{chapters-en/chapter11}\newpage
+\include{chapters-en/chapter12}\newpage
+\include{chapters-en/chapter13}\newpage
+\include{chapters-en/chapter14}\newpage
+\include{chapters-en/chapter15}\newpage
+\include{chapters-en/conclusion}\newpage
+
+% Alphabetical index of terms used.
+\printindex
+
+% Back cover.
+\includepdf[pages=-]{covers-en/back}
+
+\end{document}
