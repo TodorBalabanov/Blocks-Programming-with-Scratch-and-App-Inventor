@@ -4,4 +4,4 @@ It is a book about bloks programming with Scratch and App Inventor. The book is 
 
 ## Building the Book
 
-pandoc Blocks-Programming-with-Scratch-and-App-Inventor.tex -o Blocks-Programming-with-Scratch-and-App-Inventor.epub
+pandoc Blocks-Programming-with-Scratch-and-App-Inventor-English-Kindle.tex -o Blocks-Programming-with-Scratch-and-App-Inventor-English-Kindle.epub
